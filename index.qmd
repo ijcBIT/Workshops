@@ -4,6 +4,9 @@ subtitle: "Personal portfolio with reports and more"
  
 ---
 
+```{r}
+install.packages("rmarkdown")
+```
 
 ## Hello world
 
