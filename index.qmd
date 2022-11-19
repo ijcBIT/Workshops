@@ -6,6 +6,9 @@ subtitle: "Personal portfolio with reports and more"
 
 ```{r}
 install.packages("rmarkdown")
+install.packages("jsonlite")
+
+
 ```
 
 ## Hello world
