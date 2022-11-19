@@ -5,8 +5,8 @@ subtitle: "Personal portfolio with reports and more"
 ---
 
 ```{r}
-install.packages("rmarkdown")
-install.packages("jsonlite")
+# install.packages("rmarkdown")
+# install.packages("jsonlite")
 
 
 ```
