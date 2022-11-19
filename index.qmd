@@ -25,7 +25,7 @@ m <- leaflet() %>%
 m  # Print the map
 ```
 
-You can check out our Unit webpage here: [And Bioinformatics Unit (BIT) where I currently work here](https://www.carrerasresearch.org/es/unidad-de-bioinform%C3%A1tica_130420)
+You can check out our units` webpage here: [And Bioinformatics Unit (BIT) where I currently work here](https://www.carrerasresearch.org/es/unidad-de-bioinform%C3%A1tica_130420)
 If you are interested on my publications you can check them here:
 
 Or follow me on my youtube channel with tutorials.
