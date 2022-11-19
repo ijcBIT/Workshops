@@ -1,27 +1,30 @@
 ---
 title: "My Projects website"
 subtitle: "Personal portfolio with reports and more"
+ 
 ---
+
 
 ## Hello world
 
-I am a bioinformatics technician currently working at (IJC) Josep Carreras Leukaemia Research Institute in Badalona.
+I am a bioinformatics technician currently working at [(IJC) Josep Carreras Leukaemia Research Institute]((https://www.carrerasresearch.org/es/)) in Badalona.
 
+```{r}
 
-```{python}
-from ipyleaflet import Map, Marker, basemaps, basemap_to_tiles
-m = Map(
-  basemap=basemap_to_tiles(
-    basemaps.NASAGIBS.ModisTerraTrueColorCR, "2017-04-08"
-  ),
-  center=(52.204793, 360.121558),
-  zoom=4
-)
-m.add_layer(Marker(location=(52.204793, 360.121558)))
-m
+library(leaflet)
+
+m <- leaflet() %>%
+  addTiles() %>%  # Add default OpenStreetMap map tiles
+  addMarkers(lng=2.239724437547112, lat=41.48540089172277, popup="IJC BIT Headquarters")
+m  # Print the map
 ```
 
+You can check out our Unit webpage here: [And Bioinformatics Unit (BIT) where I currently work here](https://www.carrerasresearch.org/es/unidad-de-bioinform%C3%A1tica_130420)
+If you are interested on my publications you can check them here:
 
+Or follow me on my youtube channel with tutorials.
+[Youtube channel]()
+You cacn also clone and modify this webpage if you want by branching the github repo.
 
 ## Welcome {#welcome}
 
