@@ -19,10 +19,17 @@ I am a bioinformatics technician currently working at [(IJC) Josep Carreras Leuk
 
 library(leaflet)
 
+
 m <- leaflet() %>%
   addTiles() %>%  # Add default OpenStreetMap map tiles
-  addMarkers(lng=2.239724437547112, lat=41.48540089172277, popup="IJC BIT Headquarters")
+  addMarkers(lng=2.239724437547112, lat=41.48540089172277, popup="IJC BIT Headquarters")%>%
+  addRectangles(
+    lng1 = 2.2404, lat1 = 41.4860,
+    lng2 = 2.2392, lat2 = 41.4850,
+    fillColor = "transparent"
+    )
 m  # Print the map
+
 ```
 
 You can check out our units` webpage here: [And Bioinformatics Unit (BIT) where I currently work here](https://www.carrerasresearch.org/es/unidad-de-bioinform%C3%A1tica_130420)
