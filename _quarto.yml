@@ -39,6 +39,13 @@ website:
           - quarto-workflows/browser.md
           - quarto-workflows/rstudio.qmd
           - quarto-workflows/jupyter.md 
+      - section: Trainings/index.qmd
+        contents: 
+          - href: Trainings/R_intro.qmd
+            text: Introduction to R
+          - href: Trainings/linux_intro.qmd
+            text: Introduction to Linux 
+          
       - learning-more.qmd
       - href: transition-from-rmarkdown.qmd
         text: Transition from Rmd
