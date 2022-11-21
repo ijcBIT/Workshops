@@ -132,8 +132,8 @@ Saving images
 -   alternatively use jpeg(), png(), svg() or pdf()
 
 ```{r}
-
-
+#| eval: false
+#| 
 # open graphics device
 png(file = "my_plot.png", width = 480, height = 480)
 
