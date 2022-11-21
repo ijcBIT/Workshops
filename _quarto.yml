@@ -3,29 +3,27 @@ project:
   
 website: 
   page-navigation: true
-  title: "Making sharable documents with Quarto" 
-  site-url: "https://openscapes.github.io/quarto-website-tutorial" 
-  repo-url: https://github.com/openscapes/quarto-website-tutorial 
+  title: "IJC - Bit Workshops page" 
+  site-url: "https://ijcbit.github.io/Workshops/" 
+  repo-url: https://github.com/ijcBIT/Workshops 
   repo-actions: [edit, issue]
   
   page-footer:
     right: "This page is built with ❤️ and [Quarto](https://quarto.org/)."
-    left: "&copy; CC-By Openscapes, 2022"
+    left: "&copy; CC-By IJC-Bit, 2022"
     
   sidebar:
-    logo: "images/openscapes_hex.png"
+    logo: "data/img/logo.png"
     pinned: true
     align: center
     tools: 
       - icon: globe
-        href: https://openscapes.org
-        text: "Openscapes.org"
+        href: data/img/logo.png
+        text: "IJC-BIT"
       - icon: github
-        href: https://github.com/openscapes/quarto-website-tutorial
-        text: "Quarto website tutorial"
-      - icon: twitter
-        href: https://twitter.com/openscapes
-        text: "Openscapes Twitter"         
+        href:  https://github.com/ijcBIT/Workshops 
+        text: "Workshops website"
+ 
 
     style: "docked"
     search: true
@@ -33,22 +31,15 @@ website:
     contents:
       - href: index.qmd
         text: Welcome
-      - explore.qmd
-      - section: quarto-workflows/index.qmd
-        contents: 
-          - quarto-workflows/browser.md
-          - quarto-workflows/rstudio.qmd
-          - quarto-workflows/jupyter.md 
-      - section: Trainings/index.qmd
+     
+      - section: Trainings
         contents: 
           - href: Trainings/R_intro.qmd
             text: Introduction to R
           - href: Trainings/linux_intro.qmd
             text: Introduction to Linux 
           
-      - learning-more.qmd
-      - href: transition-from-rmarkdown.qmd
-        text: Transition from Rmd
+
 
 
 format:
