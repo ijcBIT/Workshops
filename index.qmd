@@ -7,7 +7,7 @@ subtitle: "Personal portfolio with reports and more"
 ```{r}
 # install.packages("rmarkdown")
 # install.packages("jsonlite")
-
+options(Ncpus = max(1,parallel::detectCores()-abs(max(parallel::detectCores()/10,2))))
 
 ```
 
