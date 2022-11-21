@@ -49,13 +49,14 @@ The `read.table()` function has a few important arguments:
 ```{r}
 
 # use default parameters, missing parameters are estimated
-data <- read.table(file = "./data/my_data.txt") 
+data <- read.table(file = "data/my_data.txt") 
 
 # assign parameters
-data <- read.table(file = "./data/my_data.txt", 
+data <- read.table(file = "data/my_data.txt", 
                    comment.char = "", 
-                   header = TRUE, 
-                   colClasses = c(rep("numeric",4), "factor"))
+                   header = TRUE,
+                   colClasses = c(rep("numeric",4), "factor")
+                   )
 ```
 \
 
@@ -131,7 +132,7 @@ Saving images
 -   alternatively use jpeg(), png(), svg() or pdf()
 
 ```{r}
-#| eval: false
+
 
 # open graphics device
 png(file = "my_plot.png", width = 480, height = 480)
@@ -162,6 +163,7 @@ Functions for writing data to files
 
 ```{r}
 
+#| eval: false
 # write your results to a file
 write.table(iris,                       # dataframe
             file = "results.csv",       # filename
