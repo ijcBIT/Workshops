@@ -1,5 +1,5 @@
 ---
-title: "My Projects website"
+title: "IJC Bit Workshops"
 subtitle: "Personal portfolio with reports and more"
  
 ---
