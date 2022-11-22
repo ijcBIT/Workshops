@@ -15,7 +15,7 @@ website:
     left: "&copy; CC-By IJC-Bit, 2022"
     
   sidebar:
-    logo: "data/img/logo.png"
+    logo: "data/img/hex.png"
     pinned: true
     align: center
     tools: 
