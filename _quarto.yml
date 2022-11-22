@@ -2,6 +2,8 @@ project:
   type: website
   
 website: 
+  google-analytics: G-ML1E5YYLV4
+
   page-navigation: true
   title: "IJC - Bit Workshops page" 
   site-url: "https://ijcbit.github.io/Workshops/" 
@@ -18,7 +20,7 @@ website:
     align: center
     tools: 
       - icon: globe
-        href: data/img/logo.png
+        href: https://www.carrerasresearch.org/en/bioinformatics-unit_130420
         text: "IJC-BIT"
       - icon: github
         href:  https://github.com/ijcBIT/Workshops 
@@ -50,7 +52,6 @@ format:
     code-copy: true
     code-overflow: wrap
     toc: true
-
 
 filters:
   - include-files.lua
