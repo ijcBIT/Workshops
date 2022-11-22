@@ -2,6 +2,8 @@ project:
   type: website
   
 website: 
+  google-analytics: G-ML1E5YYLV4
+
   page-navigation: true
   title: "IJC - Bit Workshops page" 
   site-url: "https://ijcbit.github.io/Workshops/" 
@@ -51,7 +53,6 @@ format:
     code-overflow: wrap
     toc: true
 
-google-analytics: G-ML1E5YYLV4
 filters:
   - include-files.lua
   - quarto
