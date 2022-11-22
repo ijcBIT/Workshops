@@ -18,7 +18,7 @@ website:
     align: center
     tools: 
       - icon: globe
-        href: data/img/logo.png
+        href: https://www.carrerasresearch.org/en/bioinformatics-unit_130420
         text: "IJC-BIT"
       - icon: github
         href:  https://github.com/ijcBIT/Workshops 

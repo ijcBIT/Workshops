@@ -20,4 +20,4 @@ Here we have a link to the [presentation]("data/Intro_to_R.pptx")
 Here we have a link to the book by D. Peng
 
 Here we have a link to the second part of the workshop:
-[Introduction to R part2]("Trainings/R_intro.qmd")
+[Introduction to R part2](Trainings/R_intro.html)
