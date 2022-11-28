@@ -1,6 +1,6 @@
 ---
 title: "IJC Bit Workshops"
-subtitle: "Personal portfolio with reports and more"
+subtitle: "R & Bioinformatics from zero to hero"
  
 ---
 
@@ -13,11 +13,13 @@ options(Ncpus = max(1,parallel::detectCores()-abs(max(parallel::detectCores()/10
 
 ```
 
+## 
+
 ## Materials
 
-Here we have a link to the [presentation]("data/Intro_to_R.pptx")
+Here we have a link to the [presentation](https://carrerasresearch-my.sharepoint.com/:p:/g/personal/amerkel_carrerasresearch_org/ESXzpGSvC2xNlKr_kBF6zW8Bmo25LTlqbZ8gNGuj1ubEJg?e=lkxm1a&nav=eyJzSWQiOjI1OCwiY0lkIjoyNjEzMjExMTJ9&CID=3df688f5-6687-f643-fc50-d6a448245eb0)
 
-Here we have a link to the book by D. Peng
+Here we have a link to the [book by D. Peng](https://bookdown.org/rdpeng/rprogdatascience/) 
 
 Here we have a link to the second part of the workshop:
 [Introduction to R part2](Trainings/R_intro.html)
