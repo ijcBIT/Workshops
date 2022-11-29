@@ -2,30 +2,30 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
     <loc>https://ijcbit.github.io/Workshops/Trainings/data_wrangle.html</loc>
-    <lastmod>2022-11-29T09:52:25.527Z</lastmod>
+    <lastmod>2022-11-29T11:29:55.148Z</lastmod>
   </url>
   <url>
     <loc>https://ijcbit.github.io/Workshops/Trainings/1rstudio.html</loc>
-    <lastmod>2022-11-29T09:52:27.955Z</lastmod>
-  </url>
-  <url>
-    <loc>https://ijcbit.github.io/Workshops/Trainings/2quarto.html</loc>
-    <lastmod>2022-11-29T09:52:28.383Z</lastmod>
+    <lastmod>2022-11-29T11:29:57.208Z</lastmod>
   </url>
   <url>
     <loc>https://ijcbit.github.io/Workshops/Trainings/0Basic_concepts.html</loc>
-    <lastmod>2022-11-29T09:52:28.839Z</lastmod>
+    <lastmod>2022-11-29T11:29:57.540Z</lastmod>
   </url>
   <url>
-    <loc>https://ijcbit.github.io/Workshops/Trainings/R_intro.html</loc>
-    <lastmod>2022-11-29T09:52:33.375Z</lastmod>
+    <loc>https://ijcbit.github.io/Workshops/Trainings/Introduction_to_R/2quarto.html</loc>
+    <lastmod>2022-11-29T11:29:57.908Z</lastmod>
+  </url>
+  <url>
+    <loc>https://ijcbit.github.io/Workshops/Trainings/Introduction_to_R/R_intro.html</loc>
+    <lastmod>2022-11-29T11:30:01.572Z</lastmod>
   </url>
   <url>
     <loc>https://ijcbit.github.io/Workshops/Trainings/linux_intro.html</loc>
-    <lastmod>2022-11-29T09:52:33.799Z</lastmod>
+    <lastmod>2022-11-29T11:30:01.912Z</lastmod>
   </url>
   <url>
     <loc>https://ijcbit.github.io/Workshops/index.html</loc>
-    <lastmod>2022-11-29T09:52:35.227Z</lastmod>
+    <lastmod>2022-11-29T11:30:02.980Z</lastmod>
   </url>
 </urlset>
