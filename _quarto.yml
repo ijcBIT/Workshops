@@ -36,10 +36,14 @@ website:
      
       - section: Trainings
         contents: 
-          - href: Trainings/R_intro.qmd
-            text: Introduction to R
           - href: Trainings/linux_intro.qmd
-            text: Introduction to Linux 
+            text: Introduction to Linux
+          - section: Introduction to R
+            contents: 
+                - href: Trainings/Introduction_to_R/2quarto.qmd
+                  text: 2quarto
+                - href: Trainings/Introduction_to_R/R_intro.qmd
+                  text: Introduction to R
           
 
 
