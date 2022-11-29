@@ -1,0 +1,17 @@
+---
+title: "Basic concepts"
+---
+
+rstudio:
+-import data:
+-quarto:
+-viewer:
+-github:
+-options:
+
+
+function: 
+-arguments
+-return
+-environment*
+
