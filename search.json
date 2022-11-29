@@ -1,5 +1,26 @@
 [
   {
+    "objectID": "Trainings/data_wrangle.html",
+    "href": "Trainings/data_wrangle.html",
+    "title": "Data manipulation with R",
+    "section": "",
+    "text": "Data science book: https://r4ds.had.co.nz/explore-intro.html"
+  },
+  {
+    "objectID": "Trainings/2quarto.html",
+    "href": "Trainings/2quarto.html",
+    "title": "quarto_tutorial",
+    "section": "",
+    "text": "Quarto is a multi-language, next-generation version of R Markdown from RStudio, and includes dozens of new features and capabilities while at the same being able to render most existing Rmd files without modification.\nhttps://quarto.org/docs/get-started/hello/rstudio.html\nRmarkdown"
+  },
+  {
+    "objectID": "Trainings/0Basic_concepts.html",
+    "href": "Trainings/0Basic_concepts.html",
+    "title": "Basic concepts",
+    "section": "",
+    "text": "rstudio: -import data: -quarto: -viewer: -github: -options:\nfunction: -arguments -return -environment*"
+  },
+  {
     "objectID": "Trainings/R_intro.html",
     "href": "Trainings/R_intro.html",
     "title": "Example data analysis",
