@@ -18,7 +18,7 @@
     "href": "Trainings/Introduction_to_R/R_basics.html",
     "title": "R basics",
     "section": "",
-    "text": "This course gives a brief introduction to R and R programming basics. The presentation from the course can be found .\n\nThe ‘R basics’ follows the book by D.Peng “R Programming for Data Science” (2022):\nChapter 4: ​\n\nNuts and bolts of R​\nClasses and types of objects​\n\nChapter 9:​\n\nSub-setting (accessing) objects​\n\nChapter 13 (Control structures):​\n\nif-else conditional\nfor-loop\nwhile-loop\nrepeat-loop\nnext, break​\n\nChapter 14:​\n\nFunctions, about & how to"
+    "text": "This course gives a brief introduction to R and R programming basics. The presentation from the course can be found here.\nThe ‘R basics’ follows the book by D.Peng “R Programming for Data Science” (2022):\nChapter 4: ​\n\nNuts and bolts of R​\nClasses and types of objects​\n\nChapter 9:​\n\nSub-setting (accessing) objects​\n\nChapter 13 (Control structures):​\n\nif-else conditional\nfor-loop\nwhile-loop\nrepeat-loop\nnext, break​\n\nChapter 14:​\n\nFunctions, about & how to"
   },
   {
     "objectID": "Trainings/Introduction_to_R/Example_data_analysis.html",
