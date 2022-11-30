@@ -1,5 +1,5 @@
 ---
-title: "IJC Bit Workshops"
+title: "IJC BIT Workshops"
 subtitle: "R & Bioinformatics from zero to hero"
  
 ---
@@ -13,27 +13,18 @@ options(Ncpus = max(1,parallel::detectCores()-abs(max(parallel::detectCores()/10
 
 ```
 
-## Wellcome
+## Welcome
 
-This site has been built by the [Bioinformatics Team (BIT)](https://www.carrerasresearch.org/es/unidad-de-bioinform%C3%A1tica_130420) facility unit from the [Josep Carreras Leukaemia Research Institute (IJC)](https://www.carrerasresearch.org/en) in order to store the materials and links for the different workshops we are hosting during the year 2022-2023. We hope this page may be useful and we encourage you to add any comments or thoughts you may have on the comments below.
+This site has been created by the [Bioinformatics Team (BIT)](https://www.carrerasresearch.org/es/unidad-de-bioinform%C3%A1tica_130420) unit a the [Josep Carreras Leukaemia Research Institute (IJC)](https://www.carrerasresearch.org/en) to store materials and links for workshops we are hosting during the year 2022-2023. We encourage you to add any comments or thoughts you may have!
 
-The in person courses already started on November 2022, but here you have a list of the future lectures:
+General topics
 
-*
-*
-*
-
-
-If you are interested in any/all of this sessions, please let us know sending a mail or filling in this form. [here](forms)
-
-
+* R and R packages
+* Bioconductor
+* Linux and beyond
+* High performance computing (HPC)
+* Data management
+* Tools for reproducible research
 
 
-## Materials
-
-Here we have a link to the [presentation](https://carrerasresearch-my.sharepoint.com/:p:/g/personal/amerkel_carrerasresearch_org/ESXzpGSvC2xNlKr_kBF6zW8Bmo25LTlqbZ8gNGuj1ubEJg?e=lkxm1a&nav=eyJzSWQiOjI1OCwiY0lkIjoyNjEzMjExMTJ9&CID=3df688f5-6687-f643-fc50-d6a448245eb0)
-
-Here we have a link to the [book by D. Peng](https://bookdown.org/rdpeng/rprogdatascience/) 
-
-Here we have a link to the second part of the workshop:
-[Introduction to R part2](Trainings/R_intro.html)
+If you are interested in any particular topic for a future workshop, please let us know by sending us a mail or simply passing by our office.

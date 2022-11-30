@@ -5,7 +5,7 @@ website:
   google-analytics: G-ML1E5YYLV4
 
   page-navigation: true
-  title: "IJC - Bit Workshops page" 
+  title: "IJC - BIT Workshops page" 
   site-url: "https://ijcbit.github.io/Workshops/" 
   repo-url: https://github.com/ijcBIT/Workshops 
   repo-actions: [edit, issue]
@@ -40,10 +40,10 @@ website:
             text: Introduction to Linux
           - section: Introduction to R
             contents: 
-                - href: Trainings/Introduction_to_R/2quarto.qmd
-                  text: 2quarto
-                - href: Trainings/Introduction_to_R/R_intro.qmd
-                  text: Introduction to R
+                - href: Trainings/Introduction_to_R/R_basics.qmd
+                  text: R basics
+                - href: Trainings/Introduction_to_R/Example_data_analysis.qmd
+                  text: Example data analysis
           
 
 

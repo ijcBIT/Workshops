@@ -1,0 +1,33 @@
+---
+title: "R basics"
+author: "Angelika Merkel"
+---
+
+This course gives a brief introduction to R and R programming basics. The presentation from the course can be found ![here]("data/Introduction_to_R.pdf"). 
+
+<embed src="data/Introduction_to_R.pdf" type=application/pdf>
+
+The 'R basics' follows the book by [D.Peng "R Programming for Data Science" (2022)](https://bookdown.org/rdpeng/rprogdatascience/):
+
+
+
+**Chapter 4:** ​
+
+* Nuts and bolts of R​
+* Classes and types of objects​
+
+**Chapter 9:**​
+
+* Sub-setting (accessing) objects​
+
+**Chapter 13 (Control structures):**​
+
+* if-else conditional
+* for-loop
+* while-loop
+* repeat-loop
+* next, break​
+
+**Chapter 14:**​
+
+* Functions, about & how to

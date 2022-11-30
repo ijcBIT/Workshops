@@ -1,5 +1,6 @@
 ---
 title: "Example data analysis"
+author: "Angelika Merkel"
 format: 
   html:
     toc: true
@@ -72,7 +73,7 @@ Once you have imported your data it is always a good idea to inspect your data o
 You may need to adjust the way you import your data!
 
 
-#### Now you can start exploring your data using `summary()` `plot(density())` `boxplot()`
+#### Now, you can start exploring your data
 
 ```{r}
 #| eval: false
@@ -107,6 +108,9 @@ plot(iris$Sepal.Length, iris$Petal.Length, col = iris$Species)
 # calculate Pearson correlation
 cor.test(iris$Sepal.Length, iris$Petal.Length)
 
+# => Great! Sepal.Length and Petal.Length are significantly positive correlated. Let's capture this
+# insight in a nicer informative plot.
+
 
 # FINAL PLOT
  
@@ -124,7 +128,12 @@ legend("topleft", legend = levels(iris$Species), col = c(1:3), pch =16)
 text(x = 7.5, y = 2, labels = "cor = 0.871\np < 2.2e-16")
 ```
 
+For more on basic R plots see [R Base Graphics: An Idiots Guide](https://rstudio-pubs-static.s3.amazonaws.com/7953_4e3efd5b9415444ca065b1167862c349.html)
+
+
 ## 4. Export results
+
+After you have finished you analysis you may want so save your results for later:
 
 Saving images
 
@@ -133,7 +142,7 @@ Saving images
 
 ```{r}
 #| eval: false
-#| 
+ 
 # open graphics device
 png(file = "my_plot.png", width = 480, height = 480)
 
@@ -162,8 +171,8 @@ Functions for writing data to files
 -   `save` (saving an arbitrary number of R objects in binary format (possibly compressed) to a file)
 
 ```{r}
-
 #| eval: false
+
 # write your results to a file
 write.table(iris,                       # dataframe
             file = "results.csv",       # filename
@@ -172,9 +181,15 @@ write.table(iris,                       # dataframe
             row.names = FALSE,          # include row names (default = TRUE)
             quote = FALSE)              # quote characters and factors
 
-# save your data object
+# save your workspace
+save(file = "my_workspace.Rdata")       # warning: this occupies the most space
+
+# save multiple objects
+save(iris, data, file = "my_two_objects.Rdata")
+
+# save a single data object (compressed)
 saveRDS(iris,                           #  data object
         file = "iris.rds")              #  file name
 ```
 
-For more on basic R plots see [R Base Graphics: An Idiots Guide](https://rstudio-pubs-static.s3.amazonaws.com/7953_4e3efd5b9415444ca065b1167862c349.html)
+
