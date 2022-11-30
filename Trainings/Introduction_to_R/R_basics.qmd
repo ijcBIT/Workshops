@@ -3,7 +3,7 @@ title: "R basics"
 author: "Angelika Merkel"
 ---
 
-This course gives a brief introduction to R and R programming basics. The presentation from the course can be found [here](data/Introduction_to_R.pdf). 
+This course gives a brief introduction to R and R programming basics. The presentation from the course can be found [here](https://carrerasresearch-my.sharepoint.com/:p:/g/personal/amerkel_carrerasresearch_org/ESXzpGSvC2xNlKr_kBF6zW8Bmo25LTlqbZ8gNGuj1ubEJg?e=UkZPDb)
 
 
 The 'R basics' follows the book by [D.Peng "R Programming for Data Science" (2022)](https://bookdown.org/rdpeng/rprogdatascience/):
