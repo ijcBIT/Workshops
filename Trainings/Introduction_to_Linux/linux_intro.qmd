@@ -1,0 +1,18 @@
+---
+title: "Introduction to Linux"
+author: "Angelika Merkel"
+---
+
+This course gives a brief introduction to Linux and Shell programming. The presentation from the course (28/11|30/11/2022) can be found [here](https://carrerasresearch-my.sharepoint.com/:p:/g/personal/amerkel_carrerasresearch_org/EQ7VXf3UdnpDkIO-5kPPvMgB7U72JUX2bmuhvmLfN6PSug?e=x8XLZ2).
+
+**Topics covered:**
+
+* What is Linux?
+* Moving around the system
+* Basic file and directory handling
+* File properties
+* File viewing
+* Text file manipulation
+* Vim text editor
+* How to create and run a shell script
+* Shell variables and control structures (if-else, for-loop, while-loop)

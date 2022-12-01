@@ -38,7 +38,9 @@ website:
         contents: 
           - section: Introduction to Linux
             contents:
-                - href: Trainings/linux_intro.qmd
+                - href: Trainings/Introduction_to_Linux/linux_intro.qmd
+                  text: Introduction
+                - href: Trainings/Introduction_to_Linux/linux_exercises.qmd
                   text: Exercises
           - section: Introduction to R
             contents: 

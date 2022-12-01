@@ -25,18 +25,18 @@ Finally, list now all files end with ‘bed’ in a single command. What command
 # go to your home directory
  cd ~
 
-# create 'analysis' directory, enter 'analysis' directory and copy 'peaks.bed' there
- mkdir analysis
- cd analysis
- cp /home/shared/peaks.bed .
+# create dir
+ mkdir analysis                     # create 'analysis' directory,
+ cd analysis                        # enter 'analysis' directory
+ cp /home/shared/peaks.bed .        # copy 'peaks.bed' there  
 
 # go back home
  cd ~
 
-# create 'test' directory, enter 'test' directory and copy 'peaks.bed' there
- mkdir test
- cd test
- ln -s /home/shared/peaks.bed -n test.bed
+# create dir
+ mkdir test                                 # create 'test' directory
+ cd test                                    # enter 'analysis' directory
+ ln -s /home/shared/peaks.bed -n test.bed   # create softlink 
 
 # go back home
  cd ~
@@ -123,4 +123,47 @@ grep -w chrM peaks.bed | cut -f 5| sort -n| tail -1
 
 ### Exercise 7:
 
-Write a script, that for any given directory lists all files it contains and counts the number of characters of all regular files it contains.  
+Write a script, that for any given directory lists all files it contains and counts the number of characters of all regular files it contains.
+
+**Answer**
+```bash
+#! /bin/bash
+
+### Author: Angelika Merkel
+### Date: 30/11/2022
+
+###############################################################################
+### Description:
+### Script script, that for any given directory lists all files it contains and
+### counts the number of characters of all regular files it contains.
+
+###############################################################################
+# assign the script's first argument to a meaningful variable
+DIR=$1
+
+# loop over all elements listed in the specified directory
+for i in `ls $DIR`
+ do
+ 
+ # test if the element listed is a regular file (else could be a directory)
+  if [ -f "$i" ]                         
+  
+  # if true, count all characters within the file and return with a message
+    then
+      CHAR=`cat $i| wc -c`
+      echo $i ":" $CHAR "characters"
+  
+  # close conditional
+  fi
+  
+# close for loop
+done
+```
+
+Finally, to run the script:
+```bash
+ chmod a+x myscript.sh       # make the file executable
+ ./myscript.sh               # run
+```
+
+
