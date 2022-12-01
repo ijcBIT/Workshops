@@ -8,7 +8,7 @@
 
 <meta name="author" content="Angelika Merkel">
 
-<title>IJC - BIT Workshops page - R basics</title>
+<title>IJC - BIT Workshops page - Introduction to Linux</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -30,8 +30,8 @@ ul.task-list li input[type="checkbox"] {
 <script src="../../site_libs/quarto-search/fuse.min.js"></script>
 <script src="../../site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="../../">
-<link href="../../Trainings/Introduction_to_R/Example_data_analysis.html" rel="next">
-<link href="../../Trainings/Introduction_to_Linux/linux_exercises.html" rel="prev">
+<link href="../../Trainings/Introduction_to_Linux/linux_exercises.html" rel="next">
+<link href="../../index.html" rel="prev">
 <script src="../../site_libs/quarto-html/quarto.js"></script>
 <script src="../../site_libs/quarto-html/popper.min.js"></script>
 <script src="../../site_libs/quarto-html/tippy.umd.min.js"></script>
@@ -81,7 +81,7 @@ gtag('config', 'G-ML1E5YYLV4', { 'anonymize_ip': true});
   <header id="quarto-header" class="headroom fixed-top">
   <nav class="quarto-secondary-nav" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
     <div class="container-fluid d-flex justify-content-between">
-      <h1 class="quarto-secondary-nav-title">R basics</h1>
+      <h1 class="quarto-secondary-nav-title">Introduction to Linux</h1>
       <button type="button" class="quarto-btn-toggle btn" aria-label="Show secondary navigation">
         <i class="bi bi-chevron-right"></i>
       </button>
@@ -124,15 +124,15 @@ gtag('config', 'G-ML1E5YYLV4', { 'anonymize_ip': true});
       <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
-            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" aria-expanded="false">Introduction to Linux</a>
-          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" aria-expanded="false">
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" aria-expanded="true">Introduction to Linux</a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" aria-expanded="true">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
       </div>
-      <ul id="quarto-sidebar-section-2" class="collapse list-unstyled sidebar-section depth2 ">  
+      <ul id="quarto-sidebar-section-2" class="collapse list-unstyled sidebar-section depth2 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../Trainings/Introduction_to_Linux/linux_intro.html" class="sidebar-item-text sidebar-link">Introduction</a>
+  <a href="../../Trainings/Introduction_to_Linux/linux_intro.html" class="sidebar-item-text sidebar-link active">Introduction</a>
   </div>
 </li>
           <li class="sidebar-item">
@@ -144,15 +144,15 @@ gtag('config', 'G-ML1E5YYLV4', { 'anonymize_ip': true});
   </li>
           <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
-            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" aria-expanded="true">Introduction to R</a>
-          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" aria-expanded="true">
+            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" aria-expanded="false">Introduction to R</a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" aria-expanded="false">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
       </div>
-      <ul id="quarto-sidebar-section-3" class="collapse list-unstyled sidebar-section depth2 show">  
+      <ul id="quarto-sidebar-section-3" class="collapse list-unstyled sidebar-section depth2 ">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../Trainings/Introduction_to_R/R_basics.html" class="sidebar-item-text sidebar-link active">R basics</a>
+  <a href="../../Trainings/Introduction_to_R/R_basics.html" class="sidebar-item-text sidebar-link">R basics</a>
   </div>
 </li>
           <li class="sidebar-item">
@@ -176,7 +176,7 @@ gtag('config', 'G-ML1E5YYLV4', { 'anonymize_ip': true});
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title d-none d-lg-block">R basics</h1>
+<h1 class="title d-none d-lg-block">Introduction to Linux</h1>
 </div>
 
 
@@ -197,28 +197,18 @@ gtag('config', 'G-ML1E5YYLV4', { 'anonymize_ip': true});
 
 </header>
 
-<p>This course gives a brief introduction to R and R programming basics. The presentation from the course can be found <a href="https://carrerasresearch-my.sharepoint.com/:p:/g/personal/amerkel_carrerasresearch_org/ESXzpGSvC2xNlKr_kBF6zW8Bmo25LTlqbZ8gNGuj1ubEJg?e=UkZPDb">here</a></p>
-<p>The ‘R basics’ follows the book by <a href="https://bookdown.org/rdpeng/rprogdatascience/">D.Peng “R Programming for Data Science” (2022)</a>:</p>
-<p><strong>Chapter 4:</strong> ​</p>
+<p>This course gives a brief introduction to Linux and Shell programming. The presentation from the course (28/11|30/11/2022) can be found <a href="https://carrerasresearch-my.sharepoint.com/:p:/g/personal/amerkel_carrerasresearch_org/EQ7VXf3UdnpDkIO-5kPPvMgB7U72JUX2bmuhvmLfN6PSug?e=x8XLZ2">here</a>.</p>
+<p><strong>Topics covered:</strong></p>
 <ul>
-<li>Nuts and bolts of R​</li>
-<li>Classes and types of objects​</li>
-</ul>
-<p><strong>Chapter 9:</strong>​</p>
-<ul>
-<li>Sub-setting (accessing) objects​</li>
-</ul>
-<p><strong>Chapter 13 (Control structures):</strong>​</p>
-<ul>
-<li>if-else conditional</li>
-<li>for-loop</li>
-<li>while-loop</li>
-<li>repeat-loop</li>
-<li>next, break​</li>
-</ul>
-<p><strong>Chapter 14:</strong>​</p>
-<ul>
-<li>Functions, about &amp; how to</li>
+<li>What is Linux?</li>
+<li>Moving around the system</li>
+<li>Basic file and directory handling</li>
+<li>File properties</li>
+<li>File viewing</li>
+<li>Text file manipulation</li>
+<li>Vim text editor</li>
+<li>How to create and run a shell script</li>
+<li>Shell variables and control structures (if-else, for-loop, while-loop)</li>
 </ul>
 
 
@@ -476,13 +466,13 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 </script>
 <nav class="page-navigation">
   <div class="nav-page nav-page-previous">
-      <a href="../../Trainings/Introduction_to_Linux/linux_exercises.html" class="pagination-link">
-        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text">Exercises</span>
+      <a href="../../index.html" class="pagination-link">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text">Welcome</span>
       </a>          
   </div>
   <div class="nav-page nav-page-next">
-      <a href="../../Trainings/Introduction_to_R/Example_data_analysis.html" class="pagination-link">
-        <span class="nav-page-text">Example data analysis</span> <i class="bi bi-arrow-right-short"></i>
+      <a href="../../Trainings/Introduction_to_Linux/linux_exercises.html" class="pagination-link">
+        <span class="nav-page-text">Exercises</span> <i class="bi bi-arrow-right-short"></i>
       </a>
   </div>
 </nav>
