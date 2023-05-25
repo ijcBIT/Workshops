@@ -48,9 +48,10 @@ website:
                   text: R basics
                 - href: Trainings/Introduction_to_R/Example_data_analysis.qmd
                   text: Example data analysis
-          
-
-
+          - section: HPC
+            contents: 
+                - href: Trainings/HPC/Intro_to_IJC_HPC.qmd
+                  text: Introduction to HPC
 
 format:
   html:
