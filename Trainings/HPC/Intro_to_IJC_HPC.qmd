@@ -1,0 +1,5 @@
+---
+title: "Intro_to_IJC_HPC"
+format: revealjs
+editor: visual
+---
