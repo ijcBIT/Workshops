@@ -16,33 +16,29 @@ Go to the directory '/home' and list its content. How many user with starting wi
 
 ### Exercise 2: 
 
-In your home directory create a new directory called 'analysis'. Copy the file peaks.bed there. Create another directory called 'test'. There, create a softlink to peaks.bed located in the shared folder and call the file 'test.bed'. 
+In your home directory create a new directory called 'analysis'. Copy the file peaks.bed from the folder /home/shared/ there. Now, create a softlink to the original file and call the file 'newpeaks.bed'. 
 
-Finally, list now all files end with ‘bed’ in a single command. What command did you use? 
+Finally, list all files that end with ‘.bed’ in a single command. What command did you use? 
 
 **Answer**
 ```bash
 # go to your home directory
  cd ~
 
-# create dir
- mkdir analysis                     # create 'analysis' directory,
- cd analysis                        # enter 'analysis' directory
- cp /home/shared/peaks.bed .        # copy 'peaks.bed' there  
+# create directory
+ mkdir analysis                     
 
-# go back home
- cd ~
+# enter 'analysis' directory 
+ cd analysis
+ 
+# copy 'peaks.bed' to current directory 
+ cp /home/shared/peaks.bed .  
 
-# create dir
- mkdir test                                 # create 'test' directory
- cd test                                    # enter 'analysis' directory
- ln -s /home/shared/peaks.bed -n test.bed   # create softlink 
-
-# go back home
- cd ~
+# create softlink 
+ ln -s /home/shared/peaks.bed -n newpeaks.bed  
 
 # list all files ending in '.bed' in all three directories
- ls ./*/*.bed
+ ls *.bed
 ```
 
 ::: {.callout-tip}
