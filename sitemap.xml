@@ -2,38 +2,38 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
     <loc>https://ijcbit.github.io/Workshops/index.html</loc>
-    <lastmod>2023-05-25T14:03:17.049Z</lastmod>
+    <lastmod>2023-06-21T10:28:41.478Z</lastmod>
   </url>
   <url>
     <loc>https://ijcbit.github.io/Workshops/Trainings/1rstudio.html</loc>
-    <lastmod>2023-05-25T14:03:19.281Z</lastmod>
-  </url>
-  <url>
-    <loc>https://ijcbit.github.io/Workshops/Trainings/0Basic_concepts.html</loc>
-    <lastmod>2023-05-25T14:03:19.693Z</lastmod>
-  </url>
-  <url>
-    <loc>https://ijcbit.github.io/Workshops/Trainings/Introduction_to_R/Example_data_analysis.html</loc>
-    <lastmod>2023-05-25T14:03:24.034Z</lastmod>
-  </url>
-  <url>
-    <loc>https://ijcbit.github.io/Workshops/Trainings/Introduction_to_R/R_basics.html</loc>
-    <lastmod>2023-05-25T14:03:24.538Z</lastmod>
+    <lastmod>2023-06-21T10:28:43.558Z</lastmod>
   </url>
   <url>
     <loc>https://ijcbit.github.io/Workshops/Trainings/Introduction_to_Linux/linux_intro.html</loc>
-    <lastmod>2023-05-25T14:03:24.998Z</lastmod>
+    <lastmod>2023-06-21T10:28:43.950Z</lastmod>
   </url>
   <url>
     <loc>https://ijcbit.github.io/Workshops/Trainings/Introduction_to_Linux/linux_exercises.html</loc>
-    <lastmod>2023-05-25T14:03:25.566Z</lastmod>
+    <lastmod>2023-06-21T10:28:44.422Z</lastmod>
+  </url>
+  <url>
+    <loc>https://ijcbit.github.io/Workshops/Trainings/0Basic_concepts.html</loc>
+    <lastmod>2023-06-21T10:28:44.786Z</lastmod>
   </url>
   <url>
     <loc>https://ijcbit.github.io/Workshops/Trainings/data_wrangle.html</loc>
-    <lastmod>2023-05-25T14:03:29.726Z</lastmod>
+    <lastmod>2023-06-21T10:28:47.590Z</lastmod>
+  </url>
+  <url>
+    <loc>https://ijcbit.github.io/Workshops/Trainings/Introduction_to_R/Example_data_analysis.html</loc>
+    <lastmod>2023-06-21T10:28:51.250Z</lastmod>
+  </url>
+  <url>
+    <loc>https://ijcbit.github.io/Workshops/Trainings/Introduction_to_R/R_basics.html</loc>
+    <lastmod>2023-06-21T10:28:51.658Z</lastmod>
   </url>
   <url>
     <loc>https://ijcbit.github.io/Workshops/Trainings/HPC/Intro_to_IJC_HPC.html</loc>
-    <lastmod>2023-05-25T14:03:30.110Z</lastmod>
+    <lastmod>2023-06-21T10:28:52.002Z</lastmod>
   </url>
 </urlset>
