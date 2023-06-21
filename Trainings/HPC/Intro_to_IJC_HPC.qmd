@@ -1,6 +1,5 @@
 ---
 title: "Intro_to_IJC_HPC"
-editor: visual
 ---
 
 These are the slides  to the introduction to HPC seminar. 
