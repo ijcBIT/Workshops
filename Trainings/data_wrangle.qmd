@@ -5,6 +5,7 @@ author: "Izar de Villasante"
 
 ```{r}
 #| include: false
+#| eval: false
 install.packages("palmerpenguins")
 ```
 
