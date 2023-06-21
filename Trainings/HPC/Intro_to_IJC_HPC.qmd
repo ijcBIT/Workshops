@@ -3,3 +3,11 @@ title: "Intro_to_IJC_HPC"
 format: revealjs
 editor: visual
 ---
+
+<div>
+
+```{=html}
+<iframe width="780" height="500" class="slide-deck" src="data/Intro_to_IJC_computing_infrastructure.final.pdf"></iframe>
+```
+
+</div>
