@@ -2,38 +2,38 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
     <loc>https://ijcbit.github.io/Workshops/index.html</loc>
-    <lastmod>2023-06-21T11:07:18.745Z</lastmod>
-  </url>
-  <url>
-    <loc>https://ijcbit.github.io/Workshops/Trainings/data_wrangle.html</loc>
-    <lastmod>2023-06-21T11:07:22.293Z</lastmod>
-  </url>
-  <url>
-    <loc>https://ijcbit.github.io/Workshops/Trainings/Introduction_to_Linux/linux_exercises.html</loc>
-    <lastmod>2023-06-21T11:07:22.741Z</lastmod>
-  </url>
-  <url>
-    <loc>https://ijcbit.github.io/Workshops/Trainings/Introduction_to_Linux/linux_intro.html</loc>
-    <lastmod>2023-06-21T11:07:23.105Z</lastmod>
-  </url>
-  <url>
-    <loc>https://ijcbit.github.io/Workshops/Trainings/HPC/Intro_to_IJC_HPC.html</loc>
-    <lastmod>2023-06-21T11:07:23.429Z</lastmod>
+    <lastmod>2023-06-21T11:57:13.253Z</lastmod>
   </url>
   <url>
     <loc>https://ijcbit.github.io/Workshops/Trainings/1rstudio.html</loc>
-    <lastmod>2023-06-21T11:07:23.757Z</lastmod>
+    <lastmod>2023-06-21T11:57:15.309Z</lastmod>
+  </url>
+  <url>
+    <loc>https://ijcbit.github.io/Workshops/Trainings/Introduction_to_Linux/linux_intro.html</loc>
+    <lastmod>2023-06-21T11:57:15.693Z</lastmod>
+  </url>
+  <url>
+    <loc>https://ijcbit.github.io/Workshops/Trainings/Introduction_to_Linux/linux_exercises.html</loc>
+    <lastmod>2023-06-21T11:57:16.173Z</lastmod>
   </url>
   <url>
     <loc>https://ijcbit.github.io/Workshops/Trainings/0Basic_concepts.html</loc>
-    <lastmod>2023-06-21T11:07:24.093Z</lastmod>
+    <lastmod>2023-06-21T11:57:16.529Z</lastmod>
   </url>
   <url>
-    <loc>https://ijcbit.github.io/Workshops/Trainings/Introduction_to_R/R_basics.html</loc>
-    <lastmod>2023-06-21T11:07:24.453Z</lastmod>
+    <loc>https://ijcbit.github.io/Workshops/Trainings/data_wrangle.html</loc>
+    <lastmod>2023-06-21T11:57:18.733Z</lastmod>
   </url>
   <url>
     <loc>https://ijcbit.github.io/Workshops/Trainings/Introduction_to_R/Example_data_analysis.html</loc>
-    <lastmod>2023-06-21T11:07:27.952Z</lastmod>
+    <lastmod>2023-06-21T11:57:23.538Z</lastmod>
+  </url>
+  <url>
+    <loc>https://ijcbit.github.io/Workshops/Trainings/Introduction_to_R/R_basics.html</loc>
+    <lastmod>2023-06-21T11:57:23.946Z</lastmod>
+  </url>
+  <url>
+    <loc>https://ijcbit.github.io/Workshops/Trainings/HPC/Intro_to_IJC_HPC.html</loc>
+    <lastmod>2023-06-21T11:57:24.282Z</lastmod>
   </url>
 </urlset>
