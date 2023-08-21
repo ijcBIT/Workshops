@@ -5,7 +5,8 @@ title: "Intro_to_IJC_HPC"
 These are the slides  to the introduction to HPC seminar. 
 
 ```{=html}
-<iframe width="780" height="500" class="slide-deck" src="data/Intro_to_IJC_computing_infrastructure.final.pdf" data-external="1"></iframe>
+<iframe width="780" height="500" class="slide-deck" src="data/Intro_to_IJC_computing_infrastructure.final.pdf" data-external="1">
+</iframe>
 ```
 
 You can also find the powerpoint [here](https://carrerasresearch-my.sharepoint.com/:p:/r/personal/amerkel_carrerasresearch_org/Documents/Documents/Training/Introduction_to_IJC_computing_infrastructure/Intro_to_IJC_computing_infrastructure.final.pptx?d=w392c1c7ee2314a70823fd92530045d22&csf=1&web=1&e=seQqJT).
