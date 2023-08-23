@@ -7,6 +7,7 @@ name: Render and Publish
 jobs:
   build-deploy:
     runs-on: ubuntu-latest
+    container: drizzt99/vonage:1.2.0
     steps:
       - name: Check out repository
         uses: actions/checkout@v3 
@@ -25,8 +26,8 @@ jobs:
           # uses the RStudio Package Manager
           use-public-rspm: true 
           
-      - name: Install xmllint
-        run: sudo apt-get install -y libxml2-utils libproj-dev
+      - name: Install terra deps
+        run: sudo apt-get install -y libgdal-dev libgeos-dev libproj-dev libproj-dev
         
       # imports an action from another repository, 
       # that deals with the dependencies
