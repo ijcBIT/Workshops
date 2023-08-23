@@ -24,7 +24,10 @@ jobs:
         with:
           # uses the RStudio Package Manager
           use-public-rspm: true 
-      
+          
+      - name: Install xmllint
+        run: sudo apt-get install -y libxml2-utils libproj-dev
+        
       # imports an action from another repository, 
       # that deals with the dependencies
       - uses: r-lib/actions/setup-r-dependencies@v2
