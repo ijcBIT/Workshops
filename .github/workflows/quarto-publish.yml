@@ -7,7 +7,7 @@ name: Render and Publish
 jobs:
   build-deploy:
     runs-on: ubuntu-latest
-    container: drizzt99/vonage:1.2.0
+    container: izarvillasante/dockerfiles:main
     steps:
       - name: Check out repository
         uses: actions/checkout@v3 
