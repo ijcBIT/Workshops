@@ -1,0 +1,6 @@
+These are the slides to the workshop: Data visualization in R with the ggplot2 package 
+
+```{=html}
+<iframe width="100%" height="94%" class="slide-deck" src="data/Data_visualizations_with_ggplot2.pdf" data-external="1">
+</iframe>
+```

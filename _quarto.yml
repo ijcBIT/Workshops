@@ -48,10 +48,14 @@ website:
                   text: R basics
                 - href: Trainings/Introduction_to_R/Example_data_analysis.qmd
                   text: Example data analysis
-          - section: HPC
+          - section: Visualizations with ggplot2
+            contents: 
+                - href: Trainings/Visualizations_with_ggplot2/Visualizations_with_ggplot2.qmd
+                  text: Visualizations with ggplot2
+          - section: Computational Infrastructure
             contents: 
                 - href: Trainings/HPC/Intro_to_IJC_HPC.qmd
-                  text: Introduction to HPC
+                  text: Computational Infrastructure
 
 format:
   html:
