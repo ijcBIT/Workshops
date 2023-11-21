@@ -5,7 +5,7 @@ title: "Intro_to_IJC_HPC"
 These are the slides  to the introduction to HPC seminar. 
 
 ```{=html}
-<iframe width="780" height="500" class="slide-deck" src="data/Intro_to_IJC_computing_infrastructure.final.pdf" data-external="1">
+<iframe width="780" height="500" class="slide-deck" src="data/Intro_to_IJC_computing_infrastructure.21112023.pdf" data-external="1">
 </iframe>
 ```
 
