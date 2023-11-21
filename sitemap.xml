@@ -2,38 +2,42 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
     <loc>https://ijcbit.github.io/Workshops/Trainings/data_wrangle.html</loc>
-    <lastmod>2023-11-21T15:39:56.882Z</lastmod>
+    <lastmod>2023-11-21T16:29:14.768Z</lastmod>
   </url>
   <url>
-    <loc>https://ijcbit.github.io/Workshops/Trainings/Introduction_to_Linux/linux_exercises.html</loc>
-    <lastmod>2023-11-21T15:39:55.666Z</lastmod>
-  </url>
-  <url>
-    <loc>https://ijcbit.github.io/Workshops/Trainings/HPC/Intro_to_IJC_HPC.html</loc>
-    <lastmod>2023-11-21T15:39:55.018Z</lastmod>
-  </url>
-  <url>
-    <loc>https://ijcbit.github.io/Workshops/Trainings/Introduction_to_R/Example_data_analysis.html</loc>
-    <lastmod>2023-11-21T15:39:54.458Z</lastmod>
-  </url>
-  <url>
-    <loc>https://ijcbit.github.io/Workshops/index.html</loc>
-    <lastmod>2023-11-21T15:39:50.478Z</lastmod>
-  </url>
-  <url>
-    <loc>https://ijcbit.github.io/Workshops/Trainings/Introduction_to_R/R_basics.html</loc>
-    <lastmod>2023-11-21T15:39:51.354Z</lastmod>
-  </url>
-  <url>
-    <loc>https://ijcbit.github.io/Workshops/Trainings/0Basic_concepts.html</loc>
-    <lastmod>2023-11-21T15:39:54.746Z</lastmod>
+    <loc>https://ijcbit.github.io/Workshops/Trainings/Visualizations_with_ggplot2/Visualizations_with_ggplot2.html</loc>
+    <lastmod>2023-11-21T16:29:13.520Z</lastmod>
   </url>
   <url>
     <loc>https://ijcbit.github.io/Workshops/Trainings/Introduction_to_Linux/linux_intro.html</loc>
-    <lastmod>2023-11-21T15:39:55.318Z</lastmod>
+    <lastmod>2023-11-21T16:29:12.888Z</lastmod>
+  </url>
+  <url>
+    <loc>https://ijcbit.github.io/Workshops/Trainings/0Basic_concepts.html</loc>
+    <lastmod>2023-11-21T16:29:12.280Z</lastmod>
+  </url>
+  <url>
+    <loc>https://ijcbit.github.io/Workshops/Trainings/Introduction_to_R/R_basics.html</loc>
+    <lastmod>2023-11-21T16:29:08.916Z</lastmod>
+  </url>
+  <url>
+    <loc>https://ijcbit.github.io/Workshops/index.html</loc>
+    <lastmod>2023-11-21T16:29:08.036Z</lastmod>
+  </url>
+  <url>
+    <loc>https://ijcbit.github.io/Workshops/Trainings/Introduction_to_R/Example_data_analysis.html</loc>
+    <lastmod>2023-11-21T16:29:11.984Z</lastmod>
+  </url>
+  <url>
+    <loc>https://ijcbit.github.io/Workshops/Trainings/HPC/Intro_to_IJC_HPC.html</loc>
+    <lastmod>2023-11-21T16:29:12.576Z</lastmod>
+  </url>
+  <url>
+    <loc>https://ijcbit.github.io/Workshops/Trainings/Introduction_to_Linux/linux_exercises.html</loc>
+    <lastmod>2023-11-21T16:29:13.248Z</lastmod>
   </url>
   <url>
     <loc>https://ijcbit.github.io/Workshops/Trainings/1rstudio.html</loc>
-    <lastmod>2023-11-21T15:39:55.950Z</lastmod>
+    <lastmod>2023-11-21T16:29:13.804Z</lastmod>
   </url>
 </urlset>
