@@ -1,0 +1,26 @@
+---
+title: "Advancing with the Shell"
+author: "Angelika Merkel"
+---
+
+In this course we teach advanced functionality of the shell (bsh).The presentation is available [here]()
+
+**Topics covered:**
+
+
+* Setting up your bash profile
+* Advanced bash
+* File manipulations with awk and sed
+* Regular expression
+ 
+
+
+
+<!-- ```{=html} -->
+<!-- <iframe width="100%" height="85%" class="slide-deck" src="data/Introduction_to_R.14112023.pdf" data-external="1"> -->
+<!-- </iframe> -->
+<!-- ``` -->
+
+
+
+
