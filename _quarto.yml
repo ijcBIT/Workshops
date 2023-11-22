@@ -48,10 +48,10 @@ website:
                   text: R basics
                 - href: Trainings/Visualizations_with_ggplot2/Visualizations_with_ggplot2.qmd
                   text: Visualizations with ggplot2
-          - section: Computational Infrastructure
+          - section: Computation
             contents: 
                 - href: Trainings/HPC/Intro_to_IJC_HPC.qmd
-                  text: Computational Infrastructure
+                  text: IJC Infrastructure
 
 format:
   html:
