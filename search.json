@@ -11,7 +11,7 @@
     "href": "Trainings/Advancing_with_the_Shell/Advancing_with_the_Shell.html",
     "title": "Advancing with the Shell",
     "section": "",
-    "text": "In this course we teach advanced functionality of the shell (bsh).The presentation is available here\nTopics covered:\n\nSetting up your bash profile\nAdvanced bash\nFile manipulations with awk and sed\nRegular expression"
+    "text": "In this course we teach advanced functionality of the shell (specifically bsh). The course presentation is available here\nTopics covered:\n\nSetting up your bash profile\nAdvanced bash\nFile manipulations with awk and sed\nRegular expression"
   },
   {
     "objectID": "Trainings/Introduction_to_Linux/linux_exercises.html",
@@ -23,9 +23,9 @@
   {
     "objectID": "Trainings/HPC/Intro_to_IJC_HPC.html",
     "href": "Trainings/HPC/Intro_to_IJC_HPC.html",
-    "title": "IJC - BIT Workshops page",
+    "title": "Introduction to the IJC Computational Infrastructure",
     "section": "",
-    "text": "These are the slides to seminar: Introduction to the IJC computational infrastructure"
+    "text": "This seminar + workshop introduces newcomers to the IJC to the institute’s computing infrastructure. It also serves to keep established researchers updated with latest changes or additions by IT. You can find the presentation here\nTopics covered:\n\nInfrastructure and filesharing\nIJC network and remote connections\nresources available for data storage and computing\nIJC’s high-performance computing cluster (HPC)\n\nIn the second part (working session) we focus on how to use the HPC with practical examples:\n\nSLURM job scheduler\nmonitor and controlling jobs\nsubmitting jobs with sbatch\nserial and array jobs"
   },
   {
     "objectID": "Trainings/Introduction_to_R/Example_data_analysis.html",
@@ -100,8 +100,8 @@
   {
     "objectID": "Trainings/Visualizations_with_ggplot2/Visualizations_with_ggplot2.html",
     "href": "Trainings/Visualizations_with_ggplot2/Visualizations_with_ggplot2.html",
-    "title": "IJC - BIT Workshops page",
+    "title": "Data visualization in R with the ggplot2 package",
     "section": "",
-    "text": "These are the slides to the workshop: Data visualization in R with the ggplot2 package"
+    "text": "This workshop introduces the ggplot2 R package for data visualization ( course presentation available here)\nTopics covered:\n\nWhy ggplot2?\nBase R and the tidyverse\nBuilding up your plot with ggplot()\nAestetics and geoms\nTypes of plots for one, two or multiple numerical/categorical variables\n\nFor this course we follow the Chapter: ‘Data visualization’ in the book R for Data Science (2nd edition) by Wickham et al. This includes the practical session and exercises."
   }
 ]
