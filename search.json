@@ -16,7 +16,7 @@
   {
     "objectID": "Trainings/Introduction_to_Linux/linux_intro.html",
     "href": "Trainings/Introduction_to_Linux/linux_intro.html",
-    "title": "Introduction to Linux",
+    "title": "Introduction to Linux and the Shell",
     "section": "",
     "text": "This course gives a brief introduction to Linux and Shell programming.\nTopics covered:\n\nWhat is Linux?\nMoving around the system\nBasic file and directory handling\nFile properties\nFile viewing\nText file manipulation\nVim text editor\nHow to create and run a shell script\nShell variables and control structures (if-else, for-loop, while-loop)\n\nThe presentation from the course can be found here and the exercises (with solutions) here."
   },
