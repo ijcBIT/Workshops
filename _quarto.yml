@@ -36,20 +36,16 @@ website:
      
       - section: Trainings
         contents: 
-          - section: Introduction to Linux
+          - section: Linux
             contents:
                 - href: Trainings/Introduction_to_Linux/linux_intro.qmd
                   text: Introduction
-                - href: Trainings/Introduction_to_Linux/linux_exercises.qmd
-                  text: Exercises
-          - section: Introduction to R
+                    - href: Trainings/Introduction_to_Linux/linux_exercises.qmd
+                      text: Exercises
+          - section: R
             contents: 
                 - href: Trainings/Introduction_to_R/R_basics.qmd
                   text: R basics
-                - href: Trainings/Introduction_to_R/Example_data_analysis.qmd
-                  text: Example data analysis
-          - section: Visualizations with ggplot2
-            contents: 
                 - href: Trainings/Visualizations_with_ggplot2/Visualizations_with_ggplot2.qmd
                   text: Visualizations with ggplot2
           - section: Computational Infrastructure

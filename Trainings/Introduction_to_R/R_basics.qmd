@@ -3,30 +3,33 @@ title: "R basics"
 author: "Angelika Merkel"
 ---
 
-This course gives a brief introduction to R and R programming basics. The presentation from the course (21.11|23.11.2022) can be found [here](https://carrerasresearch-my.sharepoint.com/:p:/g/personal/amerkel_carrerasresearch_org/EW54oLEVVqZEuzXTx66LyngBb96EkLsBQjuQDXCFDsyxmQ?e=vN23SD)
+This course gives a brief introduction to R and R programming basics. The presentation is available [here](data/Introduction_to_R.14112023.pdf)
+
+**Topics covered:**
+
+* Why R and what is R?
+* Introduction to RStudio
+* Workflow best practices
+
+* Practical session programming basics:
+  + Classes and types of objects
+  + Accessing objects
+  + Functions
+  + Control structures
+ 
+* Practical session data analysis:
+  + Importing/exporting data
+  + Exploratory data analysis
+  + Basic plots
+ 
+For the practical session we follow Chapters 4, 9, 13 and 14 of the book by [D.Peng "R Programming for Data Science" (2022)](https://bookdown.org/rdpeng/rprogdatascience/). The data analysis example can be found [here](Example_data_analysis.qmd).
 
 
-The 'R basics' follows the book by [D.Peng "R Programming for Data Science" (2022)](https://bookdown.org/rdpeng/rprogdatascience/):
+<!-- ```{=html} -->
+<!-- <iframe width="100%" height="85%" class="slide-deck" src="data/Introduction_to_R.14112023.pdf" data-external="1"> -->
+<!-- </iframe> -->
+<!-- ``` -->
 
 
 
-**Chapter 4:** ​
 
-* Nuts and bolts of R​
-* Classes and types of objects​
-
-**Chapter 9:**​
-
-* Sub-setting (accessing) objects​
-
-**Chapter 13 (Control structures):**​
-
-* if-else conditional
-* for-loop
-* while-loop
-* repeat-loop
-* next, break​
-
-**Chapter 14:**​
-
-* Functions, about & how to
