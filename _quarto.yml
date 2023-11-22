@@ -40,6 +40,8 @@ website:
             contents:
                 - href: Trainings/Introduction_to_Linux/linux_intro.qmd
                   text: Introduction
+                - section: Exercises
+                  contents:
                     - href: Trainings/Introduction_to_Linux/linux_exercises.qmd
                       text: Exercises
           - section: R
