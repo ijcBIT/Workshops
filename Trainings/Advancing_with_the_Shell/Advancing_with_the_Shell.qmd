@@ -3,7 +3,8 @@ title: "Advancing with the Shell"
 author: "Angelika Merkel"
 ---
 
-In this course we teach advanced functionality of the shell (bsh).The presentation is available [here]()
+In this course we teach advanced functionality of the shell (specifically bsh).
+The course presentation is available [here]()
 
 **Topics covered:**
 

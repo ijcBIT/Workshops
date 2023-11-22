@@ -1,8 +1,30 @@
-These are the slides to seminar: Introduction to the IJC computational infrastructure 
+---
+title: "Introduction to the IJC Computational Infrastructure "
+author: "Angelika Merkel"
+---
 
-```{=html}
-<iframe width="100%" height="94%" class="slide-deck" src="data/Intro_to_IJC_computing_infrastructure.21112023.pdf" data-external="1">
-</iframe>
-```
 
-<!-- You can also find the powerpoint [here](https://carrerasresearch-my.sharepoint.com/:p:/r/personal/amerkel_carrerasresearch_org/Documents/Documents/Training/Introduction_to_IJC_computing_infrastructure/Intro_to_IJC_computing_infrastructure.final.pptx?d=w392c1c7ee2314a70823fd92530045d22&csf=1&web=1&e=seQqJT). -->
+This seminar + workshop introduces newcomers to the IJC to the institute's computing infrastructure. It also serves to keep established researchers updated with latest changes or additions by IT. You can find the presentation [here](data/Intro_to_IJC_computing_infrastructure.21112023.pdf) 
+
+
+**Topics covered:**
+
+* Infrastructure and filesharing
+* IJC network and remote connections
+* resources available  for data storage and computing
+* IJC's high-performance computing cluster (HPC) 
+ 
+
+In the second part (working session) we focus on how to use the HPC with practical examples:
+
+* SLURM job scheduler
+* monitor and controlling jobs
+* submitting jobs with sbatch
+* serial and array jobs
+
+
+<!-- ```{=html} -->
+<!-- <iframe width="100%" height="94%" class="slide-deck" src="data/Intro_to_IJC_computing_infrastructure.21112023.pdf" data-external="1"> -->
+<!-- </iframe> -->
+<!-- ``` -->
+
