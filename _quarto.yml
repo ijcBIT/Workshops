@@ -36,21 +36,17 @@ website:
      
       - section: Trainings
         contents: 
-          - section: Linux
+          - section: Linux/Shell
             contents:
                 - href: Trainings/Introduction_to_Linux/linux_intro.qmd
-                  text: Introduction
-                - section: Exercises
-                  contents:
-                    - href: Trainings/Introduction_to_Linux/linux_exercises.qmd
-                      text: Exercises
+                  text: Intro to Linux/Shells
           - section: R
             contents: 
                 - href: Trainings/Introduction_to_R/R_basics.qmd
                   text: R basics
                 - href: Trainings/Visualizations_with_ggplot2/Visualizations_with_ggplot2.qmd
                   text: Visualizations with ggplot2
-          - section: Computation
+          - section: HPC
             contents: 
                 - href: Trainings/HPC/Intro_to_IJC_HPC.qmd
                   text: IJC Infrastructure
