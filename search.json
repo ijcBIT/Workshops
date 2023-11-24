@@ -11,7 +11,7 @@
     "href": "Trainings/Advancing_with_the_Shell/Advancing_with_the_Shell.html",
     "title": "Advancing with the Shell",
     "section": "",
-    "text": "In this course we teach advanced functionality of the shell (specifically bsh). The course presentation is available here\nTopics covered:\n\nSetting up your bash profile\nAdvanced bash\nFile manipulations with awk and sed\nRegular expression"
+    "text": "In this course we teach advanced functionality of the shell (specifically bash). The course presentation is available here\nTopics covered:\n\nCustomizing your Shell\nBash: Expansions ans substitution\nRegular expression\nFile manipulations with awk and sed"
   },
   {
     "objectID": "Trainings/Introduction_to_Linux/linux_exercises.html",
