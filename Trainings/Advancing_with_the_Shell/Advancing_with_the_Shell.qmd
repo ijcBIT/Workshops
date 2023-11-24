@@ -4,7 +4,7 @@ author: "Angelika Merkel"
 ---
 
 In this course we teach advanced functionality of the shell (specifically bash).
-The course presentation is available [here](data/Advancing_with_the_Shell.pdf).
+The course presentation is available [here](data/Advancing_with_the_Shell.pdf)
 
 **Topics covered:**
 
