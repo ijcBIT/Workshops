@@ -18,4 +18,4 @@ This course gives a brief introduction to Linux and Shell programming.
 * Shell variables and control structures (if-else, for-loop, while-loop)
 
 
-The presentation from the course can be found [here](data/Introduction_to_Linux.28112022.pdf) and the exercises (with solutions) [here](linux_exercises.qmd).
+The presentation from the course can be found [here](data/Introduction_to_Linux.June2024.pdf) and the exercises (with solutions) [here](linux_exercises.qmd).
