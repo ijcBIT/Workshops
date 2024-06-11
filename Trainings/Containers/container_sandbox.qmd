@@ -1,0 +1,16 @@
+---
+title: "Container sandbox"
+
+format: 
+  html:
+    toc: false
+    code-fold: true
+---
+
+### Create a sandbox 
+
+::: {.callout-tip title="Avoid sandboxex"}
+```bash
+The resulting image will become a blackbox
+```
+:::

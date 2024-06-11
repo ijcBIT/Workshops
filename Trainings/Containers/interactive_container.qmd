@@ -1,0 +1,40 @@
+---
+title: "Interactive shell"
+
+format: 
+  html:
+    toc: false
+    code-fold: true
+---
+
+When we run the container, it loads the image and executes the predefined command, if one is defined. Instead of running the predefined command, we can also open an interactive shell in the container.
+
+::: {.callout-note icon=false}
+## Exercice 3
+
+1. To open an interactive shell in a Singularity container, type: ``` singularity shell local_image_name.sif ```
+2. To exit the container, type ``` exit ``` 
+3. Check the user outside and inside the container with: ``` whoami ``` 
+4. Check the contents of the home directory outside and inside the container:
+5. Now run the interactive shell with the ``` -C ``` option and verify that the home directory is empty.
+
+<details>
+  <summary>Solution</summary>
+  ```bash
+  singularity shell lolcow.sif
+  exit
+  singularity shell lolcow.sif
+  whoami
+  exit
+  whoami
+  ls
+  singularity shell lolcow.sif
+  ls
+  exit
+  singularity shell -C lolcow.sif
+  ls
+  ```
+</details>
+:::
+
+

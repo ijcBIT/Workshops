@@ -1,0 +1,13 @@
+---
+title: "Not only Docker"
+
+format: 
+  html:
+    toc: false
+    code-fold: true
+---
+
+
+![](media/cloud.png)
+
+
