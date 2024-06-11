@@ -1,0 +1,10 @@
+---
+title: "Running instances"
+
+format: 
+  html:
+    toc: false
+    code-fold: true
+---
+
+* singularity images list

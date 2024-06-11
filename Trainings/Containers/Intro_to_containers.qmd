@@ -1,0 +1,47 @@
+---
+title: "Introduction to the world of containers"
+author: "Emilio Lario"
+
+format: 
+  html:
+    toc: false
+    code-fold: true
+---
+
+:::: {.columns}
+
+::: {.column width="45%"}
+![](media/meme.png)
+:::
+
+::: {.column width="10%"}
+<!-- empty column to create gap -->
+:::
+
+::: {.column width="45%"}
+* Packages code and all its dependencies.
+* Runs anywhere with a compatible kernel.
+
+::: {.callout-note icon=false}
+## Exercice 1
+
+1. Go to the VPN and log in to the Linux course machine:  <https://vpn.carrerasresearch.org/static/sslvpn/portal/>
+2. Find a container named “lolcow” from “godlovedc” on Docker Hub:  <https://hub.docker.com/>
+3. Go back to the Linux terminal and type: ``` singularity run docker://container/name ```  
+
+<details>
+  <summary>Solution</summary>
+  ```bash
+  singularity run docker://godlovedc/lolcow
+  ```
+</details>
+:::
+
+
+:::
+
+::::
+
+
+
+

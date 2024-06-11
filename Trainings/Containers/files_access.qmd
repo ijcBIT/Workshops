@@ -1,0 +1,43 @@
+---
+title: "Files access"
+
+format: 
+  html:
+    toc: false
+    code-fold: true
+---
+
+::: {.callout-tip title="Persisten changes"}
+All changes made inside a container are lost when the container is stopped. If we need the changes to be persistent, we must use a folder from the host machine.
+::: 
+
+If we need to access files outside the container, we can "BIND" folders from the host machine to the container: ``` singularity shell  -B /host/path:/path/in/container local_image_name.sif ```
+
+::: {.callout-note icon=false}
+## Exercice 5
+
+1. Create a folder named "dummy" on the host machine.
+2. Open a terminal inside the container with the ```-C``` option (```--containall```).
+3. Check that there is no "dummy" folder. 
+4. Exit the container and enter again, but this time use the bind (-B) option to mount the directory you have created to "/dummy" inside the container. You can use pwd to know your current directory.
+5. Create a text file inside the "/dummy" directory inside the container with ```touch test.txt ```
+6. Exit the container and check that the file you created inside the container is in the "dummy" directory of the host machine:
+
+<details>
+  <summary>Solution</summary>
+  ```bash
+  mkdir dummy
+  singularity shell -C lolcow.sif
+  ls
+  cd /dummy
+  exit
+  singularity shell -C -B /home/user/dummy:/dummy lolcow.sif
+  cd /dummy
+  touch test.txt
+  ls
+  exit
+  cd dummy
+  ls
+  ```
+</details>
+:::

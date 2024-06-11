@@ -1,0 +1,15 @@
+---
+title: "How containers work?"
+
+format: 
+  html:
+    toc: false
+    code-fold: true
+---
+![](media/worlds.jpeg){width="600px"}
+
+* Namespaces for access control 
+* cgroups for resources management
+
+<a href="https://ivanmorenoj.medium.com/understand-how-linux-containers-works-with-practical-examples-bd1dfaaa7656" target="_blank">For a detailed explanation, see Iván Moreno's article on Medium</a>
+

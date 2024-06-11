@@ -52,6 +52,32 @@ website:
             contents: 
                 - href: Trainings/HPC/Intro_to_IJC_HPC.qmd
                   text: IJC Infrastructure
+          - section: Containers
+            contents: 
+                - href: Trainings/Containers/Intro_to_containers.qmd
+                  text: Intro to containers
+                - href: Trainings/Containers/vm_vs_containers.qmd
+                  text: VM and containerization
+                - href: Trainings/Containers/how_containers_work.qmd
+                  text: How containers work
+                - href: Trainings/Containers/not_only_docker.qmd
+                  text: Not only Docker
+                - href: Trainings/Containers/docker_vs_singularity.qmd
+                  text: Docker vs Singularity
+                - href: Trainings/Containers/pull_container.qmd
+                  text: Pulling container images
+                - href: Trainings/Containers/interactive_container.qmd
+                  text: Interactive shell
+                - href: Trainings/Containers/run_in_container.qmd
+                  text: Run in a container
+                - href: Trainings/Containers/files_access.qmd
+                  text: Files access
+                - href: Trainings/Containers/build_a_container.qmd
+                  text: Build a container
+                - href: Trainings/Containers/container_recipe.qmd
+                  text: Container recipe
+                - href: Trainings/Containers/containers_in_HPC.qmd
+                  text: Containers in HPC
 
 format:
   html:

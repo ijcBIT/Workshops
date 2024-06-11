@@ -1,0 +1,46 @@
+---
+title: "Run in a container"
+
+format: 
+  html:
+    toc: false
+    code-fold: true
+---
+
+:::: {.columns}
+
+::: {.column width="40%"}
+![](media/building.jpg)
+:::
+
+::: {.column width="1%"}
+<!-- empty column to create gap -->
+:::
+
+::: {.column width="59%"}
+We can also tell the container to run and execute a command with: ``` singularity exec local_image_name.sif command ```
+
+::: {.callout-note icon=false}
+## Exercice 4
+
+1. Check the operating system outside the container with: ``` head /etc/os-release ``` 
+2. Check the operating system inside the container with: ``` singularity exec local_image_name.sif command ```
+
+<details>
+  <summary>Solution</summary>
+  ```bash
+  head /etc/os-release
+  singularity exec lolcow.sif head /etc/os-release
+  ```
+</details>
+:::
+
+
+:::
+
+::::
+
+
+
+
+

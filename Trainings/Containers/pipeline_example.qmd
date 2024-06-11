@@ -1,0 +1,17 @@
+---
+title: "Nexflow pipeline in a container"
+
+format: 
+  html:
+    toc: false
+    code-fold: true
+---
+
+<details>
+  <summary>Solution</summary>
+  ```bash
+  Module load Nextflow
+  Module load singularity
+  nextflow run rnaseq-nf -with-singularity
+  ```
+</details>
