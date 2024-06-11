@@ -577,6 +577,16 @@
         "stringi"
       ]
     },
+    "terra": {
+      "Package": "terra",
+      "Version": "1.6-41",
+      "Source": "Repository",
+      "Repository": "CRAN",
+      "Hash": "273302c394cb69074118e885a47a036f",
+      "Requirements": [
+        "Rcpp"
+      ]
+    },
     "tibble": {
       "Package": "tibble",
       "Version": "3.1.8",
