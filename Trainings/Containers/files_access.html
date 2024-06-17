@@ -374,7 +374,7 @@ Exercice 5
 <li>Create a folder named “dummy” on the host machine.</li>
 <li>Open a terminal inside the container with the <code>-C</code> option (<code>--containall</code>).</li>
 <li>Check that there is no “dummy” folder.</li>
-<li>Exit the container and enter again, but this time use the bind (-B) option to mount the directory you have created to “/dummy” inside the container. You can use pwd to know your current directory.</li>
+<li>Exit the container and enter again, but this time use the bind (-B) option to mount the directory you have created to “/dummy” inside the container.</li>
 <li>Create a text file inside the “/dummy” directory inside the container with <code>touch test.txt</code></li>
 <li>Exit the container and check that the file you created inside the container is in the “dummy” directory of the host machine:</li>
 </ol>
@@ -387,7 +387,7 @@ Solution
 <span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">ls</span></span>
 <span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a>  <span class="bu">cd</span> /dummy</span>
 <span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a>  <span class="bu">exit</span></span>
-<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a>  <span class="ex">singularity</span> shell <span class="at">-C</span> <span class="at">-B</span> /home/user/dummy:/dummy lolcow.sif</span>
+<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a>  <span class="ex">singularity</span> shell <span class="at">-C</span> <span class="at">-B</span> dummy:/dummy lolcow.sif</span>
 <span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a>  <span class="bu">cd</span> /dummy</span>
 <span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a>  <span class="fu">touch</span> test.txt</span>
 <span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a>  <span class="fu">ls</span></span>

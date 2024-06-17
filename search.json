@@ -42,7 +42,7 @@
     "href": "Trainings/Containers/interactive_container.html",
     "title": "Interactive shell",
     "section": "",
-    "text": "When we run the container, it loads the image and executes the predefined command, if one is defined. Instead of running the predefined command, we can also open an interactive shell in the container.\n\n\n\n\n\n\nExercice 3\n\n\n\n\nTo open an interactive shell in a Singularity container, type: singularity shell local_image_name.sif\nTo exit the container, type exit\nCheck the user outside and inside the container with: whoami\nCheck the contents of the home directory outside and inside the container:\nNow run the interactive shell with the -C option and verify that the home directory is empty.\n\n\n\nSolution\n\n  singularity shell lolcow.sif\n  exit\n  singularity shell lolcow.sif\n  whoami\n  exit\n  whoami\n  ls\n  singularity shell lolcow.sif\n  ls\n  exit\n  singularity shell -C lolcow.sif\n  ls",
+    "text": "When we run the container, it loads the image and executes the predefined command, if one is defined. Instead of running the predefined command, we can also open an interactive shell in the container.\n\n\n\n\n\n\nExercice 3\n\n\n\n\nTo open an interactive shell in a Singularity container, type: singularity shell local_image_name.sif\n(To exit the container, type exit )\nCheck the user outside and inside the container with: whoami\nCheck the contents of the home directory outside and inside the container:\nNow run the interactive shell with the -C option and verify that the home directory is empty.\n\n\n\nSolution\n\n  singularity shell lolcow.sif\n  whoami\n  exit\n  whoami\n  ls\n  singularity shell lolcow.sif\n  ls\n  exit\n  singularity shell -C lolcow.sif\n  ls",
     "crumbs": [
       "Trainings",
       "Containers",
@@ -54,7 +54,7 @@
     "href": "Trainings/Containers/containers_in_HPC.html",
     "title": "Containers in the IJC’s High-Performance Computing Cluster (HPC)",
     "section": "",
-    "text": "HPC\n\n\n\n\n\n\nNot root access in the cluster.\nEvery dependency must be installed by the system administrator.\nRunning containers with the Slurm scheduler.\n\n\n\n\n\n\n\nExercice 7\n\n\n\n\nCreate a bash script to execute the lolcow container inside an Slurm batch job:\n\n#!/bin/bash \n#SBATCH --job-name=run_lolcow\n\nUse sbatch to run the script and check the output:\nModify the script to run the command whoami inside the container\n\n\n\nSolution\n\n  vim lolcow.slm\n  #!/bin/bash \n  #SBATCH --job-name=run_lolcow\n  singularity run lolcow.sif\n  sbatch lolcow.slm",
+    "text": "Not root access in the cluster.\nEvery dependency must be installed by the system administrator.\nRunning containers with the Slurm scheduler.\n\n\n\n\n\n\n\nExercice 7\n\n\n\n\nCreate a bash script to execute the lolcow container inside an Slurm batch job:\n\n#!/bin/bash \n#SBATCH --job-name=run_lolcow\n\nUse sbatch to run the script and check the output:\nModify the script to run the command whoami inside the container\n\n\n\nSolution\n\n  vim lolcow.slm\n  #!/bin/bash \n  #SBATCH --job-name=run_lolcow\n  singularity run lolcow.sif\n  sbatch lolcow.slm",
     "crumbs": [
       "Trainings",
       "Containers",
@@ -85,7 +85,7 @@
     "href": "Trainings/Containers/run_in_container.html",
     "title": "Run in a container",
     "section": "",
-    "text": "We can also tell the container to run and execute a command with: singularity exec local_image_name.sif command\n\n\n\n\n\n\nExercice 4\n\n\n\n\nCheck the operating system outside the container with: head /etc/os-release\nCheck the operating system inside the container with: singularity exec local_image_name.sif command\n\n\n\nSolution\n\n  head /etc/os-release\n  singularity exec lolcow.sif head /etc/os-release",
+    "text": "We can tell the container to run and execute a command with: singularity exec local_image_name.sif command\n\n\n\n\n\n\nExercice 4\n\n\n\n\nCheck the operating system outside the container with: head /etc/os-release\nCheck the operating system inside the container with: singularity exec local_image_name.sif command\n\n\n\nSolution\n\n  head /etc/os-release\n  singularity exec lolcow.sif head /etc/os-release",
     "crumbs": [
       "Trainings",
       "Containers",
@@ -97,7 +97,7 @@
     "href": "Trainings/Containers/container_recipe.html",
     "title": "Container recipe",
     "section": "",
-    "text": "Bootstrap: localimage\nFrom: lolcow.sif\n\n%post\n  apt-get -y update\n  apt-get -y install sl=3.03-17build1\n\n%runscript\n  sl -F\n\n\n\n\n\n\nExercice 6\n\n\n\n\nCreate a file named steam.def with the above code.\nBuild the modified image with the command: singularity build image_name.sif recipe.def\nRun the newly created container.\n\n\n\nSolution\n\n  vim steam.def\n  apptainer build steam.sif steam.def\n  singularity run steam.sif\n\n\n\n\n\n\n\n\n\nImportance of version reference\n\n\n\nDifferent versions of a dependency may not be 100% compatible.\n\n\nhttps://apptainer.org/docs/user/1.0/index.html",
+    "text": "Bootstrap: localimage\nFrom: lolcow.sif\n\n%post\n  apt-get -y update\n  apt-get -y install sl=3.03-17build1\n\n%runscript\n  sl -F\n\n\n\n\n\n\nExercice 6\n\n\n\n\nCreate a file named steam.def with the above code.\nBuild the modified image with the command: apptainer build image_name.sif recipe.def\nRun the newly created container.\n\n\n\nSolution\n\n  vim steam.def\n  apptainer build steam.sif steam.def\n  singularity run steam.sif\n\n\n\n\n\n\n\n\n\nImportance of version reference\n\n\n\nDifferent versions of a dependency may not be 100% compatible.\n\n\nhttps://apptainer.org/docs/user/1.0/index.html",
     "crumbs": [
       "Trainings",
       "Containers",
@@ -109,7 +109,7 @@
     "href": "Trainings/Containers/vm_vs_containers.html",
     "title": "Virtualization and containerization",
     "section": "",
-    "text": "Virtual Machines\nContainer\n\n\n\n\nGuest OS\nEach VM runs on virtual hardware and the kernel is loaded into its own memory region.\nAll containers share the same kernel.\n\n\nCommunication\nThrough Ethernet Devices.\nStandard IPC mechanisms like Signals, pipes, sockets, etc.\n\n\nPerformance\nSmall overhead as the Machine instructions need to be translated from Guest to Host OS.\nNear native performance as compared to the underlying Host OS.\n\n\nStartup time\nTakes up to a few minutes to boot up.\nContainers can be booted up in a few seconds.\n\n\nIsolation\nSharing libraries, files, etc.\nbetween guests and between guests and host not natively possible.\n\n\nStorage\nVMs usually require more storage as the whole OS kernel and associated programs have to be installed and run.\nContainers consume lower amount of storage since the Host OS is shared.\n\n\n\nhttps://www.hifis.net/workshop-materials/general-container/",
+    "text": "Virtual Machines\nContainer\n\n\n\n\nGuest OS\nEach VM runs on virtual hardware and the kernel is loaded into its own memory region.\nAll containers share the same kernel.\n\n\nCommunication\nThrough Ethernet Devices.\nStandard IPC mechanisms like Signals, pipes, sockets, etc.\n\n\nPerformance\nSmall overhead as the Machine instructions need to be translated from Guest to Host OS.\nNear native performance as compared to the underlying Host OS.\n\n\nStartup time\nTakes up to a few minutes to boot up.\nContainers can be booted up in a few seconds.\n\n\nIsolation\nSharing libraries, files, etc. between guests and between guests and host not natively possible.\nSubdirectories can be transparently mounted and can be shared.\n\n\nStorage\nVMs usually require more storage as the whole OS kernel and associated programs have to be installed and run.\nContainers consume lower amount of storage since the Host OS is shared.\n\n\n\nhttps://www.hifis.net/workshop-materials/general-container/",
     "crumbs": [
       "Trainings",
       "Containers",
@@ -257,7 +257,7 @@
     "href": "Trainings/Containers/files_access.html",
     "title": "Files access",
     "section": "",
-    "text": "Persisten changes\n\n\n\nAll changes made inside a container are lost when the container is stopped. If we need the changes to be persistent, we must use a folder from the host machine.\n\n\nIf we need to access files outside the container, we can “BIND” folders from the host machine to the container: singularity shell  -B /host/path:/path/in/container local_image_name.sif\n\n\n\n\n\n\nExercice 5\n\n\n\n\nCreate a folder named “dummy” on the host machine.\nOpen a terminal inside the container with the -C option (--containall).\nCheck that there is no “dummy” folder.\nExit the container and enter again, but this time use the bind (-B) option to mount the directory you have created to “/dummy” inside the container. You can use pwd to know your current directory.\nCreate a text file inside the “/dummy” directory inside the container with touch test.txt\nExit the container and check that the file you created inside the container is in the “dummy” directory of the host machine:\n\n\n\nSolution\n\n  mkdir dummy\n  singularity shell -C lolcow.sif\n  ls\n  cd /dummy\n  exit\n  singularity shell -C -B /home/user/dummy:/dummy lolcow.sif\n  cd /dummy\n  touch test.txt\n  ls\n  exit\n  cd dummy\n  ls",
+    "text": "Persisten changes\n\n\n\nAll changes made inside a container are lost when the container is stopped. If we need the changes to be persistent, we must use a folder from the host machine.\n\n\nIf we need to access files outside the container, we can “BIND” folders from the host machine to the container: singularity shell  -B /host/path:/path/in/container local_image_name.sif\n\n\n\n\n\n\nExercice 5\n\n\n\n\nCreate a folder named “dummy” on the host machine.\nOpen a terminal inside the container with the -C option (--containall).\nCheck that there is no “dummy” folder.\nExit the container and enter again, but this time use the bind (-B) option to mount the directory you have created to “/dummy” inside the container.\nCreate a text file inside the “/dummy” directory inside the container with touch test.txt\nExit the container and check that the file you created inside the container is in the “dummy” directory of the host machine:\n\n\n\nSolution\n\n  mkdir dummy\n  singularity shell -C lolcow.sif\n  ls\n  cd /dummy\n  exit\n  singularity shell -C -B dummy:/dummy lolcow.sif\n  cd /dummy\n  touch test.txt\n  ls\n  exit\n  cd dummy\n  ls",
     "crumbs": [
       "Trainings",
       "Containers",
