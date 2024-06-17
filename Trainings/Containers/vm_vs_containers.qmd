@@ -7,14 +7,15 @@ format:
     code-fold: true
 ---
 
-![](media/vm-vs-containers.svg){width="600px"}
+![](media/vm-vs-containers.svg){width="674"}
 
-| | Virtual Machines |	Container |
-|---|------|------|
-| Guest OS	| Each VM runs on virtual hardware and the kernel is loaded into its own memory region.| 	All containers share the same kernel.| 
-| Communication |	Through Ethernet Devices.	| Standard IPC mechanisms like Signals, pipes, sockets, etc.| 
-| Performance	| Small overhead as the Machine instructions need to be translated from Guest to Host OS.	| Near native performance as compared to the underlying Host OS.| 
-| Startup time	| Takes up to a few minutes to boot up.	| Containers can be booted up in a few seconds.| 
-| Isolation	| Sharing libraries, files, etc.|  between guests and between guests and host not natively possible. | 	Subdirectories can be  transparently mounted and can be shared. | 
-| Storage	| VMs usually require more storage as the whole OS kernel and associated programs have to be installed and run.	| Containers consume lower amount of storage since the Host OS is shared. | 
+|               | Virtual Machines                                                                                              | Container                                                               |
+|-----------------|---------------------------|---------------------------|
+| Guest OS      | Each VM runs on virtual hardware and the kernel is loaded into its own memory region.                         | All containers share the same kernel.                                   |
+| Communication | Through Ethernet Devices.                                                                                     | Standard IPC mechanisms like Signals, pipes, sockets, etc.              |
+| Performance   | Small overhead as the Machine instructions need to be translated from Guest to Host OS.                       | Near native performance as compared to the underlying Host OS.          |
+| Startup time  | Takes up to a few minutes to boot up.                                                                         | Containers can be booted up in a few seconds.                           |
+| Isolation     | Sharing libraries, files, etc. between guests and between guests and host not natively possible.              | Subdirectories can be transparently mounted and can be shared.          |
+| Storage       | VMs usually require more storage as the whole OS kernel and associated programs have to be installed and run. | Containers consume lower amount of storage since the Host OS is shared. |
+
 <https://www.hifis.net/workshop-materials/general-container/>

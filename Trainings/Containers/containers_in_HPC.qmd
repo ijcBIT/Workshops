@@ -7,11 +7,9 @@ format:
     code-fold: true
 ---
 
-
-:::: {.columns}
-
+::: columns
 ::: {.column width="45%"}
-![HPC](media/container_hpc.jpeg){width="400px"}
+![](media/container_hpc.jpeg){width="400px"}
 :::
 
 ::: {.column width="10%"}
@@ -19,35 +17,36 @@ format:
 :::
 
 ::: {.column width="45%"}
-* Not root access in the cluster.
-* Every dependency must be installed by the system administrator.
-* Running containers with the Slurm scheduler.
+-   Not root access in the cluster.
+-   Every dependency must be installed by the system administrator.
+-   Running containers with the Slurm scheduler.
 
-::: {.callout-note icon=false}
+::: {.callout-note icon="false"}
 ## Exercice 7
 
-1. Create a bash script to execute the lolcow container inside an Slurm batch job:
-  ```
-  #!/bin/bash 
-  #SBATCH --job-name=run_lolcow
-  ```
-2. Use ``` sbatch ``` to run the script and check the output:
-3. Modify the script to run the command ``` whoami ``` inside the container
+1.  Create a bash script to execute the lolcow container inside an Slurm batch job:
+
+```         
+#!/bin/bash 
+#SBATCH --job-name=run_lolcow
+```
+
+2.  Use `sbatch` to run the script and check the output:
+3.  Modify the script to run the command `whoami` inside the container
 
 <details>
-  <summary>Solution</summary>
-  ```bash
+
+<summary>Solution</summary>
+
+``` bash
   vim lolcow.slm
   #!/bin/bash 
   #SBATCH --job-name=run_lolcow
   singularity run lolcow.sif
   sbatch lolcow.slm
-  ```
+```
+
 </details>
 :::
-
 :::
-
-::::
-
-
+:::

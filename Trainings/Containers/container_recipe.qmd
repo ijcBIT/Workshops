@@ -7,7 +7,7 @@ format:
     code-fold: true
 ---
 
-```r
+``` r
 Bootstrap: localimage
 From: lolcow.sif
 
@@ -17,31 +17,30 @@ From: lolcow.sif
 
 %runscript
   sl -F
-
 ```
 
-::: {.callout-note icon=false}
+::: {.callout-note icon="false"}
 ## Exercice 6
 
-1. Create a file named steam.def with the above code.
-2. Build the modified image with the command: ``` singularity build image_name.sif recipe.def  ```
-2. Run the newly created container.
+1.  Create a file named steam.def with the above code.
+2.  Build the modified image with the command: `apptainer build image_name.sif recipe.def`
+3.  Run the newly created container.
 
 <details>
-  <summary>Solution</summary>
-  ```bash
+
+<summary>Solution</summary>
+
+``` bash
   vim steam.def
   apptainer build steam.sif steam.def
   singularity run steam.sif
-  ```
+```
+
 </details>
 :::
-
-
 
 ::: {.callout-tip title="Importance of version reference"}
 Different versions of a dependency may not be 100% compatible.
 :::
-
 
 <https://apptainer.org/docs/user/1.0/index.html>
