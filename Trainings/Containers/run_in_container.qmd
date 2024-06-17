@@ -18,7 +18,7 @@ format:
 :::
 
 ::: {.column width="59%"}
-We can also tell the container to run and execute a command with: ``` singularity exec local_image_name.sif command ```
+We can tell the container to run and execute a command with: ``` singularity exec local_image_name.sif command ```
 
 ::: {.callout-note icon=false}
 ## Exercice 4
