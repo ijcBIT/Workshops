@@ -238,7 +238,7 @@
     "href": "Trainings/Containers/pull_container.html",
     "title": "Pulling container images",
     "section": "",
-    "text": "You can create your own container image from ‘scratch,’ but normally you will start with an image that somebody else has already created. o do so, you can either run the image straight from the external repository or download it locally and run it later.\n\n\n\n\n\n\nExercice 2\n\n\n\n\nGo back to the Linux terminal and type: singularity pull local_image_name.sif docker://container/name to download the image.\nRun the local image with: singularity run local_image_name.sif\n\n\n\nSolution\n\n  singularity pull lolcow.sif docker://godlovedc/lolcow\n  singularity run lolcow.sif",
+    "text": "You can create your own container image from ‘scratch,’ but normally you will start with an image that someone else has already created. To do so, you can either run the image straight from the external repository or download it locally and run it later.\n\n\n\n\n\n\nExercice 2\n\n\n\n\nGo back to the Linux terminal and type: singularity pull local_image_name.sif docker://container/name to download the image.\nRun the local image with: singularity run local_image_name.sif\n\n\n\nSolution\n\n  singularity pull lolcow.sif docker://godlovedc/lolcow\n  singularity run lolcow.sif",
     "crumbs": [
       "Trainings",
       "Containers",
