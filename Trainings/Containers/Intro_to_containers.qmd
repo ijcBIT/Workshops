@@ -25,8 +25,10 @@ format:
 ::: {.callout-note icon=false}
 ## Exercice 1
 
-1. Go to the VPN and log in to the Linux course machine:  <https://vpn.carrerasresearch.org/static/sslvpn/portal/>
-2. Find a container named “lolcow” from “godlovedc” on Docker Hub:  <https://hub.docker.com/>
+1. Go to the VPN and log in to the Linux course machine:  
+<a target="_blank" href="https://vpn.carrerasresearch.org/static/sslvpn/portal/">
+2. Find a container named “lolcow” from “godlovedc” on Docker Hub:  
+<a target="_blank" href="https://hub.docker.com/">
 3. Go back to the Linux terminal and type: ``` singularity run docker://container/name ```  
 
 <details>
