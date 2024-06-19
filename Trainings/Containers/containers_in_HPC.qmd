@@ -50,3 +50,6 @@ format:
 :::
 :::
 :::
+
+<a href="https://slurm.schedmd.com/containers.html" target="_blank">For a detailed explanation, see Slurm containers Guide</a>
+
