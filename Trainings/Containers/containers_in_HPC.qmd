@@ -9,7 +9,11 @@ format:
 
 ::: columns
 ::: {.column width="45%"}
-![](media/container_hpc.jpeg){width="400px"}
+![](media/container_hpc.jpeg){width="400px"}\
+\
+- Account for the resources needed by all the dependencies of your script.\
+\
+- Do not run a container on the master node!
 :::
 
 ::: {.column width="10%"}
@@ -17,39 +21,49 @@ format:
 :::
 
 ::: {.column width="45%"}
--   Not root access in the cluster.
+-   We are not sudo in the cluster.
 -   Every dependency must be installed by the system administrator.
--   Running containers with the Slurm scheduler.
+-   Run containers with the Slurm scheduler.
 
 ::: {.callout-note icon="false"}
 ## Exercice 7
 
-1.  Create a bash script to execute the lolcow container inside an Slurm batch job:
+1.  Create a bash script file with the following content:
 
-```         
+``` bash
+#!/bin/bash 
+curl -s "wttr.in/$1?m1"
+```
+
+2.  Create a bash script to execute the new script inside the lolcow container, within a Slurm batch job. Copy the following sbatch header and **add the command to run the script inside the container**:
+
+``` bash
 #!/bin/bash 
 #SBATCH --job-name=run_lolcow
 ```
 
-2.  Use `sbatch` to run the script and check the output:
-3.  Modify the script to run the command `whoami` inside the container
+3.  Use `sbatch` to run the script and check the output. You can use `squeue` to see the progress. You will find the log file in the current folder when the job finishes.
 
 <details>
 
 <summary>Solution</summary>
 
 ``` bash
-  vim lolcow.slm
+  vim wtt.sh
+  
   #!/bin/bash 
-  #SBATCH --job-name=run_lolcow
-  singularity run lolcow.sif
-  sbatch lolcow.slm
+  curl -s "wttr.in/$1?m1"
+  
+  vim wtt.slm
+  
+  #!/bin/bash 
+  #SBATCH --job-name=run_wtt
+  singularity exec steam.sif bash wtt.sh
+  
+  sbatch wtt.slm
 ```
 
 </details>
 :::
 :::
 :::
-
-<a href="https://slurm.schedmd.com/containers.html" target="_blank">For a detailed explanation, see Slurm containers Guide</a>
-
