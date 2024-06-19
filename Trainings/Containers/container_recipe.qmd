@@ -44,4 +44,4 @@ From: lolcow.sif
 Different versions of a dependency may not be 100% compatible.
 :::
 
-<https://apptainer.org/docs/user/1.0/index.html>
+<a target="_blank" href="https://apptainer.org/docs/user/1.0/index.html">
