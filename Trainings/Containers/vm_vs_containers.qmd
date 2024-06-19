@@ -18,4 +18,4 @@ format:
 | Isolation     | Sharing libraries, files, etc. between guests and between guests and host not natively possible.              | Subdirectories can be transparently mounted and can be shared.          |
 | Storage       | VMs usually require more storage as the whole OS kernel and associated programs have to be installed and run. | Containers consume lower amount of storage since the Host OS is shared. |
 
-<https://www.hifis.net/workshop-materials/general-container/>
+<a target="_blank" href="https://www.hifis.net/workshop-materials/general-container/">
