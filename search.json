@@ -123,7 +123,7 @@
     "href": "Trainings/Containers/Intro_to_containers.html",
     "title": "Introduction to the world of containers",
     "section": "",
-    "text": "Packages code and all its dependencies.\nRuns anywhere with a compatible kernel.\n\n\n\n\n\n\n\nExercice 1\n\n\n\n\nGo to the VPN and log in to the Linux course machine: https://vpn.carrerasresearch.org/static/sslvpn/portal/\nFind a container named “lolcow” from “godlovedc” on Docker Hub: https://hub.docker.com/\nGo back to the Linux terminal and type: singularity run docker://container/name\n\n\n\nSolution\n\n  singularity run docker://godlovedc/lolcow",
+    "text": "Packages code and all its dependencies.\nRuns anywhere with a compatible kernel.\n\n\n\n\n\n\n\nExercice 1\n\n\n\n\nGo to the VPN and log in to the Linux course machine:\n\nFind a container named “lolcow” from “godlovedc” on Docker Hub:\n\nGo back to the Linux terminal and type: singularity run docker://container/name\n\n\n\nSolution\n\n  singularity run docker://godlovedc/lolcow",
     "crumbs": [
       "Trainings",
       "Containers",
@@ -135,7 +135,7 @@
     "href": "Trainings/Containers/vm_vs_containers.html",
     "title": "Virtualization and containerization",
     "section": "",
-    "text": "Virtual Machines\nContainer\n\n\n\n\nGuest OS\nEach VM runs on virtual hardware and the kernel is loaded into its own memory region.\nAll containers share the same kernel.\n\n\nCommunication\nThrough Ethernet Devices.\nStandard IPC mechanisms like Signals, pipes, sockets, etc.\n\n\nPerformance\nSmall overhead as the Machine instructions need to be translated from Guest to Host OS.\nNear native performance as compared to the underlying Host OS.\n\n\nStartup time\nTakes up to a few minutes to boot up.\nContainers can be booted up in a few seconds.\n\n\nIsolation\nSharing libraries, files, etc. between guests and between guests and host not natively possible.\nSubdirectories can be transparently mounted and can be shared.\n\n\nStorage\nVMs usually require more storage as the whole OS kernel and associated programs have to be installed and run.\nContainers consume lower amount of storage since the Host OS is shared.\n\n\n\nhttps://www.hifis.net/workshop-materials/general-container/",
+    "text": "Virtual Machines\nContainer\n\n\n\n\nGuest OS\nEach VM runs on virtual hardware and the kernel is loaded into its own memory region.\nAll containers share the same kernel.\n\n\nCommunication\nThrough Ethernet Devices.\nStandard IPC mechanisms like Signals, pipes, sockets, etc.\n\n\nPerformance\nSmall overhead as the Machine instructions need to be translated from Guest to Host OS.\nNear native performance as compared to the underlying Host OS.\n\n\nStartup time\nTakes up to a few minutes to boot up.\nContainers can be booted up in a few seconds.\n\n\nIsolation\nSharing libraries, files, etc. between guests and between guests and host not natively possible.\nSubdirectories can be transparently mounted and can be shared.\n\n\nStorage\nVMs usually require more storage as the whole OS kernel and associated programs have to be installed and run.\nContainers consume lower amount of storage since the Host OS is shared.",
     "crumbs": [
       "Trainings",
       "Containers",
@@ -245,7 +245,7 @@
     "href": "Trainings/Containers/container_recipe.html",
     "title": "Container recipe",
     "section": "",
-    "text": "Bootstrap: localimage\nFrom: lolcow.sif\n\n%post\n  apt-get -y update\n  apt-get -y install sl=3.03-17build1\n  apt-get -y install curl\n\n%runscript\n  sl -F\n\n\n\n\n\n\nExercice 6\n\n\n\n\nCreate a file named steam.def with the above code.\nBuild the modified image with the command: apptainer build image_name.sif recipe.def\nRun the newly created container.\n\n\n\nSolution\n\n  vim steam.def\n  apptainer build steam.sif steam.def\n  singularity run steam.sif\n\n\n\n\n\n\n\n\n\nImportance of version reference\n\n\n\nDifferent versions of a dependency may not be 100% compatible.\n\n\nhttps://apptainer.org/docs/user/1.0/index.html",
+    "text": "Bootstrap: localimage\nFrom: lolcow.sif\n\n%post\n  apt-get -y update\n  apt-get -y install sl=3.03-17build1\n  apt-get -y install curl\n\n%runscript\n  sl -F\n\n\n\n\n\n\nExercice 6\n\n\n\n\nCreate a file named steam.def with the above code.\nBuild the modified image with the command: apptainer build image_name.sif recipe.def\nRun the newly created container.\n\n\n\nSolution\n\n  vim steam.def\n  apptainer build steam.sif steam.def\n  singularity run steam.sif\n\n\n\n\n\n\n\n\n\nImportance of version reference\n\n\n\nDifferent versions of a dependency may not be 100% compatible.",
     "crumbs": [
       "Trainings",
       "Containers",
