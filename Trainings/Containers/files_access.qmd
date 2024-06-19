@@ -7,7 +7,7 @@ format:
     code-fold: true
 ---
 
-::: {.callout-tip title="Persisten changes"}
+::: {.callout-tip title="Persistent changes"}
 All changes made inside a container are lost when the container is stopped. If we need the changes to be persistent, we must use a folder from the host machine.
 :::
 
