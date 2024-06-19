@@ -347,14 +347,18 @@ gtag('config', 'G-ML1E5YYLV4', { 'anonymize_ip': true});
 
 <div class="columns">
 <div class="column" style="width:45%;">
-<p><img src="media/container_hpc.jpeg" class="img-fluid" width="400"></p>
+<p><img src="media/container_hpc.jpeg" class="img-fluid" width="400"><br>
+<br>
+- Account for the resources needed by all the dependencies of your script.<br>
+<br>
+- Do not run a container on the master node!</p>
 </div><div class="column" style="width:10%;">
 <!-- empty column to create gap -->
 </div><div class="column" style="width:45%;">
 <ul>
-<li>Not root access in the cluster.</li>
+<li>We are not sudo in the cluster.</li>
 <li>Every dependency must be installed by the system administrator.</li>
-<li>Running containers with the Slurm scheduler.</li>
+<li>Run containers with the Slurm scheduler.</li>
 </ul>
 <div class="callout callout-style-default callout-note no-icon callout-titled">
 <div class="callout-header d-flex align-content-center">
@@ -367,29 +371,39 @@ Exercice 7
 </div>
 <div class="callout-body-container callout-body">
 <ol type="1">
-<li>Create a bash script to execute the lolcow container inside an Slurm batch job:</li>
+<li>Create a bash script file with the following content:</li>
 </ol>
-<pre><code>#!/bin/bash 
-#SBATCH --job-name=run_lolcow</code></pre>
+<div class="sourceCode" id="cb1"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="co">#!/bin/bash </span></span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="ex">curl</span> <span class="at">-s</span> <span class="st">"wttr.in/</span><span class="va">$1</span><span class="st">?m1"</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <ol start="2" type="1">
-<li>Use <code>sbatch</code> to run the script and check the output:</li>
-<li>Modify the script to run the command <code>whoami</code> inside the container</li>
+<li>Create a bash script to execute the new script inside the lolcow container, within a Slurm batch job. Copy the following sbatch header and <strong>add the command to run the script inside the container</strong>:</li>
+</ol>
+<div class="sourceCode" id="cb2"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="co">#!/bin/bash </span></span>
+<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a><span class="co">#SBATCH --job-name=run_lolcow</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<ol start="3" type="1">
+<li>Use <code>sbatch</code> to run the script and check the output. You can use <code>squeue</code> to see the progress. You will find the log file in the current folder when the job finishes.</li>
 </ol>
 <details>
 <summary>
 Solution
 </summary>
-<div class="sourceCode" id="cb2"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a>  <span class="ex">vim</span> lolcow.slm</span>
-<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a>  <span class="co">#!/bin/bash </span></span>
-<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a>  <span class="co">#SBATCH --job-name=run_lolcow</span></span>
-<span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a>  <span class="ex">singularity</span> run lolcow.sif</span>
-<span id="cb2-5"><a href="#cb2-5" aria-hidden="true" tabindex="-1"></a>  <span class="ex">sbatch</span> lolcow.slm</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="cb3"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a>  <span class="ex">vim</span> wtt.sh</span>
+<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a>  </span>
+<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a>  <span class="co">#!/bin/bash </span></span>
+<span id="cb3-4"><a href="#cb3-4" aria-hidden="true" tabindex="-1"></a>  <span class="ex">curl</span> <span class="at">-s</span> <span class="st">"wttr.in/</span><span class="va">$1</span><span class="st">?m1"</span></span>
+<span id="cb3-5"><a href="#cb3-5" aria-hidden="true" tabindex="-1"></a>  </span>
+<span id="cb3-6"><a href="#cb3-6" aria-hidden="true" tabindex="-1"></a>  <span class="ex">vim</span> wtt.slm</span>
+<span id="cb3-7"><a href="#cb3-7" aria-hidden="true" tabindex="-1"></a>  </span>
+<span id="cb3-8"><a href="#cb3-8" aria-hidden="true" tabindex="-1"></a>  <span class="co">#!/bin/bash </span></span>
+<span id="cb3-9"><a href="#cb3-9" aria-hidden="true" tabindex="-1"></a>  <span class="co">#SBATCH --job-name=run_wtt</span></span>
+<span id="cb3-10"><a href="#cb3-10" aria-hidden="true" tabindex="-1"></a>  <span class="ex">singularity</span> exec steam.sif bash wtt.sh</span>
+<span id="cb3-11"><a href="#cb3-11" aria-hidden="true" tabindex="-1"></a>  </span>
+<span id="cb3-12"><a href="#cb3-12" aria-hidden="true" tabindex="-1"></a>  <span class="ex">sbatch</span> wtt.slm</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details>
 </div>
 </div>
 </div>
 </div>
-<p><a href="https://slurm.schedmd.com/containers.html" target="_blank">For a detailed explanation, see Slurm containers Guide</a></p>
 
 
 
