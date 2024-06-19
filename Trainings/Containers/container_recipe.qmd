@@ -14,6 +14,7 @@ From: lolcow.sif
 %post
   apt-get -y update
   apt-get -y install sl=3.03-17build1
+  apt-get -y install curl
 
 %runscript
   sl -F
