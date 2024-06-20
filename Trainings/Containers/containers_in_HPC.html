@@ -376,7 +376,7 @@ Exercice 7
 <div class="sourceCode" id="cb1"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="co">#!/bin/bash </span></span>
 <span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="ex">curl</span> <span class="at">-s</span> <span class="st">"wttr.in/</span><span class="va">$1</span><span class="st">?m1"</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <ol start="2" type="1">
-<li>Create a bash script to execute the new script inside the lolcow container, within a Slurm batch job. Copy the following sbatch header and <strong>add the command to run the script inside the container</strong>:</li>
+<li>Create a Slurm script to execute the script from step 1 inside the container you made in the previous exercise. Copy the following sbatch header and <strong>add the command to run the script inside the container</strong>. The container will run the command that you type after the image name; therefore, you need to use bash script.sh to actually run the script.</li>
 </ol>
 <div class="sourceCode" id="cb2"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="co">#!/bin/bash </span></span>
 <span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a><span class="co">#SBATCH --job-name=run_lolcow</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
