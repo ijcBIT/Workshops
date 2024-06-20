@@ -35,7 +35,7 @@ format:
 curl -s "wttr.in/$1?m1"
 ```
 
-2.  Create a bash script to execute the new script inside the lolcow container, within a Slurm batch job. Copy the following sbatch header and **add the command to run the script inside the container**:
+2.  Create a Slurm script to execute the script from step 1 inside the container you made in the previous exercise. Copy the following sbatch header and **add the command to run the script inside the container**. The container will run the command that you type after the image name; therefore, you need to use bash script.sh to actually run the script.
 
 ``` bash
 #!/bin/bash 
