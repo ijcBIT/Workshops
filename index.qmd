@@ -6,7 +6,7 @@ subtitle: "R & Bioinformatics from zero to hero"
 
 ## Welcome
 
-This site has been created by the [Bioinformatics Team (BIT)](https://www.carrerasresearch.org/es/unidad-de-bioinform%C3%A1tica_130420) unit a the [Josep Carreras Leukaemia Research Institute (IJC)](https://www.carrerasresearch.org/en) to store materials and links for workshops we are hosting during the year 2022-2023. We encourage you to add any comments or thoughts you may have!
+This site has been created by the [Bioinformatics Team (BIT)](https://www.carrerasresearch.org/es/unidad-de-bioinform%C3%A1tica_130420) unit a the [Josep Carreras Leukaemia Research Institute (IJC)](https://www.carrerasresearch.org/en) to store materials and links for workshops we are hosting at the institute. We encourage you to add any comments or thoughts you may have!
 
 General topics
 

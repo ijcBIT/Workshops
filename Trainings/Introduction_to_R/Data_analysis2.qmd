@@ -9,54 +9,12 @@ format:
 
 ## 1. Import data
 
-Principal functions reading data into R
-
--   `read.table`, `read.csv` (tabular data)
--   `readLines` (text file)
--   `load` (read in saved workspaces)
--   `source` (for reading in R code files)\
-
-#### Reading Data Files with `read.table()`
-
-`read.table()` is one of the most commonly used functions for reading data. The help file is definitely worth reading in its entirety.
-
-The `read.table()` function has a few important arguments:
-
--   `file`, the name of a file, or a connection
--   `header`, logical indicating if the file has a header line
--   `sep`, a string indicating how the columns are separated
--   `colClasses`, a character vector indicating the class of each column in the dataset
--   `nrows`, the number of rows in the dataset. By default `read.table()` reads an entire file.
--   `comment.char`, a character string indicating the comment character. This defaults to "\#".
--   `skip`, the number of lines to skip from the beginning
--   `stringsAsFactors`, should character variables be coded as factors? This defaults to TRUE.\
-
-::: callout-tip
-**Reading larger datasets with R**
-
-`read.table()` automatically estimates various parameters to store data. If you provide these this significantly speeds up the reading of large data sets.
-
--   Set `comment.char = ""` if there are no commented lines in your file.
--   Use the `colClasses` argument. Specifying this option instead of using the default can make 'read.table' run MUCH faster, often twice as fast. In order to use this option, you have to know the class of each column in your data frame. If all of the columns are "numeric", for example, then you can just set `colClasses = "numeric"`.
--   Set `nrows`. This doesn't make R run faster but it helps with memory usage. A mild overestimate is okay.
-:::
-
-#### Now, let's import some data
-
 ```{r}
+#| eval: false
 
-# use default parameters, missing parameters are estimated
-data <- read.table(file = "data/my_data.txt") 
-
-# assign parameters
-data <- read.table(file = "data/my_data.txt", 
-                   comment.char = "", 
-                   header = TRUE,
-                   colClasses = c(rep("numeric",4), "factor")
-                   )
+# load iris data set
+data(iris)
 ```
-
-\
 
 ## 2. Data QC and exploration
 
@@ -73,9 +31,6 @@ You may need to adjust the way you import your data!
 
 ```{r}
 #| eval: false
-
-# rename the object
-iris <- data
 
 # basic summary statistics
 summary(iris)
@@ -165,6 +120,7 @@ Functions for writing data to files
 -   `write.table` or `write.csv` (writing tabular data to text files, i.e. CSV, or connections)
 -   `writeLines`(writing character data line-by-line to a file or connection)
 -   `save` (saving an arbitrary number of R objects in binary format (possibly compressed) to a file)
+-   `saveRDS` save a data object in a compressed format
 
 ```{r}
 #| eval: false
@@ -177,8 +133,6 @@ write.table(iris,                       # dataframe
             row.names = FALSE,          # include row names (default = TRUE)
             quote = FALSE)              # quote characters and factors
 
-# save your workspace
-save(file = "my_workspace.Rdata")       # warning: this occupies the most space
 
 # save multiple objects
 save(iris, data, file = "my_two_objects.Rdata")
@@ -186,4 +140,7 @@ save(iris, data, file = "my_two_objects.Rdata")
 # save a single data object (compressed)
 saveRDS(iris,                           #  data object
         file = "iris.rds")              #  file name
+
+# save your workspace
+save(file = "my_workspace_.Rdata")       # warning: this occupies the most space
 ```
