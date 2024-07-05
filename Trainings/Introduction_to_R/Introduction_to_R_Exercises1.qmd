@@ -1,0 +1,33 @@
+---
+title: "Introduction_to_R_Exercises1"
+editor: visual
+---
+
+### Exercise 1
+
+Import data on iris flower species
+
+```{r}
+
+# load package data
+data(iris)
+
+```
+
+Which class and type of object is the dataset?
+
+What information does the data set hold?
+
+Create a vector with the last and the first element of the data set. What do you observe?
+
+Create a list with 3 elements, each containing the Sepal.length for one flower species. How many measurements for setosa and versicolor larger than 5?
+
+### Exercise 2
+
+Write a loop that calculates the sepal surface for each entry.
+
+Create a function that calculates the maximum sepal surface for a specific species.
+
+### Exercise 3
+
+Write and execute a script that implements the function above from the terminal command line.
