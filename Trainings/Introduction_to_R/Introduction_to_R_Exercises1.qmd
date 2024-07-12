@@ -22,7 +22,7 @@ data(iris)
 str(iris)
 
 # view the data with the RStudio data viewer
-View(iris)
+# View(iris)
 ```
 
 1.2. What information does this data set hold?
