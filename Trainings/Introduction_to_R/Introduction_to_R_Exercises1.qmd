@@ -1,11 +1,12 @@
 ---
-title: "Introduction_to_R_Exercises1"
+title: "Introduction to R: Exercises 1"
+author: Angelika Merkel
 editor: visual
 ---
 
-### Exercise 1
+### Exercise 1: Classes and types of objects
 
-Import data on iris flower species
+Import the iris data set
 
 ```{r}
 
@@ -14,20 +15,95 @@ data(iris)
 
 ```
 
-Which class and type of object is the dataset?
+1.1. Which class and type of object is this data set? How do you find out?
 
-What information does the data set hold?
+```{r}
+# get structural information
+str(iris)
 
-Create a vector with the last and the first element of the data set. What do you observe?
+# view the data with the RStudio data viewer
+View(iris)
+```
 
-Create a list with 3 elements, each containing the Sepal.length for one flower species. How many measurements for setosa and versicolor larger than 5?
+1.2. What information does this data set hold?
 
-### Exercise 2
+```{r}
+# derive information from the structure and attributes
+str(iris)
 
-Write a loop that calculates the sepal surface for each entry.
+# use the help function (likely, the data has documentation since it was loaded as part of a package)
+?iris
+```
 
-Create a function that calculates the maximum sepal surface for a specific species.
+1.3. With the last and the first element of the data set create a vector. What do you observe?
 
-### Exercise 3
+```{r}
+# extracting the first element in the first row and the last element (= number of rows) in the last column (= number of columns)
+c(iris[1, 1], iris[nrow(iris), ncol(iris)])
+```
 
-Write and execute a script that implements the function above from the terminal command line.
+=> implicit cohersion occurs: the factor level 'versicolor' as part of a factor of length 3 is converted into the number '3.0'
+
+
+1.4. How many flowers of the 'setosa' species were measured?
+```{r}
+# select all rows from the dataframe for which the variable Species is 'setosa', and count the number of rows
+x <- iris[which(iris$Species == "setosa"), ]
+nrow(x)
+
+# select all entries for the variable Species from the dataframe iris, and calculate the length of the resulting vector
+x <- which(iris$Species == "setosa")
+length(x)
+```
+
+1.5. Create a list with 3 elements, each containing the Sepal.length for one flower species with only those with measurements larger than 5. How many entries for 'versicolor'?
+```{r}
+# Create the list
+sepal_length_large <- list(
+  setosa     = iris[which(iris$Species == "setosa" & iris$Sepal.Length > 5), 5 ],
+  versicolor = iris[which(iris$Species == "versicolor" & iris$Sepal.Length > 5), 5 ],
+  virginica  = iris[which(iris$Species == "virginica" & iris$Sepal.Length > 5), 5 ])
+
+# Calculate the length of 'versicolor element
+length(sepal_length_large[["versicolor"]])
+```
+
+
+### Exercise 2: Control structures
+
+Write a loop that calculates the sepal surface (length*width) for the first 10 measurements.
+```{r}
+for (i in 1:10) {
+  
+  sepal_surface <- iris$Sepal.Length[i] * iris$Sepal.Width[i]
+  print(sepal_surface)
+}
+```
+
+### Exercise 3: Functions
+
+Create a function that calculates the maximum sepal surface  for a specific species for the iris data set. What is the largest sepal surface for 'setosa'?
+```{r}
+# define a function, set iris as the default for the argument 'data'
+max_sepal_surface <- function(data = iris, spec) {
+  
+  # create a subset for a specific species
+  iris_sub <- iris[which(iris$Species == spec), ]
+  
+  # use the loop from exercise 2 to estimate sepal surface
+  for (i in 1:nrow(iris_sub)) {
+    sepal_surface <- iris_sub$Sepal.Length[i] * iris_sub$Sepal.Width[i]
+  }
+  
+  # estimate the maximimu value
+    sepal_surface_max <- max(sepal_surface)
+  
+  # return the value  
+    return(sepal_surface_max)
+  
+}
+
+# use the fuction to estimate the maximum sepal surface for setosa
+max_sepal_surface(spec = "setosa")
+```
+
