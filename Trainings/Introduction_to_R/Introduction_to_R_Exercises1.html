@@ -6,8 +6,9 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
+<meta name="author" content="Angelika Merkel">
 
-<title>Introduction_to_R_Exercises1 – IJC - BIT Workshops page</title>
+<title>Introduction to R: Exercises 1 – IJC - BIT Workshops page</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -123,7 +124,7 @@ gtag('config', 'G-ML1E5YYLV4', { 'anonymize_ip': true});
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item">Introduction_to_R_Exercises1</li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item">Introduction to R: Exercises 1</li></ol></nav>
         <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
       <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
@@ -180,7 +181,7 @@ gtag('config', 'G-ML1E5YYLV4', { 'anonymize_ip': true});
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../../Trainings/Introduction_to_Linux/linux_intro.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Intro to Linux/Shell</span></a>
+ <span class="menu-text">Introduction to Linux/Shell</span></a>
   </div>
 </li>
           <li class="sidebar-item">
@@ -202,8 +203,8 @@ gtag('config', 'G-ML1E5YYLV4', { 'anonymize_ip': true});
       <ul id="quarto-sidebar-section-3" class="collapse list-unstyled sidebar-section depth2 ">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../Trainings/Introduction_to_R/R_basics.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">R basics</span></a>
+  <a href="../../Trainings/Introduction_to_R/Introduction_to_R.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Introduction to R</span></a>
   </div>
 </li>
           <li class="sidebar-item">
@@ -326,9 +327,9 @@ gtag('config', 'G-ML1E5YYLV4', { 'anonymize_ip': true});
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#exercise-1" id="toc-exercise-1" class="nav-link active" data-scroll-target="#exercise-1">Exercise 1</a></li>
-  <li><a href="#exercise-2" id="toc-exercise-2" class="nav-link" data-scroll-target="#exercise-2">Exercise 2</a></li>
-  <li><a href="#exercise-3" id="toc-exercise-3" class="nav-link" data-scroll-target="#exercise-3">Exercise 3</a></li>
+  <li><a href="#exercise-1-classes-and-types-of-objects" id="toc-exercise-1-classes-and-types-of-objects" class="nav-link active" data-scroll-target="#exercise-1-classes-and-types-of-objects">Exercise 1: Classes and types of objects</a></li>
+  <li><a href="#exercise-2-control-structures" id="toc-exercise-2-control-structures" class="nav-link" data-scroll-target="#exercise-2-control-structures">Exercise 2: Control structures</a></li>
+  <li><a href="#exercise-3-functions" id="toc-exercise-3-functions" class="nav-link" data-scroll-target="#exercise-3-functions">Exercise 3: Functions</a></li>
   </ul>
 <div class="toc-actions"><ul><li><a href="https://github.com/ijcBIT/Workshops/edit/main/Trainings/Introduction_to_R/Introduction_to_R_Exercises1.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/ijcBIT/Workshops/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></nav>
     </div>
@@ -337,13 +338,19 @@ gtag('config', 'G-ML1E5YYLV4', { 'anonymize_ip': true});
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">Introduction_to_R_Exercises1</h1>
+<h1 class="title">Introduction to R: Exercises 1</h1>
 </div>
 
 
 
 <div class="quarto-title-meta">
 
+    <div>
+    <div class="quarto-title-meta-heading">Author</div>
+    <div class="quarto-title-meta-contents">
+             <p>Angelika Merkel </p>
+          </div>
+  </div>
     
   
     
@@ -354,26 +361,134 @@ gtag('config', 'G-ML1E5YYLV4', { 'anonymize_ip': true});
 </header>
 
 
-<section id="exercise-1" class="level3">
-<h3 class="anchored" data-anchor-id="exercise-1">Exercise 1</h3>
-<p>Import data on iris flower species</p>
+<section id="exercise-1-classes-and-types-of-objects" class="level3">
+<h3 class="anchored" data-anchor-id="exercise-1-classes-and-types-of-objects">Exercise 1: Classes and types of objects</h3>
+<p>Import the iris data set</p>
 <div class="cell">
 <div class="sourceCode cell-code" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="co"># load package data</span></span>
 <span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="fu">data</span>(iris)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
-<p>Which class and type of object is the dataset?</p>
-<p>What information does the data set hold?</p>
-<p>Create a vector with the last and the first element of the data set. What do you observe?</p>
-<p>Create a list with 3 elements, each containing the Sepal.length for one flower species. How many measurements for setosa and versicolor larger than 5?</p>
+<p>1.1. Which class and type of object is this data set? How do you find out?</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb2"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="co"># get structural information</span></span>
+<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a><span class="fu">str</span>(iris)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>'data.frame':   150 obs. of  5 variables:
+ $ Sepal.Length: num  5.1 4.9 4.7 4.6 5 5.4 4.6 5 4.4 4.9 ...
+ $ Sepal.Width : num  3.5 3 3.2 3.1 3.6 3.9 3.4 3.4 2.9 3.1 ...
+ $ Petal.Length: num  1.4 1.4 1.3 1.5 1.4 1.7 1.4 1.5 1.4 1.5 ...
+ $ Petal.Width : num  0.2 0.2 0.2 0.2 0.2 0.4 0.3 0.2 0.2 0.1 ...
+ $ Species     : Factor w/ 3 levels "setosa","versicolor",..: 1 1 1 1 1 1 1 1 1 1 ...</code></pre>
+</div>
+<div class="sourceCode cell-code" id="cb4"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="co"># view the data with the RStudio data viewer</span></span>
+<span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a><span class="co"># View(iris)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<p>1.2. What information does this data set hold?</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb5"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="co"># derive information from the structure and attributes</span></span>
+<span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a><span class="fu">str</span>(iris)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>'data.frame':   150 obs. of  5 variables:
+ $ Sepal.Length: num  5.1 4.9 4.7 4.6 5 5.4 4.6 5 4.4 4.9 ...
+ $ Sepal.Width : num  3.5 3 3.2 3.1 3.6 3.9 3.4 3.4 2.9 3.1 ...
+ $ Petal.Length: num  1.4 1.4 1.3 1.5 1.4 1.7 1.4 1.5 1.4 1.5 ...
+ $ Petal.Width : num  0.2 0.2 0.2 0.2 0.2 0.4 0.3 0.2 0.2 0.1 ...
+ $ Species     : Factor w/ 3 levels "setosa","versicolor",..: 1 1 1 1 1 1 1 1 1 1 ...</code></pre>
+</div>
+<div class="sourceCode cell-code" id="cb7"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="co"># use the help function (likely, the data has documentation since it was loaded as part of a package)</span></span>
+<span id="cb7-2"><a href="#cb7-2" aria-hidden="true" tabindex="-1"></a>?iris</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<p>1.3. With the last and the first element of the data set create a vector. What do you observe?</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb8"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a><span class="co"># extracting the first element in the first row and the last element (= number of rows) in the last column (= number of columns)</span></span>
+<span id="cb8-2"><a href="#cb8-2" aria-hidden="true" tabindex="-1"></a><span class="fu">c</span>(iris[<span class="dv">1</span>, <span class="dv">1</span>], iris[<span class="fu">nrow</span>(iris), <span class="fu">ncol</span>(iris)])</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] 5.1 3.0</code></pre>
+</div>
+</div>
+<p>=&gt; implicit cohersion occurs: the factor level ‘versicolor’ as part of a factor of length 3 is converted into the number ‘3.0’</p>
+<p>1.4. How many flowers of the ‘setosa’ species were measured?</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb10"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a><span class="co"># select all rows from the dataframe for which the variable Species is 'setosa', and count the number of rows</span></span>
+<span id="cb10-2"><a href="#cb10-2" aria-hidden="true" tabindex="-1"></a>x <span class="ot">&lt;-</span> iris[<span class="fu">which</span>(iris<span class="sc">$</span>Species <span class="sc">==</span> <span class="st">"setosa"</span>), ]</span>
+<span id="cb10-3"><a href="#cb10-3" aria-hidden="true" tabindex="-1"></a><span class="fu">nrow</span>(x)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] 50</code></pre>
+</div>
+<div class="sourceCode cell-code" id="cb12"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb12-1"><a href="#cb12-1" aria-hidden="true" tabindex="-1"></a><span class="co"># select all entries for the variable Species from the dataframe iris, and calculate the length of the resulting vector</span></span>
+<span id="cb12-2"><a href="#cb12-2" aria-hidden="true" tabindex="-1"></a>x <span class="ot">&lt;-</span> <span class="fu">which</span>(iris<span class="sc">$</span>Species <span class="sc">==</span> <span class="st">"setosa"</span>)</span>
+<span id="cb12-3"><a href="#cb12-3" aria-hidden="true" tabindex="-1"></a><span class="fu">length</span>(x)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] 50</code></pre>
+</div>
+</div>
+<p>1.5. Create a list with 3 elements, each containing the Sepal.length for one flower species with only those with measurements larger than 5. How many entries for ‘versicolor’?</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb14"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb14-1"><a href="#cb14-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Create the list</span></span>
+<span id="cb14-2"><a href="#cb14-2" aria-hidden="true" tabindex="-1"></a>sepal_length_large <span class="ot">&lt;-</span> <span class="fu">list</span>(</span>
+<span id="cb14-3"><a href="#cb14-3" aria-hidden="true" tabindex="-1"></a>  <span class="at">setosa     =</span> iris[<span class="fu">which</span>(iris<span class="sc">$</span>Species <span class="sc">==</span> <span class="st">"setosa"</span> <span class="sc">&amp;</span> iris<span class="sc">$</span>Sepal.Length <span class="sc">&gt;</span> <span class="dv">5</span>), <span class="dv">5</span> ],</span>
+<span id="cb14-4"><a href="#cb14-4" aria-hidden="true" tabindex="-1"></a>  <span class="at">versicolor =</span> iris[<span class="fu">which</span>(iris<span class="sc">$</span>Species <span class="sc">==</span> <span class="st">"versicolor"</span> <span class="sc">&amp;</span> iris<span class="sc">$</span>Sepal.Length <span class="sc">&gt;</span> <span class="dv">5</span>), <span class="dv">5</span> ],</span>
+<span id="cb14-5"><a href="#cb14-5" aria-hidden="true" tabindex="-1"></a>  <span class="at">virginica  =</span> iris[<span class="fu">which</span>(iris<span class="sc">$</span>Species <span class="sc">==</span> <span class="st">"virginica"</span> <span class="sc">&amp;</span> iris<span class="sc">$</span>Sepal.Length <span class="sc">&gt;</span> <span class="dv">5</span>), <span class="dv">5</span> ])</span>
+<span id="cb14-6"><a href="#cb14-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb14-7"><a href="#cb14-7" aria-hidden="true" tabindex="-1"></a><span class="co"># Calculate the length of 'versicolor element</span></span>
+<span id="cb14-8"><a href="#cb14-8" aria-hidden="true" tabindex="-1"></a><span class="fu">length</span>(sepal_length_large[[<span class="st">"versicolor"</span>]])</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] 47</code></pre>
+</div>
+</div>
 </section>
-<section id="exercise-2" class="level3">
-<h3 class="anchored" data-anchor-id="exercise-2">Exercise 2</h3>
-<p>Write a loop that calculates the sepal surface for each entry.</p>
-<p>Create a function that calculates the maximum sepal surface for a specific species.</p>
+<section id="exercise-2-control-structures" class="level3">
+<h3 class="anchored" data-anchor-id="exercise-2-control-structures">Exercise 2: Control structures</h3>
+<p>Write a loop that calculates the sepal surface (length*width) for the first 10 measurements.</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb16"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb16-1"><a href="#cb16-1" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> (i <span class="cf">in</span> <span class="dv">1</span><span class="sc">:</span><span class="dv">10</span>) {</span>
+<span id="cb16-2"><a href="#cb16-2" aria-hidden="true" tabindex="-1"></a>  </span>
+<span id="cb16-3"><a href="#cb16-3" aria-hidden="true" tabindex="-1"></a>  sepal_surface <span class="ot">&lt;-</span> iris<span class="sc">$</span>Sepal.Length[i] <span class="sc">*</span> iris<span class="sc">$</span>Sepal.Width[i]</span>
+<span id="cb16-4"><a href="#cb16-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">print</span>(sepal_surface)</span>
+<span id="cb16-5"><a href="#cb16-5" aria-hidden="true" tabindex="-1"></a>}</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] 17.85
+[1] 14.7
+[1] 15.04
+[1] 14.26
+[1] 18
+[1] 21.06
+[1] 15.64
+[1] 17
+[1] 12.76
+[1] 15.19</code></pre>
+</div>
+</div>
 </section>
-<section id="exercise-3" class="level3">
-<h3 class="anchored" data-anchor-id="exercise-3">Exercise 3</h3>
-<p>Write and execute a script that implements the function above from the terminal command line.</p>
+<section id="exercise-3-functions" class="level3">
+<h3 class="anchored" data-anchor-id="exercise-3-functions">Exercise 3: Functions</h3>
+<p>Create a function that calculates the maximum sepal surface for a specific species for the iris data set. What is the largest sepal surface for ‘setosa’?</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb18"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb18-1"><a href="#cb18-1" aria-hidden="true" tabindex="-1"></a><span class="co"># define a function, set iris as the default for the argument 'data'</span></span>
+<span id="cb18-2"><a href="#cb18-2" aria-hidden="true" tabindex="-1"></a>max_sepal_surface <span class="ot">&lt;-</span> <span class="cf">function</span>(<span class="at">data =</span> iris, spec) {</span>
+<span id="cb18-3"><a href="#cb18-3" aria-hidden="true" tabindex="-1"></a>  </span>
+<span id="cb18-4"><a href="#cb18-4" aria-hidden="true" tabindex="-1"></a>  <span class="co"># create a subset for a specific species</span></span>
+<span id="cb18-5"><a href="#cb18-5" aria-hidden="true" tabindex="-1"></a>  iris_sub <span class="ot">&lt;-</span> iris[<span class="fu">which</span>(iris<span class="sc">$</span>Species <span class="sc">==</span> spec), ]</span>
+<span id="cb18-6"><a href="#cb18-6" aria-hidden="true" tabindex="-1"></a>  </span>
+<span id="cb18-7"><a href="#cb18-7" aria-hidden="true" tabindex="-1"></a>  <span class="co"># use the loop from exercise 2 to estimate sepal surface</span></span>
+<span id="cb18-8"><a href="#cb18-8" aria-hidden="true" tabindex="-1"></a>  <span class="cf">for</span> (i <span class="cf">in</span> <span class="dv">1</span><span class="sc">:</span><span class="fu">nrow</span>(iris_sub)) {</span>
+<span id="cb18-9"><a href="#cb18-9" aria-hidden="true" tabindex="-1"></a>    sepal_surface <span class="ot">&lt;-</span> iris_sub<span class="sc">$</span>Sepal.Length[i] <span class="sc">*</span> iris_sub<span class="sc">$</span>Sepal.Width[i]</span>
+<span id="cb18-10"><a href="#cb18-10" aria-hidden="true" tabindex="-1"></a>  }</span>
+<span id="cb18-11"><a href="#cb18-11" aria-hidden="true" tabindex="-1"></a>  </span>
+<span id="cb18-12"><a href="#cb18-12" aria-hidden="true" tabindex="-1"></a>  <span class="co"># estimate the maximimu value</span></span>
+<span id="cb18-13"><a href="#cb18-13" aria-hidden="true" tabindex="-1"></a>    sepal_surface_max <span class="ot">&lt;-</span> <span class="fu">max</span>(sepal_surface)</span>
+<span id="cb18-14"><a href="#cb18-14" aria-hidden="true" tabindex="-1"></a>  </span>
+<span id="cb18-15"><a href="#cb18-15" aria-hidden="true" tabindex="-1"></a>  <span class="co"># return the value  </span></span>
+<span id="cb18-16"><a href="#cb18-16" aria-hidden="true" tabindex="-1"></a>    <span class="fu">return</span>(sepal_surface_max)</span>
+<span id="cb18-17"><a href="#cb18-17" aria-hidden="true" tabindex="-1"></a>  </span>
+<span id="cb18-18"><a href="#cb18-18" aria-hidden="true" tabindex="-1"></a>}</span>
+<span id="cb18-19"><a href="#cb18-19" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb18-20"><a href="#cb18-20" aria-hidden="true" tabindex="-1"></a><span class="co"># use the fuction to estimate the maximum sepal surface for setosa</span></span>
+<span id="cb18-21"><a href="#cb18-21" aria-hidden="true" tabindex="-1"></a><span class="fu">max_sepal_surface</span>(<span class="at">spec =</span> <span class="st">"setosa"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] 16.5</code></pre>
+</div>
+</div>
 
 
 </section>

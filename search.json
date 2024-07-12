@@ -32,46 +32,16 @@
     ]
   },
   {
-    "objectID": "Trainings/Introduction_to_R/Example_data_analysis.html",
-    "href": "Trainings/Introduction_to_R/Example_data_analysis.html",
-    "title": "Example data analysis",
+    "objectID": "Trainings/Introduction_to_R/Introduction_to_R.html",
+    "href": "Trainings/Introduction_to_R/Introduction_to_R.html",
+    "title": "Introduction to R programming",
     "section": "",
-    "text": "Principal functions reading data into R\n\nread.table, read.csv (tabular data)\nreadLines (text file)\nload (read in saved workspaces)\nsource (for reading in R code files)\n\n\n\n\nread.table() is one of the most commonly used functions for reading data. The help file is definitely worth reading in its entirety.\nThe read.table() function has a few important arguments:\n\nfile, the name of a file, or a connection\nheader, logical indicating if the file has a header line\nsep, a string indicating how the columns are separated\ncolClasses, a character vector indicating the class of each column in the dataset\nnrows, the number of rows in the dataset. By default read.table() reads an entire file.\ncomment.char, a character string indicating the comment character. This defaults to “#”.\nskip, the number of lines to skip from the beginning\nstringsAsFactors, should character variables be coded as factors? This defaults to TRUE.\n\n\n\n\n\n\n\n\nTip\n\n\n\nReading larger datasets with R\nread.table() automatically estimates various parameters to store data. If you provide these this significantly speeds up the reading of large data sets.\n\nSet comment.char = \"\" if there are no commented lines in your file.\nUse the colClasses argument. Specifying this option instead of using the default can make ‘read.table’ run MUCH faster, often twice as fast. In order to use this option, you have to know the class of each column in your data frame. If all of the columns are “numeric”, for example, then you can just set colClasses = \"numeric\".\nSet nrows. This doesn’t make R run faster but it helps with memory usage. A mild overestimate is okay.\n\n\n\n\n\n\n\n# use default parameters, missing parameters are estimated\ndata &lt;- read.table(file = \"data/my_data.txt\") \n\n# assign parameters\ndata &lt;- read.table(file = \"data/my_data.txt\", \n                   comment.char = \"\", \n                   header = TRUE,\n                   colClasses = c(rep(\"numeric\",4), \"factor\")\n                   )"
-  },
-  {
-    "objectID": "Trainings/Introduction_to_R/Example_data_analysis.html#import-data",
-    "href": "Trainings/Introduction_to_R/Example_data_analysis.html#import-data",
-    "title": "Example data analysis",
-    "section": "",
-    "text": "Principal functions reading data into R\n\nread.table, read.csv (tabular data)\nreadLines (text file)\nload (read in saved workspaces)\nsource (for reading in R code files)\n\n\n\n\nread.table() is one of the most commonly used functions for reading data. The help file is definitely worth reading in its entirety.\nThe read.table() function has a few important arguments:\n\nfile, the name of a file, or a connection\nheader, logical indicating if the file has a header line\nsep, a string indicating how the columns are separated\ncolClasses, a character vector indicating the class of each column in the dataset\nnrows, the number of rows in the dataset. By default read.table() reads an entire file.\ncomment.char, a character string indicating the comment character. This defaults to “#”.\nskip, the number of lines to skip from the beginning\nstringsAsFactors, should character variables be coded as factors? This defaults to TRUE.\n\n\n\n\n\n\n\n\nTip\n\n\n\nReading larger datasets with R\nread.table() automatically estimates various parameters to store data. If you provide these this significantly speeds up the reading of large data sets.\n\nSet comment.char = \"\" if there are no commented lines in your file.\nUse the colClasses argument. Specifying this option instead of using the default can make ‘read.table’ run MUCH faster, often twice as fast. In order to use this option, you have to know the class of each column in your data frame. If all of the columns are “numeric”, for example, then you can just set colClasses = \"numeric\".\nSet nrows. This doesn’t make R run faster but it helps with memory usage. A mild overestimate is okay.\n\n\n\n\n\n\n\n# use default parameters, missing parameters are estimated\ndata &lt;- read.table(file = \"data/my_data.txt\") \n\n# assign parameters\ndata &lt;- read.table(file = \"data/my_data.txt\", \n                   comment.char = \"\", \n                   header = TRUE,\n                   colClasses = c(rep(\"numeric\",4), \"factor\")\n                   )"
-  },
-  {
-    "objectID": "Trainings/Introduction_to_R/Example_data_analysis.html#data-qc-and-exploration",
-    "href": "Trainings/Introduction_to_R/Example_data_analysis.html#data-qc-and-exploration",
-    "title": "Example data analysis",
-    "section": "2. Data QC and exploration",
-    "text": "2. Data QC and exploration\nOnce you have imported your data it is always a good idea to inspect your data object:\n\nhead() = displays the first parts of an object\nattributes() = lists the attributes of an object\nstr() = displays the internal structure of an R object or a diagnostic function\nRStudio viewer view()\n\nYou may need to adjust the way you import your data!\n\nNow, you can start exploring your data\n\n# rename the object\niris &lt;- data\n\n# basic summary statistics\nsummary(iris)\n\n# density distribution\nplot(density(iris$Sepal.Length))\n\n# value distribution by group\nboxplot(iris$Sepal.Length ~ iris$Species, col = c(\"black\",\"red\",\"green\"))\n\n# pairwise value plots\npairs(iris, col = iris$Species)"
-  },
-  {
-    "objectID": "Trainings/Introduction_to_R/Example_data_analysis.html#data-analysis",
-    "href": "Trainings/Introduction_to_R/Example_data_analysis.html#data-analysis",
-    "title": "Example data analysis",
-    "section": "3. Data analysis",
-    "text": "3. Data analysis\nLets find out how Sepal length and Petal length are related\n\n# examine the relationship between Sepal and Petal Length\nplot(iris$Sepal.Length, iris$Petal.Length, col = iris$Species)\n\n# calculate Pearson correlation\ncor.test(iris$Sepal.Length, iris$Petal.Length)\n\n# =&gt; Great! Sepal.Length and Petal.Length are significantly positive correlated. Let's capture this\n# insight in a nicer informative plot.\n\n\n# FINAL PLOT\n \nplot(iris$Sepal.Length, iris$Petal.Length,            # x variable, y variable\n     col  = iris$Species,                             # colour by species\n     pch  = 16,                                       # type of point to use\n     xlab = \"Sepal Length\",                           # x axis label\n     ylab = \"Petal Length\",                           # y axis label\n     main = \"Flower characteristics in Iris\")         # plot title \n\n# legend with titles of iris$Species and colour 1:3, point type pch at coords (x,y)\nlegend(\"topleft\", legend = levels(iris$Species), col = c(1:3), pch =16)\n\n# text at coords (x,y) with label correlation test\ntext(x = 7.5, y = 2, labels = \"cor = 0.871\\np &lt; 2.2e-16\")\n\nFor more on basic R plots see R Base Graphics: An Idiots Guide"
-  },
-  {
-    "objectID": "Trainings/Introduction_to_R/Example_data_analysis.html#export-results",
-    "href": "Trainings/Introduction_to_R/Example_data_analysis.html#export-results",
-    "title": "Example data analysis",
-    "section": "4. Export results",
-    "text": "4. Export results\nAfter you have finished you analysis you may want so save your results for later:\nSaving images\n\nexport with RStudio through Plots &gt;&gt; save\nalternatively use jpeg(), png(), svg() or pdf()\n\n\n# open graphics device\npng(file = \"my_plot.png\", width = 480, height = 480)\n\n# plot\nplot(iris$Sepal.Length, iris$Petal.Length,            # x variable, y variable\n     col  = iris$Species,                             # colour by species\n     pch  = 16,                                       # type of point to use\n     xlab = \"Sepal Length\",                           # x axis label\n     ylab = \"Petal Length\",                           # y axis label\n     main = \"Flower characteristics in Iris\")         # plot title \n\n# legend with titles of iris$Species and colour 1:3, point type pch at coords (x,y)\nlegend(\"topleft\", legend = levels(iris$Species), col = c(1:3), pch =16)\n\n# text at coords (x,y) with label correlation test\ntext(x = 7.5, y = 2, labels = \"cor = 0.871\\np &lt; 2.2e-16\")\n\n# close the device\ndev.off()\n\nFunctions for writing data to files\n\nwrite.table or write.csv (writing tabular data to text files, i.e. CSV, or connections)\nwriteLines(writing character data line-by-line to a file or connection)\nsave (saving an arbitrary number of R objects in binary format (possibly compressed) to a file)\n\n\n# write your results to a file\nwrite.table(iris,                       # dataframe\n            file = \"results.csv\",       # filename\n            sep  = \";\",                 # field seperator\n            col.names = TRUE,           # include header (default = TRUE)\n            row.names = FALSE,          # include row names (default = TRUE)\n            quote = FALSE)              # quote characters and factors\n\n# save your workspace\nsave(file = \"my_workspace.Rdata\")       # warning: this occupies the most space\n\n# save multiple objects\nsave(iris, data, file = \"my_two_objects.Rdata\")\n\n# save a single data object (compressed)\nsaveRDS(iris,                           #  data object\n        file = \"iris.rds\")              #  file name"
-  },
-  {
-    "objectID": "Trainings/Introduction_to_R/Introduction_to_R_Exercises1.html",
-    "href": "Trainings/Introduction_to_R/Introduction_to_R_Exercises1.html",
-    "title": "Introduction_to_R_Exercises1",
-    "section": "",
-    "text": "Exercise 1\nImport data on iris flower species\n\n# load package data\ndata(iris)\n\nWhich class and type of object is the dataset?\nWhat information does the data set hold?\nCreate a vector with the last and the first element of the data set. What do you observe?\nCreate a list with 3 elements, each containing the Sepal.length for one flower species. How many measurements for setosa and versicolor larger than 5?\n\n\nExercise 2\nWrite a loop that calculates the sepal surface for each entry.\nCreate a function that calculates the maximum sepal surface for a specific species.\n\n\nExercise 3\nWrite and execute a script that implements the function above from the terminal command line."
+    "text": "This 2-day-course gives a brief introduction to R and R programming basics for Beginners. After the course, you should be capable of writing your own scripts and functions, utilize RStudio, create basic plots and have a basic understanding of data analysis workflows in R.\nTopics covered:\nDay 1\n\nWhy R and what is R?\nIntroduction to RStudio\nRunning R scripts\nPractical session I: programming basics\n\nClasses and types of objects\nAccessing objects\nControl structures\nFunctions\n\n\nDay 2\n\nBase r and the tidyverse\nCoding style\nPractical session II: data analysis\n\nImporting/exporting data\nExploratory data analysis\nBasic plots\n\n\n Course materials:\n\nCourse presentation\nExercises Day 1\nData analysis session Day 2\n\nFor the practical sessions, we also follow chapters from the book by D.Peng “R Programming for Data Science” (2022).",
+    "crumbs": [
+      "Trainings",
+      "R",
+      "Introduction to R"
+    ]
   },
   {
     "objectID": "Trainings/Containers/interactive_container.html",
@@ -180,7 +150,7 @@
     "crumbs": [
       "Trainings",
       "Linux/Shell",
-      "Intro to Linux/Shell"
+      "Introduction to Linux/Shell"
     ]
   },
   {
@@ -284,86 +254,67 @@
     ]
   },
   {
-    "objectID": "Trainings/Introduction_to_R/Data_analysis.html",
-    "href": "Trainings/Introduction_to_R/Data_analysis.html",
-    "title": "Example data analysis",
+    "objectID": "Trainings/Introduction_to_R/Introduction_to_R_Exercises1.html",
+    "href": "Trainings/Introduction_to_R/Introduction_to_R_Exercises1.html",
+    "title": "Introduction to R: Exercises 1",
     "section": "",
-    "text": "Principal functions reading data into R\n\nread.table, read.csv (tabular data)\nreadLines (text file)\nload (read in saved workspaces)\nsource (for reading in R code files)"
+    "text": "Exercise 1: Classes and types of objects\nImport the iris data set\n\n# load package data\ndata(iris)\n\n1.1. Which class and type of object is this data set? How do you find out?\n\n# get structural information\nstr(iris)\n\n'data.frame':   150 obs. of  5 variables:\n $ Sepal.Length: num  5.1 4.9 4.7 4.6 5 5.4 4.6 5 4.4 4.9 ...\n $ Sepal.Width : num  3.5 3 3.2 3.1 3.6 3.9 3.4 3.4 2.9 3.1 ...\n $ Petal.Length: num  1.4 1.4 1.3 1.5 1.4 1.7 1.4 1.5 1.4 1.5 ...\n $ Petal.Width : num  0.2 0.2 0.2 0.2 0.2 0.4 0.3 0.2 0.2 0.1 ...\n $ Species     : Factor w/ 3 levels \"setosa\",\"versicolor\",..: 1 1 1 1 1 1 1 1 1 1 ...\n\n# view the data with the RStudio data viewer\n# View(iris)\n\n1.2. What information does this data set hold?\n\n# derive information from the structure and attributes\nstr(iris)\n\n'data.frame':   150 obs. of  5 variables:\n $ Sepal.Length: num  5.1 4.9 4.7 4.6 5 5.4 4.6 5 4.4 4.9 ...\n $ Sepal.Width : num  3.5 3 3.2 3.1 3.6 3.9 3.4 3.4 2.9 3.1 ...\n $ Petal.Length: num  1.4 1.4 1.3 1.5 1.4 1.7 1.4 1.5 1.4 1.5 ...\n $ Petal.Width : num  0.2 0.2 0.2 0.2 0.2 0.4 0.3 0.2 0.2 0.1 ...\n $ Species     : Factor w/ 3 levels \"setosa\",\"versicolor\",..: 1 1 1 1 1 1 1 1 1 1 ...\n\n# use the help function (likely, the data has documentation since it was loaded as part of a package)\n?iris\n\n1.3. With the last and the first element of the data set create a vector. What do you observe?\n\n# extracting the first element in the first row and the last element (= number of rows) in the last column (= number of columns)\nc(iris[1, 1], iris[nrow(iris), ncol(iris)])\n\n[1] 5.1 3.0\n\n\n=&gt; implicit cohersion occurs: the factor level ‘versicolor’ as part of a factor of length 3 is converted into the number ‘3.0’\n1.4. How many flowers of the ‘setosa’ species were measured?\n\n# select all rows from the dataframe for which the variable Species is 'setosa', and count the number of rows\nx &lt;- iris[which(iris$Species == \"setosa\"), ]\nnrow(x)\n\n[1] 50\n\n# select all entries for the variable Species from the dataframe iris, and calculate the length of the resulting vector\nx &lt;- which(iris$Species == \"setosa\")\nlength(x)\n\n[1] 50\n\n\n1.5. Create a list with 3 elements, each containing the Sepal.length for one flower species with only those with measurements larger than 5. How many entries for ‘versicolor’?\n\n# Create the list\nsepal_length_large &lt;- list(\n  setosa     = iris[which(iris$Species == \"setosa\" & iris$Sepal.Length &gt; 5), 5 ],\n  versicolor = iris[which(iris$Species == \"versicolor\" & iris$Sepal.Length &gt; 5), 5 ],\n  virginica  = iris[which(iris$Species == \"virginica\" & iris$Sepal.Length &gt; 5), 5 ])\n\n# Calculate the length of 'versicolor element\nlength(sepal_length_large[[\"versicolor\"]])\n\n[1] 47\n\n\n\n\nExercise 2: Control structures\nWrite a loop that calculates the sepal surface (length*width) for the first 10 measurements.\n\nfor (i in 1:10) {\n  \n  sepal_surface &lt;- iris$Sepal.Length[i] * iris$Sepal.Width[i]\n  print(sepal_surface)\n}\n\n[1] 17.85\n[1] 14.7\n[1] 15.04\n[1] 14.26\n[1] 18\n[1] 21.06\n[1] 15.64\n[1] 17\n[1] 12.76\n[1] 15.19\n\n\n\n\nExercise 3: Functions\nCreate a function that calculates the maximum sepal surface for a specific species for the iris data set. What is the largest sepal surface for ‘setosa’?\n\n# define a function, set iris as the default for the argument 'data'\nmax_sepal_surface &lt;- function(data = iris, spec) {\n  \n  # create a subset for a specific species\n  iris_sub &lt;- iris[which(iris$Species == spec), ]\n  \n  # use the loop from exercise 2 to estimate sepal surface\n  for (i in 1:nrow(iris_sub)) {\n    sepal_surface &lt;- iris_sub$Sepal.Length[i] * iris_sub$Sepal.Width[i]\n  }\n  \n  # estimate the maximimu value\n    sepal_surface_max &lt;- max(sepal_surface)\n  \n  # return the value  \n    return(sepal_surface_max)\n  \n}\n\n# use the fuction to estimate the maximum sepal surface for setosa\nmax_sepal_surface(spec = \"setosa\")\n\n[1] 16.5"
   },
   {
-    "objectID": "Trainings/Introduction_to_R/Data_analysis.html#import-data",
-    "href": "Trainings/Introduction_to_R/Data_analysis.html#import-data",
-    "title": "Example data analysis",
+    "objectID": "Trainings/Introduction_to_R/Example_data_analysis.html",
+    "href": "Trainings/Introduction_to_R/Example_data_analysis.html",
+    "title": "Data analysis in R",
     "section": "",
-    "text": "Principal functions reading data into R\n\nread.table, read.csv (tabular data)\nreadLines (text file)\nload (read in saved workspaces)\nsource (for reading in R code files)"
+    "text": "Let’s try importing some data using some examples that come with the {readr} and {readxl} packages.\n\ninstall.packages(c(\"readr\",\"readxl\"))\n\n\n## tabular data (csv)\n\nlibrary(readr)\n\n# retrieve local path\npath_example1 &lt;- readr_example(\"mtcars.csv\")\n\n# import the excel from the local path\ndata1 &lt;- read_csv(path_example1)\n\n## excel\n\nlibrary(readxl)\n\n# retrieve local\npath_example2 &lt;- readxl_example(\"deaths.xls\")\n\n# import the excel from the local path\ndata2 &lt;- read_xls(path_example2)\n\n\n\n\n\n\n\nTIP\n\n\n\nTry importing data with RStudio ( &gt; Workspace &gt; ‘Environment’ OR &gt; ‘File’ &gt; ’import)\n\n\nBe aware of common issues:\n\ncomments or empty line at the beginning or end of the file\nspaces/commas/etc are used as field delimiters but also within cells (for example in a text string)\nempty fields\nspecial (including hidden) characters\nspecial formatting (for example dates or geographical coordinates)"
   },
   {
-    "objectID": "Trainings/Introduction_to_R/Data_analysis.html#data-qc-and-exploration",
-    "href": "Trainings/Introduction_to_R/Data_analysis.html#data-qc-and-exploration",
-    "title": "Example data analysis",
-    "section": "2. Data QC and exploration",
-    "text": "2. Data QC and exploration\nOnce you have imported your data it is always a good idea to inspect your data object:\n\nhead() = displays the first parts of an object\nattributes() = lists the attributes of an object\nstr() = displays the internal structure of an R object or a diagnostic function\nRStudio viewer view()\n\nYou may need to adjust the way you import your data!\n\nNow, you can start exploring your data\n\n# rename the object\ndata(iris)\n\n# basic summary statistics\nsummary(iris)\n\n# density distribution\nplot(density(iris$Sepal.Length))\n\n# value distribution by group\nboxplot(iris$Sepal.Length ~ iris$Species, col = c(\"black\",\"red\",\"green\"))\n\n# pairwise value plots\npairs(iris, col = iris$Species)"
-  },
-  {
-    "objectID": "Trainings/Introduction_to_R/Data_analysis.html#data-analysis",
-    "href": "Trainings/Introduction_to_R/Data_analysis.html#data-analysis",
-    "title": "Example data analysis",
-    "section": "3. Data analysis",
-    "text": "3. Data analysis\nLets find out how Sepal length and Petal length are related\n\n# examine the relationship between Sepal and Petal Length\nplot(iris$Sepal.Length, iris$Petal.Length, col = iris$Species)\n\n# calculate Pearson correlation\ncor.test(iris$Sepal.Length, iris$Petal.Length)\n\n# =&gt; Great! Sepal.Length and Petal.Length are significantly positive correlated. Let's capture this\n# insight in a nicer informative plot.\n\n\n# FINAL PLOT\n \nplot(iris$Sepal.Length, iris$Petal.Length,            # x variable, y variable\n     col  = iris$Species,                             # colour by species\n     pch  = 16,                                       # type of point to use\n     xlab = \"Sepal Length\",                           # x axis label\n     ylab = \"Petal Length\",                           # y axis label\n     main = \"Flower characteristics in Iris\")         # plot title \n\n# legend with titles of iris$Species and colour 1:3, point type pch at coords (x,y)\nlegend(\"topleft\", legend = levels(iris$Species), col = c(1:3), pch =16)\n\n# text at coords (x,y) with label correlation test\ntext(x = 7.5, y = 2, labels = \"cor = 0.871\\np &lt; 2.2e-16\")\n\nFor more on basic R plots see R Base Graphics: An Idiots Guide"
-  },
-  {
-    "objectID": "Trainings/Introduction_to_R/Data_analysis.html#export-results",
-    "href": "Trainings/Introduction_to_R/Data_analysis.html#export-results",
-    "title": "Example data analysis",
-    "section": "4. Export results",
-    "text": "4. Export results\nAfter you have finished you analysis you may want so save your results for later:\nSaving images\n\nexport with RStudio through Plots &gt;&gt; save\nalternatively use jpeg(), png(), svg() or pdf()\n\n\n# open graphics device\npng(file = \"my_plot.png\", width = 480, height = 480)\n\n# plot\nplot(iris$Sepal.Length, iris$Petal.Length,            # x variable, y variable\n     col  = iris$Species,                             # colour by species\n     pch  = 16,                                       # type of point to use\n     xlab = \"Sepal Length\",                           # x axis label\n     ylab = \"Petal Length\",                           # y axis label\n     main = \"Flower characteristics in Iris\")         # plot title \n\n# legend with titles of iris$Species and colour 1:3, point type pch at coords (x,y)\nlegend(\"topleft\", legend = levels(iris$Species), col = c(1:3), pch =16)\n\n# text at coords (x,y) with label correlation test\ntext(x = 7.5, y = 2, labels = \"cor = 0.871\\np &lt; 2.2e-16\")\n\n# close the device\ndev.off()\n\nFunctions for writing data to files\n\nwrite.table or write.csv (writing tabular data to text files, i.e. CSV, or connections)\nwriteLines(writing character data line-by-line to a file or connection)\nsave (saving an arbitrary number of R objects in binary format (possibly compressed) to a file)\nsaveRDS save a data object in a compressed format\n\n\n# write your results to a file\nwrite.table(iris,                       # dataframe\n            file = \"results.csv\",       # filename\n            sep  = \";\",                 # field seperator\n            col.names = TRUE,           # include header (default = TRUE)\n            row.names = FALSE,          # include row names (default = TRUE)\n            quote = FALSE)              # quote characters and factors\n\n\n# save multiple objects\nsave(iris, data, file = \"my_two_objects.Rdata\")\n\n# save a single data object (compressed)\nsaveRDS(iris,                           #  data object\n        file = \"iris.rds\")              #  file name\n\n# save your workspace\nsave(file = \"my_workspace.Rdata\")       # warning: this occupies the most space"
-  },
-  {
-    "objectID": "Trainings/Introduction_to_R/R_basics.html",
-    "href": "Trainings/Introduction_to_R/R_basics.html",
-    "title": "R basics",
+    "objectID": "Trainings/Introduction_to_R/Example_data_analysis.html#import-data",
+    "href": "Trainings/Introduction_to_R/Example_data_analysis.html#import-data",
+    "title": "Data analysis in R",
     "section": "",
-    "text": "This course gives a brief introduction to R and R programming basics. The presentation is available here\nTopics covered:\n\nWhy R and what is R?\nIntroduction to RStudio\nWorkflow best practices\nPractical session programming basics:\n\nClasses and types of objects\nAccessing objects\nFunctions\nControl structures\n\nPractical session data analysis:\n\nImporting/exporting data\nExploratory data analysis\nBasic plots\n\n\nFor the practical session we follow Chapters 4, 9, 13 and 14 of the book by D.Peng “R Programming for Data Science” (2022). The data analysis example can be found here.",
-    "crumbs": [
-      "Trainings",
-      "R",
-      "R basics"
-    ]
+    "text": "Let’s try importing some data using some examples that come with the {readr} and {readxl} packages.\n\ninstall.packages(c(\"readr\",\"readxl\"))\n\n\n## tabular data (csv)\n\nlibrary(readr)\n\n# retrieve local path\npath_example1 &lt;- readr_example(\"mtcars.csv\")\n\n# import the excel from the local path\ndata1 &lt;- read_csv(path_example1)\n\n## excel\n\nlibrary(readxl)\n\n# retrieve local\npath_example2 &lt;- readxl_example(\"deaths.xls\")\n\n# import the excel from the local path\ndata2 &lt;- read_xls(path_example2)\n\n\n\n\n\n\n\nTIP\n\n\n\nTry importing data with RStudio ( &gt; Workspace &gt; ‘Environment’ OR &gt; ‘File’ &gt; ’import)\n\n\nBe aware of common issues:\n\ncomments or empty line at the beginning or end of the file\nspaces/commas/etc are used as field delimiters but also within cells (for example in a text string)\nempty fields\nspecial (including hidden) characters\nspecial formatting (for example dates or geographical coordinates)"
   },
   {
-    "objectID": "Trainings/Introduction_to_R/Data_analysis2.html",
-    "href": "Trainings/Introduction_to_R/Data_analysis2.html",
-    "title": "Example data analysis",
-    "section": "",
-    "text": "# load iris data set\ndata(iris)"
+    "objectID": "Trainings/Introduction_to_R/Example_data_analysis.html#wrangle-data",
+    "href": "Trainings/Introduction_to_R/Example_data_analysis.html#wrangle-data",
+    "title": "Data analysis in R",
+    "section": "Wrangle data",
+    "text": "Wrangle data\nYou may need to modify or transfor your data after you have imported it. This can be done with R{base}, but the dplyr package within the tidyverse provides very convinient and intuitive functions.\nData wrangling with {dplyr}: R programming for Data science (D. Peng 2022): Chapter 12"
   },
   {
-    "objectID": "Trainings/Introduction_to_R/Data_analysis2.html#import-data",
-    "href": "Trainings/Introduction_to_R/Data_analysis2.html#import-data",
-    "title": "Example data analysis",
-    "section": "",
-    "text": "# load iris data set\ndata(iris)"
+    "objectID": "Trainings/Introduction_to_R/Example_data_analysis.html#quality-control",
+    "href": "Trainings/Introduction_to_R/Example_data_analysis.html#quality-control",
+    "title": "Data analysis in R",
+    "section": "Quality control",
+    "text": "Quality control\nIt is always a good idea to inspect your data object\n\nhead() = display the first parts of an object\nview() = view data in the RStudio viewer\nattributes() = list the attributes of an object\nstr() = display the internal structure of an R object or a diagnostic function\nis.na() = check for NA’s"
   },
   {
-    "objectID": "Trainings/Introduction_to_R/Data_analysis2.html#data-qc-and-exploration",
-    "href": "Trainings/Introduction_to_R/Data_analysis2.html#data-qc-and-exploration",
-    "title": "Example data analysis",
-    "section": "2. Data QC and exploration",
-    "text": "2. Data QC and exploration\nOnce you have imported your data it is always a good idea to inspect your data object:\n\nhead() = displays the first parts of an object\nattributes() = lists the attributes of an object\nstr() = displays the internal structure of an R object or a diagnostic function\nRStudio viewer view()\n\nYou may need to adjust the way you import your data!\n\nNow, you can start exploring your data\n\n# basic summary statistics\nsummary(iris)\n\n# density distribution\nplot(density(iris$Sepal.Length))\n\n# value distribution by group\nboxplot(iris$Sepal.Length ~ iris$Species, col = c(\"black\",\"red\",\"green\"))\n\n# pairwise value plots\npairs(iris, col = iris$Species)"
+    "objectID": "Trainings/Introduction_to_R/Example_data_analysis.html#exploratory-data-analysis",
+    "href": "Trainings/Introduction_to_R/Example_data_analysis.html#exploratory-data-analysis",
+    "title": "Data analysis in R",
+    "section": "Exploratory data analysis",
+    "text": "Exploratory data analysis\nWe return to our trusted ‘iris’ data set\n\nload(iris)\n\nLet’s start getting some summary statistics and visualize the distribution of our data to get a feel for it.\n\n# basic summary statistics\nsummary(iris)\n\n# histogram\nhist(iris$Sepal.Length)\n\n# density distribution\nplot(density(iris$Sepal.Length))\n\n# value distribution by group\nboxplot(iris$Sepal.Length ~ iris$Species, col = c(\"black\",\"red\",\"green\"))\n\n# pairwise value plots\npairs(iris, col = iris$Species)"
   },
   {
-    "objectID": "Trainings/Introduction_to_R/Data_analysis2.html#data-analysis",
-    "href": "Trainings/Introduction_to_R/Data_analysis2.html#data-analysis",
-    "title": "Example data analysis",
-    "section": "3. Data analysis",
-    "text": "3. Data analysis\nLets find out how Sepal length and Petal length are related\n\n# examine the relationship between Sepal and Petal Length\nplot(iris$Sepal.Length, iris$Petal.Length, col = iris$Species)\n\n# calculate Pearson correlation\ncor.test(iris$Sepal.Length, iris$Petal.Length)\n\n# =&gt; Great! Sepal.Length and Petal.Length are significantly positive correlated. Let's capture this\n# insight in a nicer informative plot.\n\n\n# FINAL PLOT\n \nplot(iris$Sepal.Length, iris$Petal.Length,            # x variable, y variable\n     col  = iris$Species,                             # colour by species\n     pch  = 16,                                       # type of point to use\n     xlab = \"Sepal Length\",                           # x axis label\n     ylab = \"Petal Length\",                           # y axis label\n     main = \"Flower characteristics in Iris\")         # plot title \n\n# legend with titles of iris$Species and colour 1:3, point type pch at coords (x,y)\nlegend(\"topleft\", legend = levels(iris$Species), col = c(1:3), pch =16)\n\n# text at coords (x,y) with label correlation test\ntext(x = 7.5, y = 2, labels = \"cor = 0.871\\np &lt; 2.2e-16\")\n\nFor more on basic R plots see R Base Graphics: An Idiots Guide"
+    "objectID": "Trainings/Introduction_to_R/Example_data_analysis.html#data-analysis",
+    "href": "Trainings/Introduction_to_R/Example_data_analysis.html#data-analysis",
+    "title": "Data analysis in R",
+    "section": "Data analysis",
+    "text": "Data analysis\nLets find out how Sepal length and Petal length are related\n\n# examine the relationship between Sepal and Petal Length\nplot(iris$Sepal.Length, iris$Petal.Length, col = iris$Species)\n\nIt seem there is quite a correlation. Let’s check\n\n# calculate Pearson correlation\ncor.test(iris$Sepal.Length, iris$Petal.Length)"
   },
   {
-    "objectID": "Trainings/Introduction_to_R/Data_analysis2.html#export-results",
-    "href": "Trainings/Introduction_to_R/Data_analysis2.html#export-results",
-    "title": "Example data analysis",
-    "section": "4. Export results",
-    "text": "4. Export results\nAfter you have finished you analysis you may want so save your results for later:\nSaving images\n\nexport with RStudio through Plots &gt;&gt; save\nalternatively use jpeg(), png(), svg() or pdf()\n\n\n# open graphics device\npng(file = \"my_plot.png\", width = 480, height = 480)\n\n# plot\nplot(iris$Sepal.Length, iris$Petal.Length,            # x variable, y variable\n     col  = iris$Species,                             # colour by species\n     pch  = 16,                                       # type of point to use\n     xlab = \"Sepal Length\",                           # x axis label\n     ylab = \"Petal Length\",                           # y axis label\n     main = \"Flower characteristics in Iris\")         # plot title \n\n# legend with titles of iris$Species and colour 1:3, point type pch at coords (x,y)\nlegend(\"topleft\", legend = levels(iris$Species), col = c(1:3), pch =16)\n\n# text at coords (x,y) with label correlation test\ntext(x = 7.5, y = 2, labels = \"cor = 0.871\\np &lt; 2.2e-16\")\n\n# close the device\ndev.off()\n\nFunctions for writing data to files\n\nwrite.table or write.csv (writing tabular data to text files, i.e. CSV, or connections)\nwriteLines(writing character data line-by-line to a file or connection)\nsave (saving an arbitrary number of R objects in binary format (possibly compressed) to a file)\nsaveRDS save a data object in a compressed format\n\n\n# write your results to a file\nwrite.table(iris,                       # dataframe\n            file = \"results.csv\",       # filename\n            sep  = \";\",                 # field seperator\n            col.names = TRUE,           # include header (default = TRUE)\n            row.names = FALSE,          # include row names (default = TRUE)\n            quote = FALSE)              # quote characters and factors\n\n\n# save multiple objects\nsave(iris, data, file = \"my_two_objects.Rdata\")\n\n# save a single data object (compressed)\nsaveRDS(iris,                           #  data object\n        file = \"iris.rds\")              #  file name\n\n# save your workspace\nsave(file = \"my_workspace_.Rdata\")       # warning: this occupies the most space"
+    "objectID": "Trainings/Introduction_to_R/Example_data_analysis.html#visualization",
+    "href": "Trainings/Introduction_to_R/Example_data_analysis.html#visualization",
+    "title": "Data analysis in R",
+    "section": "Visualization",
+    "text": "Visualization\nGreat! Sepal.Length and Petal.Length are significantly positive correlated. Let’s capture this insight in a nicer informative plot.\n\n# FINAL PLOT\n \nplot(iris$Sepal.Length, iris$Petal.Length,            # x variable, y variable\n     col  = iris$Species,                             # colour by species\n     pch  = 16,                                       # type of point to use\n     xlab = \"Sepal Length\",                           # x axis label\n     ylab = \"Petal Length\",                           # y axis label\n     main = \"Flower characteristics in Iris\")         # plot title \n\n# legend with titles of iris$Species and colour 1:3, point type pch at coords (x,y)\nlegend(\"topleft\", legend = levels(iris$Species), col = c(1:3), pch =16)\n\n# text at coords (x,y) with label correlation test\ntext(x = 7.5, y = 2, labels = \"cor = 0.871\\np &lt; 2.2e-16\")\n\nFor more on basic R plots see R Base Graphics: An Idiots Guide"
+  },
+  {
+    "objectID": "Trainings/Introduction_to_R/Example_data_analysis.html#export-results",
+    "href": "Trainings/Introduction_to_R/Example_data_analysis.html#export-results",
+    "title": "Data analysis in R",
+    "section": "Export results",
+    "text": "Export results\nAfter you have finished you analysis you may want so save your results for later:\nSaving images\n\nExport with RStudio through Plots pane &gt;&gt; save\nAlternatively, in the console use jpeg(), png(), svg() or pdf()\n\n\n# open graphics device\npng(file = \"my_plot.png\", width = 480, height = 480)\n\n# plot\nplot(iris$Sepal.Length, iris$Petal.Length,            # x variable, y variable\n     col  = iris$Species,                             # colour by species\n     pch  = 16,                                       # type of point to use\n     xlab = \"Sepal Length\",                           # x axis label\n     ylab = \"Petal Length\",                           # y axis label\n     main = \"Flower characteristics in Iris\")         # plot title \n\n# legend with titles of iris$Species and colour 1:3, point type pch at coords (x,y)\nlegend(\"topleft\", legend = levels(iris$Species), col = c(1:3), pch =16)\n\n# text at coords (x,y) with label correlation test\ntext(x = 7.5, y = 2, labels = \"cor = 0.871\\np &lt; 2.2e-16\")\n\n# close the device\ndev.off()\n\nSaving data\n\nwrite.table or write.csv (writing tabular data to text files, i.e. CSV, or connections)\nwriteLines(writing character data line-by-line to a file or connection)\nsaveRDS save a single data object in a compressed format\nsave (saving an arbitrary number of R objects in binary format (possibly compressed) to a file)\n\nLet’s save a results data frame in a comma delimited format (.csv) which is a common standard can be easily be opened by many application that can read text and tabular data (e.g. excel, libre office).\n\n# write your results to a file\nwrite.table(iris,                       # dataframe\n            file = \"results.csv\",       # filename\n            sep  = \";\",                 # field seperator\n            col.names = TRUE,           # include header (default = TRUE)\n            row.names = FALSE,          # include row names (default = TRUE)\n            quote = FALSE)              # quote characters and factors\n\nYou may also save objects for further use with R:\n\n# save a single data object (compressed)\nsaveRDS(iris,                           #  data object\n        file = \"iris.rds\")              #  file name\n\n\n# save multiple objects from your workspace\nsave(iris, data, file = \"my_two_objects.Rdata\")\n\n\n# save all objects in your workspace\nsave(file = \"my_workspace.Rdata\")       # warning: this occupies the most space\n\nIf you want to import these objects again to your R session:\n\nreadRDS(\"iris.rds\")\n\nload(\"my_workspace.Rdata\")"
   },
   {
     "objectID": "Trainings/Advancing_with_the_Shell/Shell_exercises.html",
