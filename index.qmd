@@ -1,21 +1,17 @@
 ---
-title: "IJC BIT Workshops"
-subtitle: "R & Bioinformatics from zero to hero"
- 
+title: "BIT Workshops"
+subtitle: "Bioinformatics from zero to hero"
 ---
 
-## Welcome
+## Welcome!
 
-This site has been created by the [Bioinformatics Team (BIT)](https://www.carrerasresearch.org/es/unidad-de-bioinform%C3%A1tica_130420) unit a the [Josep Carreras Leukaemia Research Institute (IJC)](https://www.carrerasresearch.org/en) to store materials and links for workshops we are hosting at the institute. We encourage you to add any comments or thoughts you may have!
+This website, developed by the [Bioinformatics Team (BIT)](https://www.carrerasresearch.org/es/unidad-de-bioinform%C3%A1tica_130420) a the [Josep Carreras Leukaemia Research Institute (IJC)](https://www.carrerasresearch.org/en) serves as a repository for materials and links related to our workshops. We invite you to share any comments or thoughts you may have or any topic you would like to propose!
 
-General topics
+Current topics
 
-* R and R packages
-* Bioconductor
-* Linux and beyond
-* High performance computing (HPC)
-* Data management
-* Tools for reproducible research
-
-
-If you are interested in any particular topic for a future workshop, please let us know by sending us a mail or simply passing by our office.
+-   R (base) and the Tidyverse
+-   Bioconductor
+-   Linux and beyond
+-   High performance computing (HPC)
+-   Tools for reproducible research
+-   Data visualization
