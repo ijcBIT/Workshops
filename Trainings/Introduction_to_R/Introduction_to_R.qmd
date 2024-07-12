@@ -1,0 +1,42 @@
+---
+title: "Introduction to R programming"
+author: "Angelika Merkel"
+---
+
+This 2-day-course gives a brief introduction to R and R programming basics for [Beginners]{.underline}. After the course, you should be capable of writing your own scripts and functions, utilize RStudio, create basic plots and have a basic understanding of data analysis workflows in R.
+
+**Topics covered:**
+
+Day 1
+
+* Why R and what is R?
+* Introduction to RStudio
+* Running R scripts
+* Practical session I: programming basics
+  + Classes and types of objects
+  + Accessing objects
+  + Control structures
+  + Functions
+
+Day 2
+
+* Base r and the tidyverse
+* Coding style
+* Practical session II: data analysis
+  + Importing/exporting data
+  + Exploratory data analysis
+  + Basic plots
+  
+<br/>
+**Course materials:**
+
+* [Course presentation](data/Introduction_to_R.July2024.pdf)
+* [Exercises Day 1](Introduction_to_R_Exercises1.qmd)
+* [Data analysis session Day 2](Example_data_analysis.qmd)
+
+For the practical sessions, we also follow chapters from the book by [D.Peng "R Programming for Data Science" (2022)](https://bookdown.org/rdpeng/rprogdatascience/). 
+
+
+
+
+

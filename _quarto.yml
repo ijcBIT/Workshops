@@ -39,13 +39,13 @@ website:
           - section: Linux/Shell
             contents:
                 - href: Trainings/Introduction_to_Linux/linux_intro.qmd
-                  text: Intro to Linux/Shell
+                  text: Introduction to Linux/Shell
                 - href: Trainings/Advancing_with_the_Shell/Advancing_with_the_Shell.qmd
                   text: The Shell advanced
           - section: R
             contents: 
-                - href: Trainings/Introduction_to_R/R_basics.qmd
-                  text: R basics
+                - href: Trainings/Introduction_to_R/Introduction_to_R.qmd
+                  text: Introduction to R
                 - href: Trainings/Visualizations_with_ggplot2/Visualizations_with_ggplot2.qmd
                   text: Visualizations with ggplot2
           - section: HPC
