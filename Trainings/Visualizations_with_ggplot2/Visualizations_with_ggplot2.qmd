@@ -1,22 +1,25 @@
 ---
-title: "Data visualization in R with the ggplot2 package"
+title: "Data visualization in R"
 author: "Angelika Merkel"
 ---
 
-This workshop introduces the ggplot2 R package for data visualization ( course presentation available [here](data/Data_visualization_with_ggplot2.pdf))
+This workshop introduces data visualization in R with the ggplot2 package for [Beginners]{.underline}'. After this course you should have sufficient knowledge to create your own plots (visualizations) with ggplo2. 
 
 **Topics covered:**
 
 * Why ggplot2?
 * Base R and the tidyverse
-* Building up your plot with ggplot()
-* Aestetics and geoms
-* Types of plots for one, two or multiple numerical/categorical variables
+* The grammar of graphics
+* Practical session:
+  + building up a plot
+  + mappings and layers
+  + groupings
+  + scaling
+  + formatting
 
-For this course we follow the Chapter: 'Data visualization' in the book [R for Data Science (2nd edition)](https://r4ds.hadley.nz/) by Wickham et al. This includes the practical session and exercises.
 
+**Course materials:**
 
-<!-- ```{=html} -->
-<!-- <iframe width="100%" height="94%" class="slide-deck" src="data/Data_visualizations_with_ggplot2.pdf" data-external="1"> -->
-<!-- </iframe> -->
-<!-- ``` -->
+* [Course presentation](data/Data_visualization_in_R.July2024pdf)
+
+For this course we follow several chapters from the book [R for Data Science (2nd edition)](https://r4ds.hadley.nz/) by Wickham et al. This includes the practical session and exercises.
