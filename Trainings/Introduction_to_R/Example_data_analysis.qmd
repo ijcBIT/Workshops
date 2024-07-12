@@ -1,5 +1,5 @@
 ---
-title: "Example data analysis"
+title: "Data analysis in R"
 author: "Angelika Merkel"
 format: 
   html:
@@ -7,78 +7,85 @@ format:
     self-contained: true
 ---
 
-## 1. Import data
+## Import data
 
-Principal functions reading data into R
-
--   `read.table`, `read.csv` (tabular data)
--   `readLines` (text file)
--   `load` (read in saved workspaces)
--   `source` (for reading in R code files)\
-
-#### Reading Data Files with `read.table()`
-
-`read.table()` is one of the most commonly used functions for reading data. The help file is definitely worth reading in its entirety.
-
-The `read.table()` function has a few important arguments:
-
--   `file`, the name of a file, or a connection
--   `header`, logical indicating if the file has a header line
--   `sep`, a string indicating how the columns are separated
--   `colClasses`, a character vector indicating the class of each column in the dataset
--   `nrows`, the number of rows in the dataset. By default `read.table()` reads an entire file.
--   `comment.char`, a character string indicating the comment character. This defaults to "\#".
--   `skip`, the number of lines to skip from the beginning
--   `stringsAsFactors`, should character variables be coded as factors? This defaults to TRUE.\
-
-::: callout-tip
-**Reading larger datasets with R**
-
-`read.table()` automatically estimates various parameters to store data. If you provide these this significantly speeds up the reading of large data sets.
-
--   Set `comment.char = ""` if there are no commented lines in your file.
--   Use the `colClasses` argument. Specifying this option instead of using the default can make 'read.table' run MUCH faster, often twice as fast. In order to use this option, you have to know the class of each column in your data frame. If all of the columns are "numeric", for example, then you can just set `colClasses = "numeric"`.
--   Set `nrows`. This doesn't make R run faster but it helps with memory usage. A mild overestimate is okay.
-:::
-
-#### Now, let's import some data
+Let's try importing some data using some examples that come with the {readr} and {readxl} packages.
 
 ```{r}
+#| eval: false
+install.packages(c("readr","readxl"))
 
-# use default parameters, missing parameters are estimated
-data <- read.table(file = "data/my_data.txt") 
 
-# assign parameters
-data <- read.table(file = "data/my_data.txt", 
-                   comment.char = "", 
-                   header = TRUE,
-                   colClasses = c(rep("numeric",4), "factor")
-                   )
+## tabular data (csv)
+
+library(readr)
+
+# retrieve local path
+path_example1 <- readr_example("mtcars.csv")
+
+# import the excel from the local path
+data1 <- read_csv(path_example1)
+
+## excel
+
+library(readxl)
+
+# retrieve local
+path_example2 <- readxl_example("deaths.xls")
+
+# import the excel from the local path
+data2 <- read_xls(path_example2)
 ```
 
-\
+::: {.callout-tip style="fill: yellow" appearance="simple"}
+## TIP
 
-## 2. Data QC and exploration
+Try importing data with RStudio ( \> Workspace \> 'Environment' OR \> 'File' \> 'import)
+:::
 
-Once you have imported your data it is always a good idea to inspect your data object:
+Be aware of common issues:
 
--   `head()` = displays the first parts of an object
--   `attributes()` = lists the attributes of an object
--   `str()` = displays the internal structure of an R object or a diagnostic function
--   RStudio viewer `view()`
+-   comments or empty line at the beginning or end of the file
+-   spaces/commas/etc are used as field delimiters but also within cells (for example in a text string)
+-   empty fields
+-   special (including hidden) characters
+-   special formatting (for example dates or geographical coordinates)
 
-You may need to adjust the way you import your data!
+## Wrangle data
 
-#### Now, you can start exploring your data
+You may need to modify or transfor your data after you have imported it. This can be done with R{base}, but the dplyr package within the tidyverse provides very convinient and intuitive functions.
+
+Data wrangling with {dplyr}: [R programming for Data science (D. Peng 2022): Chapter 12](https://bookdown.org/rdpeng/rprogdatascience/managing-data-frames-with-the-dplyr-package.html#data-frames-1)
+
+## Quality control
+
+It is always a good idea to inspect your data object
+
+-   `head()` = display the first parts of an object
+-   `view()` = view data in the RStudio viewer
+-   `attributes()` = list the attributes of an object
+-   `str()` = display the internal structure of an R object or a diagnostic function
+-   `is.na()` = check for NA's
+
+## Exploratory data analysis
+
+We return to our trusted 'iris' data set
+
+```{r}
+#| eval: false
+load(iris)
+```
+
+Let's start getting some summary statistics and visualize the distribution of our data to get a feel for it.
 
 ```{r}
 #| eval: false
 
-# rename the object
-iris <- data
-
 # basic summary statistics
 summary(iris)
+
+# histogram
+hist(iris$Sepal.Length)
 
 # density distribution
 plot(density(iris$Sepal.Length))
@@ -90,9 +97,7 @@ boxplot(iris$Sepal.Length ~ iris$Species, col = c("black","red","green"))
 pairs(iris, col = iris$Species)
 ```
 
-\
-
-## 3. Data analysis
+## Data analysis
 
 Lets find out how Sepal length and Petal length are related
 
@@ -101,13 +106,23 @@ Lets find out how Sepal length and Petal length are related
 
 # examine the relationship between Sepal and Petal Length
 plot(iris$Sepal.Length, iris$Petal.Length, col = iris$Species)
+```
+
+It seem there is quite a correlation. Let's check
+
+```{r}
+#| eval: false
 
 # calculate Pearson correlation
 cor.test(iris$Sepal.Length, iris$Petal.Length)
+```
 
-# => Great! Sepal.Length and Petal.Length are significantly positive correlated. Let's capture this
-# insight in a nicer informative plot.
+## Visualization
 
+Great! Sepal.Length and Petal.Length are significantly positive correlated. Let's capture this insight in a nicer informative plot.
+
+```{r}
+#| eval: false
 
 # FINAL PLOT
  
@@ -127,14 +142,14 @@ text(x = 7.5, y = 2, labels = "cor = 0.871\np < 2.2e-16")
 
 For more on basic R plots see [R Base Graphics: An Idiots Guide](https://rstudio-pubs-static.s3.amazonaws.com/7953_4e3efd5b9415444ca065b1167862c349.html)
 
-## 4. Export results
+## Export results
 
 After you have finished you analysis you may want so save your results for later:
 
-Saving images
+**Saving images**
 
--   export with RStudio through Plots \>\> save
--   alternatively use jpeg(), png(), svg() or pdf()
+a)  Export with RStudio through Plots pane \>\> save
+b)  Alternatively, in the console use jpeg(), png(), svg() or pdf()
 
 ```{r}
 #| eval: false
@@ -160,11 +175,14 @@ text(x = 7.5, y = 2, labels = "cor = 0.871\np < 2.2e-16")
 dev.off()
 ```
 
-Functions for writing data to files
+**Saving data**
 
 -   `write.table` or `write.csv` (writing tabular data to text files, i.e. CSV, or connections)
 -   `writeLines`(writing character data line-by-line to a file or connection)
+-   `saveRDS` save a single data object in a compressed format
 -   `save` (saving an arbitrary number of R objects in binary format (possibly compressed) to a file)
+
+Let's save a results data frame in a comma delimited format (.csv) which is a common standard can be easily be opened by many application that can read text and tabular data (e.g. excel, libre office).
 
 ```{r}
 #| eval: false
@@ -176,14 +194,32 @@ write.table(iris,                       # dataframe
             col.names = TRUE,           # include header (default = TRUE)
             row.names = FALSE,          # include row names (default = TRUE)
             quote = FALSE)              # quote characters and factors
+```
 
-# save your workspace
-save(file = "my_workspace.Rdata")       # warning: this occupies the most space
+You may also save objects for further use with R:
 
-# save multiple objects
-save(iris, data, file = "my_two_objects.Rdata")
+```{r}
+#| eval: false
 
 # save a single data object (compressed)
 saveRDS(iris,                           #  data object
         file = "iris.rds")              #  file name
+
+
+# save multiple objects from your workspace
+save(iris, data, file = "my_two_objects.Rdata")
+
+
+# save all objects in your workspace
+save(file = "my_workspace.Rdata")       # warning: this occupies the most space
+```
+
+If you want to import these objects again to your R session:
+
+```{r}
+#| eval: false
+
+readRDS("iris.rds")
+
+load("my_workspace.Rdata")
 ```
