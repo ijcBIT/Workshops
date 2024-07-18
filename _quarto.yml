@@ -47,7 +47,7 @@ website:
                 - href: Trainings/Introduction_to_R/Introduction_to_R.qmd
                   text: Introduction to R
                 - href: Trainings/Visualizations_with_ggplot2/Visualizations_with_ggplot2.qmd
-                  text: Visualizations with ggplot2
+                  text: Data visualization in R
           - section: HPC
             contents: 
                 - href: Trainings/HPC/Intro_to_IJC_HPC.qmd
