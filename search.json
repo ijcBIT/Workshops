@@ -134,7 +134,7 @@
     "href": "Trainings/Visualizations_with_ggplot2/Visualizations_with_ggplot2.html",
     "title": "Data visualization in R",
     "section": "",
-    "text": "This workshop introduces data visualization in R with the ggplot2 package for Beginners’. After this course you should have sufficient knowledge to create your own plots (visualizations) with ggplo2.\nTopics covered:\n\nWhy ggplot2?\nBase R and the tidyverse\nThe grammar of graphics\nPractical session:\n\nbuilding up a plot\nmappings and layers\ngroupings\nscaling\nformatting\n\n\nCourse materials:\n\nCourse presentation\n\nFor this course we follow several chapters from the book R for Data Science (2nd edition) by Wickham et al. This includes the practical session and exercises.",
+    "text": "This workshop introduces data visualization in R with the ggplot2 package for Beginners. After this course you should have a good understanding of the ‘Grammar of Graphics’ and sufficient knowledge to create your own plots (visualizations) with ggplot2.\nTopics covered:\n\nWhy use ggplot2?\nBase R and the tidyverse\nThe Grammar of Graphics\nPractical session:\n\nbuilding up a plot\nmappings and layers\ngroupings\nscaling\nformatting\n\n\nCourse materials:\n\nCourse presentation\n\nFor this course we follow several chapters from the book R for Data Science (2nd edition) by Wickham et al. This includes the practical session and exercises.",
     "crumbs": [
       "Trainings",
       "R",
