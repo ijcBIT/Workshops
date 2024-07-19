@@ -1,0 +1,28 @@
+---
+title: "Introduction to Linux and the Shell"
+---
+
+This 2-day-course gives a brief introduction to Linux and Shell programming for [Beginners]{.underline}. After the course, you should be able to find your way around a Linux system, handle and modify files and directories and write (and execute) your own Shell (bash) scripts.
+
+**Topics covered:**
+
+Day 1
+
+-   What is Linux?
+-   Moving around the file system
+-   File properties
+-   Basic file and directory handling
+-   Text file viewing and manipulation
+
+Day 2
+
+-   Introduction to 'Vim' text editor
+-   Create and run a shell script
+-   Shell programming:
+    -   Variables and control structures (if-else, for-loop, while-loop)
+
+<br/> **Course materials:**
+
+-   [Course presentation](data/Introduction_to_Linux.June2024.pdf)
+-   [Exercises](Linux_exercises.June2024.qmd)
+-   [Exercises with solutions](Linux_exercises_with_solutions.June2024.qmd)

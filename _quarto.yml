@@ -38,7 +38,7 @@ website:
         contents: 
           - section: Linux/Shell
             contents:
-                - href: Trainings/Introduction_to_Linux/linux_intro.qmd
+                - href: Trainings/Introduction_to_Linux/Linux_intro.qmd
                   text: Introduction to Linux/Shell
                 - href: Trainings/Advancing_with_the_Shell/Advancing_with_the_Shell.qmd
                   text: The Shell advanced

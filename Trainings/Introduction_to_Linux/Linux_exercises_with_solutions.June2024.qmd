@@ -5,49 +5,59 @@ author: "Angelika Merkel"
 
 ### Exercise 1:
 
-Go to the root directory and list its content. How many other files aside from directories ? How many directories starting with 's'?
+Go to the 'root' directory and list its content. How many other files aside from directories ? How many directories starting with 's'?
 
 **Answer**
 
 ``` bash
+ # Go to the 'root' directory 
  cd /
+ 
+# List the content of the current directory
  ls .      # 1 regular files, 6 softlinks
+ 
+# List directories starting with 's' 
  ls -d s*  # 4 directories, 
-           # Note that `ls s*` will list the contents of all directories
-           # starting with 's"' 
+
+# => Note that `ls s*` will list the contents of all directories starting with 's"' 
 ```
+
+<br/>
 
 ### Exercise 2:
 
-In your home directory create a new directory called 'analysis'. Copy the file '/home/shared/peaks.bed' to this directory. Now, create a softlink to the original file and call it 'softlink_peaks.bed'.
+In YOUR 'home' directory create a new directory called 'analysis'. Copy the file '/home/shared/peaks.bed' to this directory. Now, create a softlink to the original file and call it 'softlink_peaks.bed'.
 
 Finally, list all files that end with '.bed' in a single command.
 
 **Answer**
 
 ``` bash
-# go to your home directory
+# Go to your 'home' directory
  cd ~
 
-# create directory
+# Create a new directory
  mkdir analysis                     
 
-# enter 'analysis' directory 
+# Enter the 'analysis' directory 
  cd analysis
  
 # copy 'peaks.bed' to current directory 
  cp /home/shared/peaks.bed .  
 
-# create softlink 
+# create a softlink 
  ln -s /home/shared/peaks.bed -n softlink_peaks.bed  
 
-# list all files ending in '.bed' in all three directories
+# list all files ending in '.bed' in the current directory
  ls *.bed
+ ls -lrth *.bed
 ```
+
+<br/>
 
 ### Exercise 3:
 
-Is bzip2 or gzip the better compression? Which algorithm compresses peaks.bed more?
+Is bzip2 or gzip the better compression? Which algorithm compresses the file 'peaks.bed' more?
 
 **Answer**
 
@@ -68,43 +78,49 @@ Is bzip2 or gzip the better compression? Which algorithm compresses peaks.bed mo
 # => the file compressed with bzip2 is slightly smaller (6.1K) than the one compressed with gzip (6.4K)
 ```
 
-### Exercise 4
+<br/>
+
+### Exercise 4:
 
 Extract the first and last 10 lines of the file peaks.bed into a new file. How many characters does this file have?
 
 **Answer**
 
 ``` bash
-# extract the first 10 lines
+# Extract the first 10 lines
  head -10 peaks.bed > head.peaks
  
-# extract the last 10 lines and append to the previous file
+# Extract the last 10 lines and append to the previous file
  tail -10 peaks.bed >> head.peaks
  
-# count the number of characters
+# Count the number of characters
  wc -c head.peaks
 ```
 
+<br/>
+
 ### Exercise 5:
 
-Extract the first 10 lines of the second and fifth column from of peaks.bed. Create a file where the (originally) second column is sorted by increasing size and the fifth column by decreasing size.
+Extract the first 10 lines of the second and fifth column from of peaks.bed. Create a file where the (original) second column is sorted by increasing size and the fifth column by decreasing size. Use the pipe if you can.
 
 How many characters does the last line of this file have?
 
 **Answer**
 
 ``` bash
-# extract the first 10 lines, slice column 2, sort numerical and store output in a file
+# Extract the first 10 lines, slice column 2, sort numerical and store output in a file
  head -10 peaks.bed | cut -f 2 |sort -n > column2
 
-# do the same but with column 5 and sort in reverse order.
-# then join output with previous file, extract last line and count number of characters (=12)
+# Do the same but with column 5 and sort in reverse order.
+# Then join output with previous file, extract last line and count number of characters (=12)
  head -10 peaks.bed | cut -f 5 |sort -nr| paste column 2 - | tail -1| wc -c
 ```
 
+<br/>
+
 ### Exercise 6:
 
-What is the highest and lowest value in column 5 on chrM?
+In the file 'peaks.bed', what is the highest and lowest value in column 5 on chrM?
 
 **Answer**
 
@@ -114,6 +130,8 @@ What is the highest and lowest value in column 5 on chrM?
 grep -w chrM peaks.bed | cut -f 5| sort -n| head -1
 grep -w chrM peaks.bed | cut -f 5| sort -n| tail -1
 ```
+
+<br/>
 
 ### Exercise 7:
 
@@ -136,26 +154,26 @@ Write a script, that for any given directory lists all files it contains and cou
 # assign the script's first argument to a meaningful variable
 DIR=$1
 
-# loop over all elements listed in the specified directory
+# Loop over all elements listed in the specified directory
 for i in `ls $DIR`
  do
  
- # test if the element listed is a regular file (else could be a directory)
+ # Test if the element listed is a regular file (else could be a directory)
   if [ -f "$i" ]                         
   
-  # if true, count all characters within the file and return with a message
+  # if this is true, count all characters within the file and return a message
     then
       CHAR=`cat $i| wc -c`
       echo $i ":" $CHAR "characters"
   
-  # close conditional
+  # close conditional structure
   fi
   
-# close for loop
+# close the 'for loop'
 done
 ```
 
-Finally, to run the script:
+Finally, to run the script in the terminal:
 
 ``` bash
  chmod a+x myscript.sh       # make the file executable
