@@ -11,7 +11,7 @@ This course gives a brief introduction to version control with git and the gitHu
 **Topics covered:**
 
 * Why use version control?
-* basic Git workflow and commands
+* Basic Git workflow and commands
 * Backtracking
 * Remote repositories
 * Branches
