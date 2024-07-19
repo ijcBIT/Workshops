@@ -321,7 +321,12 @@
     "href": "Trainings/Git/Introduction_to_git.html",
     "title": "Introduction to git and GitHub",
     "section": "",
-    "text": "This course gives a brief introduction to version control with git and the gitHub repository. The course is aimed at user with an Intermediate level of programming skills and and a basic knowledge of Linux and the Terminal.\nTopics covered:\n\nWhy use version control?\nBasic Git workflow and commands\nBacktracking\nRemote repositories\nBranches\n\nMaterials\n\nSeminar presentation"
+    "text": "This course gives a brief introduction to version control with git and the gitHub repository. The course is aimed at user with an Intermediate level of programming skills and and a basic knowledge of Linux and the Terminal.\nTopics covered:\n\nWhy use version control?\nBasic Git workflow and commands\nBacktracking\nRemote repositories\nBranches\n\nMaterials\n\nSeminar presentation",
+    "crumbs": [
+      "Trainings",
+      "Git/GitHub",
+      "Git/GitHub"
+    ]
   },
   {
     "objectID": "Trainings/IJC_computing/IJC_computing_HPC.html",

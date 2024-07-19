@@ -2,118 +2,118 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
     <loc>https://ijcbit.github.io/Workshops/index.html</loc>
-    <lastmod>2024-07-19T13:49:50.103Z</lastmod>
+    <lastmod>2024-07-19T14:02:10.382Z</lastmod>
   </url>
   <url>
     <loc>https://ijcbit.github.io/Workshops/Trainings/Advancing_with_the_Shell/Advancing_with_the_Shell.html</loc>
-    <lastmod>2024-07-19T13:49:50.051Z</lastmod>
+    <lastmod>2024-07-19T14:02:10.330Z</lastmod>
   </url>
   <url>
     <loc>https://ijcbit.github.io/Workshops/Trainings/IJC_computing/IJC_computing_infrastructure.html</loc>
-    <lastmod>2024-07-19T13:49:50.071Z</lastmod>
+    <lastmod>2024-07-19T14:02:10.350Z</lastmod>
   </url>
   <url>
     <loc>https://ijcbit.github.io/Workshops/Trainings/Data_visualization_in_R/Data_visualization_in_R.html</loc>
-    <lastmod>2024-07-19T13:49:50.063Z</lastmod>
+    <lastmod>2024-07-19T14:02:10.342Z</lastmod>
   </url>
   <url>
     <loc>https://ijcbit.github.io/Workshops/Trainings/Introduction_to_R/Introduction_to_R.html</loc>
-    <lastmod>2024-07-19T13:49:50.091Z</lastmod>
+    <lastmod>2024-07-19T14:02:10.366Z</lastmod>
   </url>
   <url>
     <loc>https://ijcbit.github.io/Workshops/Trainings/Containers/interactive_container.html</loc>
-    <lastmod>2024-07-19T13:49:50.055Z</lastmod>
+    <lastmod>2024-07-19T14:02:10.334Z</lastmod>
   </url>
   <url>
     <loc>https://ijcbit.github.io/Workshops/Trainings/Containers/Intro_to_containers.html</loc>
-    <lastmod>2024-07-19T13:49:50.055Z</lastmod>
+    <lastmod>2024-07-19T14:02:10.334Z</lastmod>
   </url>
   <url>
     <loc>https://ijcbit.github.io/Workshops/Trainings/Containers/running_instances.html</loc>
-    <lastmod>2024-07-19T13:49:50.063Z</lastmod>
+    <lastmod>2024-07-19T14:02:10.338Z</lastmod>
   </url>
   <url>
     <loc>https://ijcbit.github.io/Workshops/Trainings/Containers/files_access.html</loc>
-    <lastmod>2024-07-19T13:49:50.055Z</lastmod>
+    <lastmod>2024-07-19T14:02:10.334Z</lastmod>
   </url>
   <url>
     <loc>https://ijcbit.github.io/Workshops/Trainings/Containers/docker_vs_singularity.html</loc>
-    <lastmod>2024-07-19T13:49:50.055Z</lastmod>
+    <lastmod>2024-07-19T14:02:10.334Z</lastmod>
   </url>
   <url>
     <loc>https://ijcbit.github.io/Workshops/Trainings/Containers/build_a_container.html</loc>
-    <lastmod>2024-07-19T13:49:50.055Z</lastmod>
+    <lastmod>2024-07-19T14:02:10.334Z</lastmod>
   </url>
   <url>
     <loc>https://ijcbit.github.io/Workshops/Trainings/Containers/containers_in_HPC.html</loc>
-    <lastmod>2024-07-19T13:49:50.055Z</lastmod>
+    <lastmod>2024-07-19T14:02:10.334Z</lastmod>
   </url>
   <url>
     <loc>https://ijcbit.github.io/Workshops/Trainings/Containers/pipeline_example.html</loc>
-    <lastmod>2024-07-19T13:49:50.063Z</lastmod>
+    <lastmod>2024-07-19T14:02:10.338Z</lastmod>
   </url>
   <url>
     <loc>https://ijcbit.github.io/Workshops/Trainings/Introduction_to_Linux/Linux_exercises.June2024.html</loc>
-    <lastmod>2024-07-19T13:49:50.083Z</lastmod>
+    <lastmod>2024-07-19T14:02:10.362Z</lastmod>
   </url>
   <url>
     <loc>https://ijcbit.github.io/Workshops/Trainings/Introduction_to_Linux/Linux_exercises_with_solutions.June2024.html</loc>
-    <lastmod>2024-07-19T13:49:50.083Z</lastmod>
+    <lastmod>2024-07-19T14:02:10.362Z</lastmod>
   </url>
   <url>
     <loc>https://ijcbit.github.io/Workshops/Trainings/Introduction_to_Linux/Introduction_to_Linux.html</loc>
-    <lastmod>2024-07-19T13:49:50.083Z</lastmod>
+    <lastmod>2024-07-19T14:02:10.362Z</lastmod>
   </url>
   <url>
     <loc>https://ijcbit.github.io/Workshops/Trainings/Containers/how_containers_work.html</loc>
-    <lastmod>2024-07-19T13:49:50.055Z</lastmod>
+    <lastmod>2024-07-19T14:02:10.334Z</lastmod>
   </url>
   <url>
     <loc>https://ijcbit.github.io/Workshops/Trainings/Containers/pull_container.html</loc>
-    <lastmod>2024-07-19T13:49:50.063Z</lastmod>
+    <lastmod>2024-07-19T14:02:10.338Z</lastmod>
   </url>
   <url>
     <loc>https://ijcbit.github.io/Workshops/Trainings/Containers/vm_vs_containers.html</loc>
-    <lastmod>2024-07-19T13:49:50.063Z</lastmod>
+    <lastmod>2024-07-19T14:02:10.338Z</lastmod>
   </url>
   <url>
     <loc>https://ijcbit.github.io/Workshops/Trainings/Containers/not_only_docker.html</loc>
-    <lastmod>2024-07-19T13:49:50.063Z</lastmod>
+    <lastmod>2024-07-19T14:02:10.338Z</lastmod>
   </url>
   <url>
     <loc>https://ijcbit.github.io/Workshops/Trainings/Containers/sequera_containers.html</loc>
-    <lastmod>2024-07-19T13:49:50.063Z</lastmod>
+    <lastmod>2024-07-19T14:02:10.338Z</lastmod>
   </url>
   <url>
     <loc>https://ijcbit.github.io/Workshops/Trainings/Containers/container_recipe.html</loc>
-    <lastmod>2024-07-19T13:49:50.055Z</lastmod>
+    <lastmod>2024-07-19T14:02:10.334Z</lastmod>
   </url>
   <url>
     <loc>https://ijcbit.github.io/Workshops/Trainings/Containers/container_sandbox.html</loc>
-    <lastmod>2024-07-19T13:49:50.055Z</lastmod>
+    <lastmod>2024-07-19T14:02:10.334Z</lastmod>
   </url>
   <url>
     <loc>https://ijcbit.github.io/Workshops/Trainings/Containers/run_in_container.html</loc>
-    <lastmod>2024-07-19T13:49:50.063Z</lastmod>
+    <lastmod>2024-07-19T14:02:10.338Z</lastmod>
   </url>
   <url>
     <loc>https://ijcbit.github.io/Workshops/Trainings/Introduction_to_R/Introduction_to_R_Exercises1.html</loc>
-    <lastmod>2024-07-19T13:49:50.091Z</lastmod>
+    <lastmod>2024-07-19T14:02:10.366Z</lastmod>
   </url>
   <url>
     <loc>https://ijcbit.github.io/Workshops/Trainings/Introduction_to_R/Example_data_analysis.html</loc>
-    <lastmod>2024-07-19T13:49:50.091Z</lastmod>
+    <lastmod>2024-07-19T14:02:10.366Z</lastmod>
   </url>
   <url>
     <loc>https://ijcbit.github.io/Workshops/Trainings/Git/Introduction_to_git.html</loc>
-    <lastmod>2024-07-19T13:49:50.063Z</lastmod>
+    <lastmod>2024-07-19T14:02:10.342Z</lastmod>
   </url>
   <url>
     <loc>https://ijcbit.github.io/Workshops/Trainings/IJC_computing/IJC_computing_HPC.html</loc>
-    <lastmod>2024-07-19T13:49:50.071Z</lastmod>
+    <lastmod>2024-07-19T14:02:10.350Z</lastmod>
   </url>
   <url>
     <loc>https://ijcbit.github.io/Workshops/Trainings/Advancing_with_the_Shell/Advancing_with_the_Shell_Exercises.June2024.html</loc>
-    <lastmod>2024-07-19T13:49:50.051Z</lastmod>
+    <lastmod>2024-07-19T14:02:10.330Z</lastmod>
   </url>
 </urlset>
