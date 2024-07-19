@@ -1,0 +1,22 @@
+---
+title: "Introduction to git and GitHub"
+editor: visual
+author: Marina Vilardell
+---
+
+
+This course gives a brief introduction to version control with git and the gitHub repository. The course is aimed at user with an [Intermediate]{.underline} level of programming skills and and a basic knowledge of Linux and the Terminal.
+
+
+**Topics covered:**
+
+* Why use version control?
+* basic Git workflow and commands
+* Backtracking
+* Remote repositories
+* Branches
+
+
+**Materials**
+
+- [Seminar presentation](data/git_workshop_June2024.pdf) 
