@@ -48,10 +48,10 @@ website:
                   text: Introduction to R
                 - href: Trainings/Data_visualization_in_R/Data_visualization_in_R.qmd
                   text: Data visualization in R
-          - section: HPC
+          - section: IJC_computing
             contents: 
-                - href: Trainings/HPC/Intro_to_IJC_HPC.qmd
-                  text: IJC Infrastructure
+                - href: Trainings/IJC_computing/IJC_computing.qmd
+                  text: IJC computing
           - section: Containers
             contents: 
                 - href: Trainings/Containers/Intro_to_containers.qmd
