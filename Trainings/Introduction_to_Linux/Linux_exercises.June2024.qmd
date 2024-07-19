@@ -1,0 +1,52 @@
+---
+title: "Introduction to Linux: Exercises"
+editor: visual
+author: "Angelika Merkel"
+---
+
+### Exercise 1:
+
+Go to the 'root' directory and list its content. How many other files aside from directories ? How many directories starting with 's'?
+
+<br/>
+
+### Exercise 2:
+
+In YOUR 'home' directory create a new directory called 'analysis'. Copy the file '/home/shared/peaks.bed' to this directory. Now, create a softlink to the original file and call it 'softlink_peaks.bed'.
+
+Finally, list all files that end with '.bed' in a single command.
+
+<br/>
+
+### Exercise 3:
+
+Is bzip2 or gzip the better compression? Which algorithm compresses the file 'peaks.bed' more?
+
+
+<br/>
+
+### Exercise 4:
+
+Extract the first and last 10 lines of the file peaks.bed into a new file. How many characters does this file have?
+
+
+<br/>
+
+### Exercise 5:
+
+Extract the first 10 lines of the second and fifth column from of peaks.bed. Create a file where the (original) second column is sorted by increasing size and the fifth column by decreasing size. Use the pipe if you can.
+
+How many characters does the last line of this file have?
+
+
+<br/>
+
+### Exercise 6:
+
+In the file 'peaks.bed', what is the highest and lowest value in column 5 on chrM?
+
+<br/>
+
+### Exercise 7:
+
+Write a script, that for any given directory lists all files it contains and counts the number of characters of all regular files it contains.

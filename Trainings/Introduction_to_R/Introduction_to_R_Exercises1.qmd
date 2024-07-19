@@ -42,10 +42,10 @@ str(iris)
 c(iris[1, 1], iris[nrow(iris), ncol(iris)])
 ```
 
-=> implicit cohersion occurs: the factor level 'versicolor' as part of a factor of length 3 is converted into the number '3.0'
-
+=\> implicit cohersion occurs: the factor level 'versicolor' as part of a factor of length 3 is converted into the number '3.0'
 
 1.4. How many flowers of the 'setosa' species were measured?
+
 ```{r}
 # select all rows from the dataframe for which the variable Species is 'setosa', and count the number of rows
 x <- iris[which(iris$Species == "setosa"), ]
@@ -57,6 +57,7 @@ length(x)
 ```
 
 1.5. Create a list with 3 elements, each containing the Sepal.length for one flower species with only those with measurements larger than 5. How many entries for 'versicolor'?
+
 ```{r}
 # Create the list
 sepal_length_large <- list(
@@ -68,10 +69,10 @@ sepal_length_large <- list(
 length(sepal_length_large[["versicolor"]])
 ```
 
-
 ### Exercise 2: Control structures
 
-Write a loop that calculates the sepal surface (length*width) for the first 10 measurements.
+Write a loop that calculates the sepal surface (length\*width) for the first 10 measurements.
+
 ```{r}
 for (i in 1:10) {
   
@@ -82,7 +83,8 @@ for (i in 1:10) {
 
 ### Exercise 3: Functions
 
-Create a function that calculates the maximum sepal surface  for a specific species for the iris data set. What is the largest sepal surface for 'setosa'?
+Create a function that calculates the maximum sepal surface for a specific species for the iris data set. What is the largest sepal surface for 'setosa'?
+
 ```{r}
 # define a function, set iris as the default for the argument 'data'
 max_sepal_surface <- function(data = iris, spec) {
@@ -106,4 +108,3 @@ max_sepal_surface <- function(data = iris, spec) {
 # use the fuction to estimate the maximum sepal surface for setosa
 max_sepal_surface(spec = "setosa")
 ```
-
