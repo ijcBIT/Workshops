@@ -1,0 +1,92 @@
+---
+title: "Advancing with the Shell: Exercises"
+editor: visual
+author: Angelika Merkel
+---
+
+### Exercise 1:
+
+Create a 'for loop' to iterate over a list of .bed files and print out the name for each file.
+
+Answer
+
+``` bash
+#
+for i in $( ls *bed ); do echo $i; done
+```
+
+<br/>
+
+### Exercise 2:
+
+Using a 'for loop' calculate the multiplication series for the number 7 for each 5th instance up to 140 (for example: 1 \* 7 = 7, 5 \* 7 = 35, 10 \* 7 = 70 ... 20 \* 7 = 140).
+
+Answer
+
+``` bash
+#
+for i in {1..140..4}; do echo $(( $i * 7)); done
+```
+
+<br/>
+
+### Exercise 3:
+
+Rename all '.bed' files to '.txt' files.
+
+Answer
+
+``` bash
+#
+for i in $( ls *bed ); do mv $i ${i%.bed}.txt; done
+```
+
+<br/>
+
+### Exercise 4:
+
+From the file 'subsample1.bed' extract all lines that start with chr20, chr21, chr22 but not chr2.
+
+Answer
+
+``` bash
+#
+egrep '^chr2[0-2]' subsample.bed
+```
+
+<br/>
+
+### Exercise 5:
+
+Using 'sed', remove all quotes from a file.
+
+Answer
+
+``` bash
+#
+sed 's/\"//g' myfile
+```
+
+<br/>
+
+### Exercise 6:
+
+Using 'awk', print the coordinates of all peaks occoring on the plus strand.
+
+Answer
+
+``` bash
+#
+awk '{if($5=="+"){print $1, $2, $3}}'  peaks.bed
+```
+
+Using 'awk', calculate the total of the peak scores for all peaks occuring on the plus strand.
+
+<br/>
+
+Answer
+
+``` bash
+#
+awk '{if($5=="+"){SUM+=$1}} END {print "The total score is", SUM}' peaks.bed
+```
