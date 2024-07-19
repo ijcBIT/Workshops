@@ -1,28 +1,19 @@
 ---
 title: "Advancing with the Shell"
-author: "Angelika Merkel"
 ---
 
-In this course we teach advanced functionality of the shell (specifically bash).
-The course presentation is available [here](data/Advancing_with_the_Shell.pdf)
+In this course we teach advanced functionality of the Shell (specifically bash). This course is aimed at users at the [Intermediate]{.underline} level, and we strongly recommend to attend the Beginners' course 'Introduction to Linux and the Shell' beforehand.
+
 
 **Topics covered:**
 
-
+* Bash: expansions and substitutions
+* Regular expressions
+* File manipulations with 'sed' and 'awk'
 * Customizing your Shell
-* Bash: Expansions ans substitution
-* Regular expression
-* File manipulations with awk and sed
 
  
+**Course materials:**
 
-
-
-<!-- ```{=html} -->
-<!-- <iframe width="100%" height="85%" class="slide-deck" src="data/Introduction_to_R.14112023.pdf" data-external="1"> -->
-<!-- </iframe> -->
-<!-- ``` -->
-
-
-
-
+- [Course presentation](data/Advancing_with_the_Shell.June2024.pdf)
+- [Exercises with solutions](Advancing_with_the_Shell_Exercises.June2024.qmd)
