@@ -80,7 +80,11 @@ website:
                   text: Container recipe
                 - href: Trainings/Containers/containers_in_HPC.qmd
                   text: Containers in HPC
-
+          - section: Git/GitHub
+            contents: 
+                - href: Trainings/Git/Introduction_to_git.qmd
+                  text: Git/GitHub
+                  
 format:
   html:
     theme:
