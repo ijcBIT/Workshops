@@ -312,7 +312,7 @@
     "text": "Introduction to the IJC Computing Infrastructure\nThe Bioinformatics Unit (together with the IT team) provides this seminar to introduce newcomers to the IJC to the institute’s computing infrastructure. It also serves to keep established researchers updated with latest changes or additions by IT.\nTopics covered:\n\nComputational infrastructure and resources\nFile sharing (oneDrive/nextCloud/sharedFolder)\nData sharing (ftp/sftp)\nThe IJC network and remote connections\nIJC’s high-performance computing cluster (HPC)\n\nMaterials\n\nSeminar presentation\n\n\n\n\nComputations with the IJC HPC Cluster ‘Minastirith’\nFor bioinformaticians specifically, we provide a practical training session on how to use the IJC HPC cluster (aka ‘minastirith’) for scientific computation. This session is aimed at users with an Intermediate level and requires basic knowledge of Linux and Bash. We strongly recommend to attend our Beginners course ‘Introduction to Linux and the Shell’ beforehand.\nTopics covered:\n\nThe SLURM job scheduler\nSubmitting jobs with sbatch\nMonitoring and controlling jobs\nSerial and array jobs\nRequesting resources\n\nMaterials:\n\nWorkshop presentation",
     "crumbs": [
       "Trainings",
-      "IJC_computing",
+      "IJC computing",
       "IJC computing"
     ]
   },
