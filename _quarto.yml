@@ -50,8 +50,10 @@ website:
                   text: Data visualization in R
           - section: IJC computing
             contents: 
-                - href: Trainings/IJC_computing/IJC_computing.qmd
-                  text: IJC computing
+                - href: Trainings/IJC_computing/IJC_computing_infrastructure.qmd
+                  text: Infrastructure
+                - href: Trainings/IJC_computing/IJC_computing_HPC.qmd
+                  text: HPC
           - section: Containers
             contents: 
                 - href: Trainings/Containers/Intro_to_containers.qmd

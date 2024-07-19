@@ -1,0 +1,20 @@
+---
+title: "Introduction to the IJC Computing Infrastructure"
+---
+
+
+The Bioinformatics Unit (together with the IT team) provides this seminar to introduce newcomers to the IJC to the institute's computing infrastructure. It also serves to keep established researchers updated with latest changes or additions by IT. 
+
+
+**Topics covered:**
+
+* Computational infrastructure and resources
+* File sharing (oneDrive/nextCloud/sharedFolder)
+* Data sharing (ftp/sftp)
+* The IJC network and remote connections
+* IJC's high-performance computing cluster (HPC) 
+
+
+**Materials**
+
+- [Seminar presentation](data/Introduction_to_the_IJC_computing_infrastructure_Overview.June2024.pdf) 
