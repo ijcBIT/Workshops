@@ -1,49 +1,28 @@
 ---
 title: "Introduction to the world of containers"
 author: "Emilio Lario"
-
-format: 
-  html:
-    toc: false
-    code-fold: true
+editor: visual
 ---
 
-:::: {.columns}
+This workshop provides a comprehensive introduction to containers for newcomers. It focuses on container technology, usage, and practical applications. Participants will gain insights into container creation, image management, and executing scripts in high-performance computing (HPC) environments.
 
-::: {.column width="45%"}
-![](media/meme.png)
-:::
+**Topics covered:**
 
-::: {.column width="10%"}
-<!-- empty column to create gap -->
-:::
+-   Virtualization and Containerization
+-   How Containers Work
+-   Not Only Docker
+-   Docker vs Singularity
+-   Pulling Container Images
+-   Interactive Shell
+-   Run in a Container
+-   Files Access
+-   Build a Container
+-   Containers in the IJC’s High-Performance Computing Cluster (HPC)
 
-::: {.column width="45%"}
-* Packages code and all its dependencies.
-* Runs anywhere with a compatible kernel.
+**Materials**
 
-::: {.callout-note icon=false}
-## Exercice 1
-
-1. Go to the VPN and log in to the Linux course machine: \ 
-<a target="_blank" href="https://vpn.carrerasresearch.org/static/sslvpn/portal/">vpn</a>
-2. Find a container named “lolcow” from “godlovedc” on Docker Hub:  \
-<a target="_blank" href="https://hub.docker.com/">hub.docker.com</a>
-3. Go back to the Linux terminal and type: ``` singularity run docker://container/name ```  
-
-<details>
-  <summary>Solution</summary>
-  ```bash
-  singularity run docker://godlovedc/lolcow
-  ```
-</details>
-:::
-
-
-:::
-
-::::
-
+-   [Seminar presentation (quarto)](Introduction_to_containers_presentation.qmd)
+-   [Seminar presentation (pdf)](data/containers_workshop_june2024.pdf)
 
 
 

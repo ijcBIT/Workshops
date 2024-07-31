@@ -1,0 +1,75 @@
+/*-- scss:defaults --*/
+
+// custom.scss
+
+// Variables for background lines and logo
+$line-image: "../../../../Trainings/Containers/media/line.png";
+$logo-image: "../../../../Trainings/Containers/media/logo.png";
+
+/*-- scss:rules --*/
+
+// Set the background images for the top and bottom of the slide
+.reveal {
+  background: none; // Remove default background if needed
+  // Apply the top image
+  &:before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 21px; 
+    background: url(#{$line-image}) no-repeat center top;
+    background-size: cover; // Adjust to fit the image nicely
+    z-index: 1;
+  }
+
+  // Apply the bottom image
+  &:after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 21px; 
+    background: url(#{$line-image}) no-repeat center bottom;
+    background-size: cover; // Adjust to fit the image nicely
+    z-index: 1;
+  }
+
+  h2 {
+    font-size: 40px !important;
+  }
+}
+
+.pdf-page {
+  background: none; // Remove default background if needed
+  // Apply the top image
+  &:before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 21px; 
+    background: url(#{$line-image}) no-repeat center top;
+    background-size: cover; // Adjust to fit the image nicely
+    z-index: 1;
+  }
+
+  // Apply the bottom image
+  &:after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 20px; 
+    background: url(#{$line-image}) no-repeat center bottom;
+    background-size: cover; // Adjust to fit the image nicely
+    z-index: 1;
+  }
+}
+
+
+
