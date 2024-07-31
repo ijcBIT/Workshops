@@ -21,40 +21,6 @@ ul.task-list li input[type="checkbox"] {
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
 }
-/* CSS for syntax highlighting */
-pre > code.sourceCode { white-space: pre; position: relative; }
-pre > code.sourceCode > span { line-height: 1.25; }
-pre > code.sourceCode > span:empty { height: 1.2em; }
-.sourceCode { overflow: visible; }
-code.sourceCode > span { color: inherit; text-decoration: inherit; }
-div.sourceCode { margin: 1em 0; }
-pre.sourceCode { margin: 0; }
-@media screen {
-div.sourceCode { overflow: auto; }
-}
-@media print {
-pre > code.sourceCode { white-space: pre-wrap; }
-pre > code.sourceCode > span { display: inline-block; text-indent: -5em; padding-left: 5em; }
-}
-pre.numberSource code
-  { counter-reset: source-line 0; }
-pre.numberSource code > span
-  { position: relative; left: -4em; counter-increment: source-line; }
-pre.numberSource code > span > a:first-child::before
-  { content: counter(source-line);
-    position: relative; left: -1em; text-align: right; vertical-align: baseline;
-    border: none; display: inline-block;
-    -webkit-touch-callout: none; -webkit-user-select: none;
-    -khtml-user-select: none; -moz-user-select: none;
-    -ms-user-select: none; user-select: none;
-    padding: 0 4px; width: 4em;
-  }
-pre.numberSource { margin-left: 3em;  padding-left: 4px; }
-div.sourceCode
-  {   }
-@media screen {
-pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
-}
 </style>
 
 
@@ -64,7 +30,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <script src="../../site_libs/quarto-search/fuse.min.js"></script>
 <script src="../../site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="../../">
-<link href="../../Trainings/Containers/vm_vs_containers.html" rel="next">
+<link href="../../Trainings/Git/Introduction_to_git.html" rel="next">
 <link href="../../Trainings/IJC_computing/IJC_computing_HPC.html" rel="prev">
 <script src="../../site_libs/quarto-html/quarto.js"></script>
 <script src="../../site_libs/quarto-html/popper.min.js"></script>
@@ -117,7 +83,7 @@ gtag('config', 'G-ML1E5YYLV4', { 'anonymize_ip': true});
 
 </head>
 
-<body class="nav-sidebar docked fullcontent">
+<body class="nav-sidebar docked">
 
 <div id="quarto-search-results"></div>
   <header id="quarto-header" class="headroom fixed-top">
@@ -255,72 +221,6 @@ gtag('config', 'G-ML1E5YYLV4', { 'anonymize_ip': true});
  <span class="menu-text">Intro to containers</span></a>
   </div>
 </li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../../Trainings/Containers/vm_vs_containers.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">VM and containerization</span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../../Trainings/Containers/how_containers_work.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">How containers work</span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../../Trainings/Containers/not_only_docker.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Not only Docker</span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../../Trainings/Containers/docker_vs_singularity.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Docker vs Singularity</span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../../Trainings/Containers/pull_container.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Pulling container images</span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../../Trainings/Containers/interactive_container.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Interactive shell</span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../../Trainings/Containers/run_in_container.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Run in a container</span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../../Trainings/Containers/files_access.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Files access</span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../../Trainings/Containers/build_a_container.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Build a container</span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../../Trainings/Containers/container_recipe.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Container recipe</span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../../Trainings/Containers/containers_in_HPC.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Containers in HPC</span></a>
-  </div>
-</li>
       </ul>
   </li>
           <li class="sidebar-item sidebar-item-section">
@@ -347,7 +247,9 @@ gtag('config', 'G-ML1E5YYLV4', { 'anonymize_ip': true});
 </nav>
 <div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
 <!-- margin-sidebar -->
-    
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar zindex-bottom">
+        
+    </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
@@ -376,42 +278,25 @@ gtag('config', 'G-ML1E5YYLV4', { 'anonymize_ip': true});
 </header>
 
 
-<div class="columns">
-<div class="column" style="width:45%;">
-<p><img src="media/meme.png" class="img-fluid"></p>
-</div><div class="column" style="width:10%;">
-<!-- empty column to create gap -->
-</div><div class="column" style="width:45%;">
+<p>This workshop provides a comprehensive introduction to containers for newcomers. It focuses on container technology, usage, and practical applications. Participants will gain insights into container creation, image management, and executing scripts in high-performance computing (HPC) environments.</p>
+<p><strong>Topics covered:</strong></p>
 <ul>
-<li>Packages code and all its dependencies.</li>
-<li>Runs anywhere with a compatible kernel.</li>
+<li>Virtualization and Containerization</li>
+<li>How Containers Work</li>
+<li>Not Only Docker</li>
+<li>Docker vs Singularity</li>
+<li>Pulling Container Images</li>
+<li>Interactive Shell</li>
+<li>Run in a Container</li>
+<li>Files Access</li>
+<li>Build a Container</li>
+<li>Containers in the IJC’s High-Performance Computing Cluster (HPC)</li>
 </ul>
-<div class="callout callout-style-default callout-note no-icon callout-titled">
-<div class="callout-header d-flex align-content-center">
-<div class="callout-icon-container">
-<i class="callout-icon no-icon"></i>
-</div>
-<div class="callout-title-container flex-fill">
-Exercice 1
-</div>
-</div>
-<div class="callout-body-container callout-body">
-<ol type="1">
-<li>Go to the VPN and log in to the Linux course machine: &nbsp; <a target="_blank" href="https://vpn.carrerasresearch.org/static/sslvpn/portal/">vpn</a></li>
-<li>Find a container named “lolcow” from “godlovedc” on Docker Hub:<br>
-<a target="_blank" href="https://hub.docker.com/">hub.docker.com</a></li>
-<li>Go back to the Linux terminal and type: <code>singularity run docker://container/name</code></li>
-</ol>
-<details>
-<summary>
-Solution
-</summary>
-<div class="sourceCode" id="cb1"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a>  <span class="ex">singularity</span> run docker://godlovedc/lolcow</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</details>
-</div>
-</div>
-</div>
-</div>
+<p><strong>Materials</strong></p>
+<ul>
+<li><a href="../../Trainings/Containers/Introduction_to_containers_presentation.html">Seminar presentation (quarto)</a></li>
+<li><a href="data/containers_workshop_june2024.pdf">Seminar presentation (pdf)</a></li>
+</ul>
 
 
 
@@ -989,8 +874,8 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
       </a>          
   </div>
   <div class="nav-page nav-page-next">
-      <a href="../../Trainings/Containers/vm_vs_containers.html" class="pagination-link" aria-label="VM and containerization">
-        <span class="nav-page-text">VM and containerization</span> <i class="bi bi-arrow-right-short"></i>
+      <a href="../../Trainings/Git/Introduction_to_git.html" class="pagination-link" aria-label="Git/GitHub">
+        <span class="nav-page-text">Git/GitHub</span> <i class="bi bi-arrow-right-short"></i>
       </a>
   </div>
 </nav>
