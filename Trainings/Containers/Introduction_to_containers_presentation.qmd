@@ -1,0 +1,392 @@
+---
+title: "Introduction to the world of containers"
+author: "Emilio Lario"
+editor: visual
+format: 
+  revealjs:
+    theme: [default, custom.scss]
+    code-fold: true
+    logo: media/logo.png
+    css: logo.css 
+    embed-resources: true
+resources:
+  - media/line.png
+---
+
+## Introduction to containers
+
+::: columns
+::: {.column width="45%"}
+![](media/meme.png)
+:::
+
+::: {.column width="10%"}
+<!-- empty column to create gap -->
+:::
+
+::: {.column width="45%"}
+
+::: {style="font-size: 75%;"}
+-   Packages code and all its dependencies.
+-   Runs anywhere with a compatible kernel.
+
+::: {.callout-note icon="false"}
+### Exercice 1
+
+1.  Go to the VPN and log in to the Linux course machine:   <a target="_blank" href="https://vpn.carrerasresearch.org/static/sslvpn/portal/">vpn</a>
+2.  Find a container named “lolcow” from “godlovedc” on Docker Hub:\
+    <a target="_blank" href="https://hub.docker.com/">hub.docker.com</a>
+3.  Go back to the Linux terminal and type: `singularity run docker://container/name`
+
+<details>
+
+<summary>Solution</summary>
+
+``` bash
+  singularity run docker://godlovedc/lolcow
+```
+
+</details>
+:::
+:::
+:::
+:::
+
+
+## Virtualization and containerization 
+
+::: {.r-fit-text}
+
+![](media/vm-vs-containers.svg){width="675" }
+
+::: {style="font-size: 65%;"}
+
+|               | Virtual Machines                                                                                              | Container                                                               |
+|------------------|---------------------------|---------------------------|
+| Guest OS      | Each VM runs on virtual hardware and the kernel is loaded into its own memory region.                         | All containers share the same kernel.                                   |
+| Communication | Through Ethernet Devices.                                                                                     | Standard IPC mechanisms like Signals, pipes, sockets, etc.              |
+| Performance   | Small overhead as the Machine instructions need to be translated from Guest to Host OS.                       | Near native performance as compared to the underlying Host OS.          |
+| Startup time  | Takes up to a few minutes to boot up.                                                                         | Containers can be booted up in a few seconds.                           |
+| Isolation     | Sharing libraries, files, etc. between guests and between guests and host not natively possible.              | Subdirectories can be transparently mounted and can be shared.          |
+| Storage       | VMs usually require more storage as the whole OS kernel and associated programs have to be installed and run. | Containers consume lower amount of storage since the Host OS is shared. |
+
+:::
+:::
+
+## How containers work?
+
+![](media/worlds.jpeg){width="500px" fig-align="center"}
+
+::: {style="font-size: 50%;"}
+* Namespaces for access control 
+* cgroups for resources management
+
+<a href="https://ivanmorenoj.medium.com/understand-how-linux-containers-works-with-practical-examples-bd1dfaaa7656" target="_blank">For a detailed explanation, see Iván Moreno's article on Medium</a>
+:::
+
+## Not only Docker
+
+![](media/cloud.png)
+
+
+## Docker vs Singularity
+
+::: {style="font-size: 50%;"}
+
+![](media/docker.png)
+![](media/singularity.png)
+
+### Sudo in docker
+
+Singularity runs with the same user that starts the container while the Docker daemon runs as root.
+
+### Host files access
+
+Default Behavior: Docker isolates the container from the host machine by default. Singularity mounts the /home directory of the user running the container.
+
+::: {.callout-warning title="Side effects of mounting the home directory"}
+All user customization files will be in the container when it runs. This can break the isolation/reproducibility concept, such as having user-defined R libraries.
+
+It is recommended to run Singularity with --no-home or even with --containall (-C) and bind only the required directories.
+:::
+
+:::
+
+## Pulling container images
+
+::: {style="font-size: 50%;"}
+![](media/pulling.jpg){width="500px" fig-align="center"}
+
+You can create your own container image from 'scratch,' but normally you will start with an image that someone else has already created.
+To do so, you can either run the image straight from the external repository or download it locally and run it later.
+
+
+::: {.callout-note icon=false}
+
+1. Go back to the Linux terminal and type: ``` singularity pull local_image_name.sif docker://container/name ```  to download the image.
+2. Run the local image with: ``` singularity run local_image_name.sif ```
+
+<details>
+  <summary>Solution</summary>
+  ```bash
+  singularity pull lolcow.sif docker://godlovedc/lolcow
+  singularity run lolcow.sif
+  ```
+</details>
+:::
+:::
+
+## Interactive shell
+
+::: {.r-fit-text}
+
+When we run the container, it loads the image and executes the predefined command, if one is defined. Instead of running the predefined command, we can also open an interactive shell in the container.
+
+::: {.callout-note icon="false"}
+### Exercice 3
+
+1.  To open an interactive shell in a Singularity container, type: `singularity shell local_image_name.sif ` \
+    (To exit the container, type `exit` )
+2.  Check the user outside and inside the container with: `whoami`
+3.  Check the contents of the home directory outside and inside the container:
+4.  Now run the interactive shell with the `-C` option and verify that the home directory is empty.
+
+<details>
+
+<summary>Solution</summary>
+
+``` bash
+  singularity shell lolcow.sif
+  whoami
+  exit
+  whoami
+  ls
+  singularity shell lolcow.sif
+  ls
+  exit
+  singularity shell -C lolcow.sif
+  ls
+```
+
+</details>
+:::
+:::
+
+## Run in a container
+
+:::: {.columns}
+
+::: {.column width="40%"}
+![](media/building.jpg)
+:::
+
+::: {.column width="1%"}
+<!-- empty column to create gap -->
+:::
+
+::: {.column width="59%" style="font-size: 75%;"}
+We can tell the container to run and execute a command with:
+
+::: {style="font-size: 60%;"}
+``` singularity exec local_image_name.sif command ```
+:::
+
+::: {.callout-note icon=false}
+### Exercice 4
+
+1. Check the operating system outside the container with: 
+
+::: {style="font-size: 80%;"}
+``` head /etc/os-release ``` 
+:::
+
+2. Check the operating system inside the container with: 
+
+::: {style="font-size: 80%;"}
+``` singularity exec local_image_name.sif command ```
+:::
+
+<details>
+  <summary>Solution</summary>
+  ```bash
+  head /etc/os-release
+  singularity exec lolcow.sif head /etc/os-release
+  ```
+</details>
+:::
+
+
+:::
+
+::::
+
+
+## Files access
+
+::: {style="font-size: 65%;"}
+::: {.callout-tip title="Persistent changes"}
+All changes made inside a container are lost when the container is stopped. If we need the changes to be persistent, we must use a folder from the host machine.
+:::
+
+If we need to access files outside the container, we can "BIND" folders from the host machine to the container: 
+
+::: {style="font-size: 80%;"}
+`singularity shell  -B /host/path:/path/in/container local_image_name.sif`
+:::
+
+::: {.callout-note icon="false"}
+### Exercice 5
+
+1.  Create a folder named "dummy" on the host machine.
+2.  Open a terminal inside the container with the `-C` option (`--containall`).
+3.  Check that there is no "dummy" folder.
+4.  Exit the container and enter again, but this time use the bind (-B) option to mount the directory you have created to "/dummy" inside the container.
+5.  Create a text file inside the "/dummy" directory inside the container with `touch test.txt`
+6.  Exit the container and check that the file you created inside the container is in the "dummy" directory of the host machine:
+
+<details>
+
+<summary>Solution</summary>
+
+``` bash
+  mkdir dummy
+  singularity shell -C lolcow.sif
+  ls
+  cd /dummy
+  exit
+  singularity shell -C -B dummy:/dummy lolcow.sif
+  cd /dummy
+  touch test.txt
+  ls
+  exit
+  cd dummy
+  ls
+```
+
+</details>
+:::
+:::
+
+## Build a container
+::: {style="font-size: 80%;"}
+-   scratch
+-   Alpine
+-   Ubuntu
+-   DockerHUb <https://hub.docker.com/> --\> Rocker, Bioconductor, conda, ...
+
+### Singularity & Apptainer
+
+![From Signulary to Apptainer](media/singularity_apptainer.png) \
+"--fakeroot" or remote build
+:::
+
+## Container recipe
+
+::: {style="font-size: 70%;"}
+
+``` r 
+Bootstrap: localimage
+From: lolcow.sif
+
+%post
+  apt-get -y update
+  apt-get -y install sl=3.03-17build1
+  apt-get -y install curl
+
+%runscript
+  sl -F
+```
+
+::: {.callout-note icon="false"}
+### Exercice 6
+
+1.  Create a file named steam.def with the above code.
+2.  Build the modified image with the command: `apptainer build image_name.sif recipe.def`
+3.  Run the newly created container.
+
+<details>
+
+<summary>Solution</summary>
+
+``` bash
+  vim steam.def
+  apptainer build steam.sif steam.def
+  singularity run steam.sif
+```
+
+</details>
+:::
+
+::: {.callout-tip title="Importance of version reference"}
+Different versions of a dependency may not be 100% compatible.
+:::
+
+:::
+
+
+
+## Containers in the IJC’s HPC
+
+::: {style="font-size: 45%;"}
+::: columns 
+::: {.column width="45%"}
+![](media/container_hpc.jpeg){width="400px"}\
+\
+- Account for the resources needed by all the dependencies of your script.\
+\
+- Do not run a container on the master node!
+:::
+
+::: {.column width="10%"}
+<!-- empty column to create gap -->
+:::
+
+::: {.column width="45%"}
+-   We are not sudo in the cluster.
+-   Every dependency must be installed by the system administrator.
+-   Run containers with the Slurm scheduler.
+
+::: {.callout-note icon="false"}
+### Exercice 7
+
+1.  Create a bash script file with the following content:
+
+``` bash
+#!/bin/bash 
+curl -s "wttr.in/$1?m1"
+```
+
+2.  Create a Slurm script to execute the script from step 1 inside the container you made in the previous exercise. Copy the following sbatch header and **add the command to run the script inside the container**. The container will run the command that you type after the image name; therefore, you need to use bash script.sh to actually run the script.
+
+``` bash
+#!/bin/bash 
+#SBATCH --job-name=run_lolcow
+```
+
+3.  Use `sbatch` to run the script and check the output. You can use `squeue` to see the progress. You will find the log file in the current folder when the job finishes.
+
+<details>
+
+<summary>Solution</summary>
+
+``` bash
+  vim wtt.sh
+  
+  #!/bin/bash 
+  curl -s "wttr.in/$1?m1"
+  
+  vim wtt.slm
+  
+  #!/bin/bash 
+  #SBATCH --job-name=run_wtt
+  singularity exec steam.sif bash wtt.sh
+  
+  sbatch wtt.slm
+```
+
+</details>
+:::
+:::
+:::
+:::
+

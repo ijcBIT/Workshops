@@ -1,0 +1,10 @@
+.reveal .slide-logo {
+  position: absolute; !important;
+  top: 10px; 
+  right: 10px;
+  height: 4rem !important;
+  background-size: contain; // Ensure the logo fits nicely
+  z-index: 3;
+  max-width: unset !important;
+  max-height: unset !important;
+}
