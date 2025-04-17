@@ -6,7 +6,7 @@ name: Render and Publish
 
 jobs:
   build-deploy:
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-22.04
     # container: izarvillasante/dockerfiles:main
     steps:
       - name: Check out repository
