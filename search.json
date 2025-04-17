@@ -1,23 +1,34 @@
 [
   {
-    "objectID": "index.html",
-    "href": "index.html",
-    "title": "BIT Workshops",
+    "objectID": "Trainings/IJC_computing/IJC_computing_HPC.html",
+    "href": "Trainings/IJC_computing/IJC_computing_HPC.html",
+    "title": "Computation with the HPC cluster ‘Minastirith’",
     "section": "",
-    "text": "This website, developed by the Bioinformatics Team (BIT) a the Josep Carreras Leukaemia Research Institute (IJC) serves as a repository for materials and links related to our workshops. We invite you to share any comments or thoughts you may have or any topic you would like to propose!\nCurrent topics\n\nR (base) and the Tidyverse\nBioconductor\nLinux and beyond\nHigh performance computing (HPC)\nTools for reproducible research\nData visualization",
+    "text": "Specifically for bioinformaticians, we (together with the IT team)provide a practical training session on how to use the IJC HPC cluster (aka ‘Minastirith’) for scientific computation. This session is aimed at users with an Intermediate level and requires basic knowledge of Linux and Bash. We strongly recommend to attend our Beginners course ‘Introduction to Linux and the Shell’ beforehand.\nTopics covered:\n\nThe SLURM job scheduler\nSubmitting jobs with sbatch\nMonitoring and controlling jobs\nSerial and array jobs\nRequesting resources\n\nMaterials:\n\nWorkshop presentation",
     "crumbs": [
-      "Welcome"
+      "Trainings",
+      "IJC computing",
+      "HPC"
     ]
   },
   {
-    "objectID": "index.html#welcome",
-    "href": "index.html#welcome",
-    "title": "BIT Workshops",
+    "objectID": "Trainings/Git/Introduction_to_git.html",
+    "href": "Trainings/Git/Introduction_to_git.html",
+    "title": "Introduction to git and GitHub",
     "section": "",
-    "text": "This website, developed by the Bioinformatics Team (BIT) a the Josep Carreras Leukaemia Research Institute (IJC) serves as a repository for materials and links related to our workshops. We invite you to share any comments or thoughts you may have or any topic you would like to propose!\nCurrent topics\n\nR (base) and the Tidyverse\nBioconductor\nLinux and beyond\nHigh performance computing (HPC)\nTools for reproducible research\nData visualization",
+    "text": "This course gives a brief introduction to version control with git and the gitHub repository. The course is aimed at user with an Intermediate level of programming skills and and a basic knowledge of Linux and the Terminal.\nTopics covered:\n\nWhy use version control?\nBasic Git workflow and commands\nBacktracking\nRemote repositories\nBranches\n\nMaterials\n\nSeminar presentation",
     "crumbs": [
-      "Welcome"
+      "Trainings",
+      "Git/GitHub",
+      "Git/GitHub"
     ]
+  },
+  {
+    "objectID": "Trainings/Introduction_to_R/Introduction_to_R_Exercises1.html",
+    "href": "Trainings/Introduction_to_R/Introduction_to_R_Exercises1.html",
+    "title": "Introduction to R: Exercises",
+    "section": "",
+    "text": "Exercise 1: Classes and types of objects\nImport the iris data set\n\n# load package data\ndata(iris)\n\n1.1. Which class and type of object is this data set? How do you find out?\n\n# get structural information\nstr(iris)\n\n'data.frame':   150 obs. of  5 variables:\n $ Sepal.Length: num  5.1 4.9 4.7 4.6 5 5.4 4.6 5 4.4 4.9 ...\n $ Sepal.Width : num  3.5 3 3.2 3.1 3.6 3.9 3.4 3.4 2.9 3.1 ...\n $ Petal.Length: num  1.4 1.4 1.3 1.5 1.4 1.7 1.4 1.5 1.4 1.5 ...\n $ Petal.Width : num  0.2 0.2 0.2 0.2 0.2 0.4 0.3 0.2 0.2 0.1 ...\n $ Species     : Factor w/ 3 levels \"setosa\",\"versicolor\",..: 1 1 1 1 1 1 1 1 1 1 ...\n\n# view the data with the RStudio data viewer\n# View(iris)\n\n1.2. What information does this data set hold?\n\n# derive information from the structure and attributes\nstr(iris)\n\n'data.frame':   150 obs. of  5 variables:\n $ Sepal.Length: num  5.1 4.9 4.7 4.6 5 5.4 4.6 5 4.4 4.9 ...\n $ Sepal.Width : num  3.5 3 3.2 3.1 3.6 3.9 3.4 3.4 2.9 3.1 ...\n $ Petal.Length: num  1.4 1.4 1.3 1.5 1.4 1.7 1.4 1.5 1.4 1.5 ...\n $ Petal.Width : num  0.2 0.2 0.2 0.2 0.2 0.4 0.3 0.2 0.2 0.1 ...\n $ Species     : Factor w/ 3 levels \"setosa\",\"versicolor\",..: 1 1 1 1 1 1 1 1 1 1 ...\n\n# use the help function (likely, the data has documentation since it was loaded as part of a package)\n?iris\n\n1.3. With the last and the first element of the data set create a vector. What do you observe?\n\n# extracting the first element in the first row and the last element (= number of rows) in the last column (= number of columns)\nc(iris[1, 1], iris[nrow(iris), ncol(iris)])\n\n[1] 5.1 3.0\n\n\n=&gt; implicit cohersion occurs: the factor level ‘versicolor’ as part of a factor of length 3 is converted into the number ‘3.0’\n1.4. How many flowers of the ‘setosa’ species were measured?\n\n# select all rows from the dataframe for which the variable Species is 'setosa', and count the number of rows\nx &lt;- iris[which(iris$Species == \"setosa\"), ]\nnrow(x)\n\n[1] 50\n\n# select all entries for the variable Species from the dataframe iris, and calculate the length of the resulting vector\nx &lt;- which(iris$Species == \"setosa\")\nlength(x)\n\n[1] 50\n\n\n1.5. Create a list with 3 elements, each containing the Sepal.length for one flower species with only those with measurements larger than 5. How many entries for ‘versicolor’?\n\n# Create the list\nsepal_length_large &lt;- list(\n  setosa     = iris[which(iris$Species == \"setosa\" & iris$Sepal.Length &gt; 5), 5 ],\n  versicolor = iris[which(iris$Species == \"versicolor\" & iris$Sepal.Length &gt; 5), 5 ],\n  virginica  = iris[which(iris$Species == \"virginica\" & iris$Sepal.Length &gt; 5), 5 ])\n\n# Calculate the length of 'versicolor element\nlength(sepal_length_large[[\"versicolor\"]])\n\n[1] 47\n\n\n\n\nExercise 2: Control structures\nWrite a loop that calculates the sepal surface (length*width) for the first 10 measurements.\n\nfor (i in 1:10) {\n  \n  sepal_surface &lt;- iris$Sepal.Length[i] * iris$Sepal.Width[i]\n  print(sepal_surface)\n}\n\n[1] 17.85\n[1] 14.7\n[1] 15.04\n[1] 14.26\n[1] 18\n[1] 21.06\n[1] 15.64\n[1] 17\n[1] 12.76\n[1] 15.19\n\n\n\n\nExercise 3: Functions\nCreate a function that calculates the maximum sepal surface for a specific species for the iris data set. What is the largest sepal surface for ‘setosa’?\n\n# define a function, set iris as the default for the argument 'data'\nmax_sepal_surface &lt;- function(data = iris, spec) {\n  \n  # create a subset for a specific species\n  iris_sub &lt;- iris[which(iris$Species == spec), ]\n  \n  # use the loop from exercise 2 to estimate sepal surface\n  for (i in 1:nrow(iris_sub)) {\n    sepal_surface &lt;- iris_sub$Sepal.Length[i] * iris_sub$Sepal.Width[i]\n  }\n  \n  # estimate the maximimu value\n    sepal_surface_max &lt;- max(sepal_surface)\n  \n  # return the value  \n    return(sepal_surface_max)\n  \n}\n\n# use the fuction to estimate the maximum sepal surface for setosa\nmax_sepal_surface(spec = \"setosa\")\n\n[1] 16.5"
   },
   {
     "objectID": "Trainings/Introduction_to_R/Example_data_analysis.html",
@@ -76,11 +87,59 @@
     "text": "Export results\nAfter you have finished you analysis you may want so save your results for later:\nSaving images\n\nExport with RStudio through Plots pane &gt;&gt; save\nAlternatively, in the console use jpeg(), png(), svg() or pdf()\n\n\n# open graphics device\npng(file = \"my_plot.png\", width = 480, height = 480)\n\n# plot\nplot(iris$Sepal.Length, iris$Petal.Length,            # x variable, y variable\n     col  = iris$Species,                             # colour by species\n     pch  = 16,                                       # type of point to use\n     xlab = \"Sepal Length\",                           # x axis label\n     ylab = \"Petal Length\",                           # y axis label\n     main = \"Flower characteristics in Iris\")         # plot title \n\n# legend with titles of iris$Species and colour 1:3, point type pch at coords (x,y)\nlegend(\"topleft\", legend = levels(iris$Species), col = c(1:3), pch =16)\n\n# text at coords (x,y) with label correlation test\ntext(x = 7.5, y = 2, labels = \"cor = 0.871\\np &lt; 2.2e-16\")\n\n# close the device\ndev.off()\n\nSaving data\n\nwrite.table or write.csv (writing tabular data to text files, i.e. CSV, or connections)\nwriteLines(writing character data line-by-line to a file or connection)\nsaveRDS save a single data object in a compressed format\nsave (saving an arbitrary number of R objects in binary format (possibly compressed) to a file)\n\nLet’s save a results data frame in a comma delimited format (.csv) which is a common standard can be easily be opened by many application that can read text and tabular data (e.g. excel, libre office).\n\n# write your results to a file\nwrite.table(iris,                       # dataframe\n            file = \"results.csv\",       # filename\n            sep  = \";\",                 # field seperator\n            col.names = TRUE,           # include header (default = TRUE)\n            row.names = FALSE,          # include row names (default = TRUE)\n            quote = FALSE)              # quote characters and factors\n\nYou may also save objects for further use with R:\n\n# save a single data object (compressed)\nsaveRDS(iris,                           #  data object\n        file = \"iris.rds\")              #  file name\n\n\n# save multiple objects from your workspace\nsave(iris, data, file = \"my_two_objects.Rdata\")\n\n\n# save all objects in your workspace\nsave(file = \"my_workspace.Rdata\")       # warning: this occupies the most space\n\nIf you want to import these objects again to your R session:\n\nreadRDS(\"iris.rds\")\n\nload(\"my_workspace.Rdata\")"
   },
   {
-    "objectID": "Trainings/Introduction_to_R/Introduction_to_R_Exercises1.html",
-    "href": "Trainings/Introduction_to_R/Introduction_to_R_Exercises1.html",
-    "title": "Introduction to R: Exercises",
+    "objectID": "Trainings/Introduction_to_Linux/Linux_exercises_with_solutions.June2024.html",
+    "href": "Trainings/Introduction_to_Linux/Linux_exercises_with_solutions.June2024.html",
+    "title": "Introduction to Linux - Exercises",
     "section": "",
-    "text": "Exercise 1: Classes and types of objects\nImport the iris data set\n\n# load package data\ndata(iris)\n\n1.1. Which class and type of object is this data set? How do you find out?\n\n# get structural information\nstr(iris)\n\n'data.frame':   150 obs. of  5 variables:\n $ Sepal.Length: num  5.1 4.9 4.7 4.6 5 5.4 4.6 5 4.4 4.9 ...\n $ Sepal.Width : num  3.5 3 3.2 3.1 3.6 3.9 3.4 3.4 2.9 3.1 ...\n $ Petal.Length: num  1.4 1.4 1.3 1.5 1.4 1.7 1.4 1.5 1.4 1.5 ...\n $ Petal.Width : num  0.2 0.2 0.2 0.2 0.2 0.4 0.3 0.2 0.2 0.1 ...\n $ Species     : Factor w/ 3 levels \"setosa\",\"versicolor\",..: 1 1 1 1 1 1 1 1 1 1 ...\n\n# view the data with the RStudio data viewer\n# View(iris)\n\n1.2. What information does this data set hold?\n\n# derive information from the structure and attributes\nstr(iris)\n\n'data.frame':   150 obs. of  5 variables:\n $ Sepal.Length: num  5.1 4.9 4.7 4.6 5 5.4 4.6 5 4.4 4.9 ...\n $ Sepal.Width : num  3.5 3 3.2 3.1 3.6 3.9 3.4 3.4 2.9 3.1 ...\n $ Petal.Length: num  1.4 1.4 1.3 1.5 1.4 1.7 1.4 1.5 1.4 1.5 ...\n $ Petal.Width : num  0.2 0.2 0.2 0.2 0.2 0.4 0.3 0.2 0.2 0.1 ...\n $ Species     : Factor w/ 3 levels \"setosa\",\"versicolor\",..: 1 1 1 1 1 1 1 1 1 1 ...\n\n# use the help function (likely, the data has documentation since it was loaded as part of a package)\n?iris\n\n1.3. With the last and the first element of the data set create a vector. What do you observe?\n\n# extracting the first element in the first row and the last element (= number of rows) in the last column (= number of columns)\nc(iris[1, 1], iris[nrow(iris), ncol(iris)])\n\n[1] 5.1 3.0\n\n\n=&gt; implicit cohersion occurs: the factor level ‘versicolor’ as part of a factor of length 3 is converted into the number ‘3.0’\n1.4. How many flowers of the ‘setosa’ species were measured?\n\n# select all rows from the dataframe for which the variable Species is 'setosa', and count the number of rows\nx &lt;- iris[which(iris$Species == \"setosa\"), ]\nnrow(x)\n\n[1] 50\n\n# select all entries for the variable Species from the dataframe iris, and calculate the length of the resulting vector\nx &lt;- which(iris$Species == \"setosa\")\nlength(x)\n\n[1] 50\n\n\n1.5. Create a list with 3 elements, each containing the Sepal.length for one flower species with only those with measurements larger than 5. How many entries for ‘versicolor’?\n\n# Create the list\nsepal_length_large &lt;- list(\n  setosa     = iris[which(iris$Species == \"setosa\" & iris$Sepal.Length &gt; 5), 5 ],\n  versicolor = iris[which(iris$Species == \"versicolor\" & iris$Sepal.Length &gt; 5), 5 ],\n  virginica  = iris[which(iris$Species == \"virginica\" & iris$Sepal.Length &gt; 5), 5 ])\n\n# Calculate the length of 'versicolor element\nlength(sepal_length_large[[\"versicolor\"]])\n\n[1] 47\n\n\n\n\nExercise 2: Control structures\nWrite a loop that calculates the sepal surface (length*width) for the first 10 measurements.\n\nfor (i in 1:10) {\n  \n  sepal_surface &lt;- iris$Sepal.Length[i] * iris$Sepal.Width[i]\n  print(sepal_surface)\n}\n\n[1] 17.85\n[1] 14.7\n[1] 15.04\n[1] 14.26\n[1] 18\n[1] 21.06\n[1] 15.64\n[1] 17\n[1] 12.76\n[1] 15.19\n\n\n\n\nExercise 3: Functions\nCreate a function that calculates the maximum sepal surface for a specific species for the iris data set. What is the largest sepal surface for ‘setosa’?\n\n# define a function, set iris as the default for the argument 'data'\nmax_sepal_surface &lt;- function(data = iris, spec) {\n  \n  # create a subset for a specific species\n  iris_sub &lt;- iris[which(iris$Species == spec), ]\n  \n  # use the loop from exercise 2 to estimate sepal surface\n  for (i in 1:nrow(iris_sub)) {\n    sepal_surface &lt;- iris_sub$Sepal.Length[i] * iris_sub$Sepal.Width[i]\n  }\n  \n  # estimate the maximimu value\n    sepal_surface_max &lt;- max(sepal_surface)\n  \n  # return the value  \n    return(sepal_surface_max)\n  \n}\n\n# use the fuction to estimate the maximum sepal surface for setosa\nmax_sepal_surface(spec = \"setosa\")\n\n[1] 16.5"
+    "text": "Exercise 1:\nGo to the ‘root’ directory and list its content. How many other files aside from directories ? How many directories starting with ‘s’?\nAnswer\n # Go to the 'root' directory \n cd /\n \n# List the content of the current directory\n ls .      # 1 regular files, 6 softlinks\n \n# List directories starting with 's' \n ls -d s*  # 4 directories, \n\n# =&gt; Note that `ls s*` will list the contents of all directories starting with 's\"' \n\n\n\nExercise 2:\nIn YOUR ‘home’ directory create a new directory called ‘analysis’. Copy the file ‘/home/shared/peaks.bed’ to this directory. Now, create a softlink to the original file and call it ‘softlink_peaks.bed’.\nFinally, list all files that end with ‘.bed’ in a single command.\nAnswer\n# Go to your 'home' directory\n cd ~\n\n# Create a new directory\n mkdir analysis                     \n\n# Enter the 'analysis' directory \n cd analysis\n \n# copy 'peaks.bed' to current directory \n cp /home/shared/peaks.bed .  \n\n# create a softlink \n ln -s /home/shared/peaks.bed -n softlink_peaks.bed  \n\n# list all files ending in '.bed' in the current directory\n ls *.bed\n ls -lrth *.bed\n\n\n\nExercise 3:\nIs bzip2 or gzip the better compression? Which algorithm compresses the file ‘peaks.bed’ more?\nAnswer\n# create two extra copies of 'peaks.bed'\n cp peaks.bed peaks1.bed\n cp peaks.bed peaks2.bed\n\n# compress one file with gzip\n gzip peaks1.bed\n\n# compress the other file wit bzip2\n bzip2 peaks2.bed\n\n# compare file sizes with ls\n ls -lth\n\n# =&gt; the file compressed with bzip2 is slightly smaller (6.1K) than the one compressed with gzip (6.4K)\n\n\n\nExercise 4:\nExtract the first and last 10 lines of the file peaks.bed into a new file. How many characters does this file have?\nAnswer\n# Extract the first 10 lines\n head -10 peaks.bed &gt; head.peaks\n \n# Extract the last 10 lines and append to the previous file\n tail -10 peaks.bed &gt;&gt; head.peaks\n \n# Count the number of characters\n wc -c head.peaks\n\n\n\nExercise 5:\nExtract the first 10 lines of the second and fifth column from of peaks.bed. Create a file where the (original) second column is sorted by increasing size and the fifth column by decreasing size. Use the pipe if you can.\nHow many characters does the last line of this file have?\nAnswer\n# Extract the first 10 lines, slice column 2, sort numerical and store output in a file\n head -10 peaks.bed | cut -f 2 |sort -n &gt; column2\n\n# Do the same but with column 5 and sort in reverse order.\n# Then join output with previous file, extract last line and count number of characters (=12)\n head -10 peaks.bed | cut -f 5 |sort -nr| paste column 2 - | tail -1| wc -c\n\n\n\nExercise 6:\nIn the file ‘peaks.bed’, what is the highest and lowest value in column 5 on chrM?\nAnswer\n# find all lines with pattern 'chrM', slice column 5, sort numerical, \n# extract first and last line\ngrep -w chrM peaks.bed | cut -f 5| sort -n| head -1\ngrep -w chrM peaks.bed | cut -f 5| sort -n| tail -1\n\n\n\nExercise 7:\nWrite a script, that for any given directory lists all files it contains and counts the number of characters of all regular files it contains.\nAnswer\n#! /bin/bash\n\n### Author: Angelika Merkel\n### Date: 30/11/2022\n\n###############################################################################\n### Description:\n### Script script, that for any given directory lists all files it contains and\n### counts the number of characters of all regular files it contains.\n\n###############################################################################\n# assign the script's first argument to a meaningful variable\nDIR=$1\n\n# Loop over all elements listed in the specified directory\nfor i in `ls $DIR`\n do\n \n # Test if the element listed is a regular file (else could be a directory)\n  if [ -f \"$i\" ]                         \n  \n  # if this is true, count all characters within the file and return a message\n    then\n      CHAR=`cat $i| wc -c`\n      echo $i \":\" $CHAR \"characters\"\n  \n  # close conditional structure\n  fi\n  \n# close the 'for loop'\ndone\nFinally, to run the script in the terminal:\n chmod a+x myscript.sh       # make the file executable\n ./myscript.sh               # run"
+  },
+  {
+    "objectID": "Trainings/Containers/sequera_containers.html",
+    "href": "Trainings/Containers/sequera_containers.html",
+    "title": "Seqera containers",
+    "section": "",
+    "text": "https://seqera.io/containers/"
+  },
+  {
+    "objectID": "Trainings/Containers/running_instances.html",
+    "href": "Trainings/Containers/running_instances.html",
+    "title": "Running instances",
+    "section": "",
+    "text": "singularity images list"
+  },
+  {
+    "objectID": "Trainings/Containers/pipeline_example.html",
+    "href": "Trainings/Containers/pipeline_example.html",
+    "title": "Nexflow pipeline in a container",
+    "section": "",
+    "text": "Solution\n\n  Module load Nextflow\n  Module load singularity\n  nextflow run rnaseq-nf -with-singularity"
+  },
+  {
+    "objectID": "Trainings/Advancing_with_the_Shell/Advancing_with_the_Shell_Exercises.June2024.html",
+    "href": "Trainings/Advancing_with_the_Shell/Advancing_with_the_Shell_Exercises.June2024.html",
+    "title": "Advancing with the Shell: Exercises",
+    "section": "",
+    "text": "Exercise 1:\nCreate a ‘for loop’ to iterate over a list of .bed files and print out the name for each file.\nAnswer\n#\nfor i in $( ls *bed ); do echo $i; done\n\n\n\nExercise 2:\nUsing a ‘for loop’ calculate the multiplication series for the number 7 for each 5th instance up to 140 (for example: 1 * 7 = 7, 5 * 7 = 35, 10 * 7 = 70 … 20 * 7 = 140).\nAnswer\n#\nfor i in {1..140..4}; do echo $(( $i * 7)); done\n\n\n\nExercise 3:\nRename all ‘.bed’ files to ‘.txt’ files.\nAnswer\n#\nfor i in $( ls *bed ); do mv $i ${i%.bed}.txt; done\n\n\n\nExercise 4:\nFrom the file ‘subsample1.bed’ extract all lines that start with chr20, chr21, chr22 but not chr2.\nAnswer\n#\negrep '^chr2[0-2]' subsample.bed\n\n\n\nExercise 5:\nUsing ‘sed’, remove all quotes from a file.\nAnswer\n#\nsed 's/\\\"//g' myfile\n\n\n\nExercise 6:\nUsing ‘awk’, print the coordinates of all peaks occoring on the plus strand.\nAnswer\n#\nawk '{if($5==\"+\"){print $1, $2, $3}}'  peaks.bed\nUsing ‘awk’, calculate the total of the peak scores for all peaks occuring on the plus strand.\n\nAnswer\n#\nawk '{if($5==\"+\"){SUM+=$1}} END {print \"The total score is\", SUM}' peaks.bed"
+  },
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "BIT Workshops",
+    "section": "",
+    "text": "This website, developed by the Bioinformatics Team (BIT) a the Josep Carreras Leukaemia Research Institute (IJC) serves as a repository for materials and links related to our workshops. We invite you to share any comments or thoughts you may have or any topic you would like to propose!\nCurrent topics\n\nR (base) and the Tidyverse\nBioconductor\nLinux and beyond\nHigh performance computing (HPC)\nTools for reproducible research\nData visualization",
+    "crumbs": [
+      "Welcome"
+    ]
+  },
+  {
+    "objectID": "index.html#welcome",
+    "href": "index.html#welcome",
+    "title": "BIT Workshops",
+    "section": "",
+    "text": "This website, developed by the Bioinformatics Team (BIT) a the Josep Carreras Leukaemia Research Institute (IJC) serves as a repository for materials and links related to our workshops. We invite you to share any comments or thoughts you may have or any topic you would like to propose!\nCurrent topics\n\nR (base) and the Tidyverse\nBioconductor\nLinux and beyond\nHigh performance computing (HPC)\nTools for reproducible research\nData visualization",
+    "crumbs": [
+      "Welcome"
+    ]
   },
   {
     "objectID": "Trainings/Advancing_with_the_Shell/Advancing_with_the_Shell.html",
@@ -95,16 +154,11 @@
     ]
   },
   {
-    "objectID": "Trainings/IJC_computing/IJC_computing_infrastructure.html",
-    "href": "Trainings/IJC_computing/IJC_computing_infrastructure.html",
-    "title": "Introduction to the IJC Computing Infrastructure",
+    "objectID": "Trainings/Containers/container_sandbox.html",
+    "href": "Trainings/Containers/container_sandbox.html",
+    "title": "Container sandbox",
     "section": "",
-    "text": "The Bioinformatics Unit (together with the IT team) provides this seminar to introduce newcomers to the IJC to the institute’s computing infrastructure. It also serves to keep established researchers updated with latest changes or additions by IT.\nTopics covered:\n\nComputational infrastructure and resources\nFile sharing (oneDrive/nextCloud/sharedFolder)\nData sharing (ftp/sftp)\nThe IJC network and remote connections\nIJC’s high-performance computing cluster (HPC)\n\nMaterials\n\nSeminar presentation",
-    "crumbs": [
-      "Trainings",
-      "IJC computing",
-      "Infrastructure"
-    ]
+    "text": "Create a sandbox\n\n\n\n\n\n\nAvoid sandboxex\n\n\n\nThe resulting image will become a blackbox"
   },
   {
     "objectID": "Trainings/Containers/Introduction_to_containers_presentation.html#introduction-to-containers",
@@ -118,7 +172,7 @@
     "href": "Trainings/Containers/Introduction_to_containers_presentation.html#virtualization-and-containerization",
     "title": "Introduction to the world of containers",
     "section": "Virtualization and containerization",
-    "text": "Virtualization and containerization\n\n\n  \n    \n      \n      \n      \n      \n      \n    \n    \n      \n      \n      \n      \n      \n    \n    \n      \n      \n      \n      \n      \n    \n    \n      \n      \n      \n      \n      \n    \n    \n      \n      \n      \n      \n      \n    \n    \n      \n      \n      \n      \n      \n    \n    \n      \n      \n      \n      \n      \n    \n    \n      \n      \n      \n      \n      \n    \n    \n      \n      \n      \n      \n      \n    \n    \n      \n      \n      \n      \n      \n    \n    \n      \n      \n      \n      \n      \n    \n    \n      \n      \n      \n      \n      \n    \n    \n      \n      \n      \n      \n      \n    \n    \n      \n      \n      \n      \n      \n    \n    \n      \n      \n      \n      \n      \n    \n    \n      \n      \n      \n      \n      \n    \n    \n      \n      \n      \n      \n      \n    \n    \n      \n      \n      \n      \n      \n    \n    \n      \n      \n      \n      \n      \n    \n    \n      \n      \n      \n      \n      \n    \n    \n      \n      \n      \n      \n      \n    \n    \n      \n      \n      \n      \n      \n    \n  \n  \n  \n    \n      \n        image/svg+xml\n        \n        \n        \n      \n      \n        \n        \n        \n        \n        \n      \n    \n  \n  \n    \n    \n      \n        \n        Host Operating System\n        \n          \n          Hypervisor\n        \n        \n        VM\n        \n          \n        \n        \n          \n            \n            Guest OS\n            Bins/Libs\n            \n            App\n          \n        \n        \n          \n            \n            Guest OS\n          \n          \n            \n            Bins/Libs\n          \n          \n            \n            App\n          \n        \n        \n          \n            \n            ...\n          \n          \n            \n            ...\n          \n          \n            \n            ...\n          \n        \n        \n        VM\n        \n        VM\n      \n      Virtualization\n    \n    vs.\n    \n      Containers\n      \n        \n          \n            \n            Operating System\n          \n        \n        \n          \n          Container Engine\n        \n        \n          \n            \n              \n                \n                Bins/Libs\n              \n            \n            \n              \n                \n                App\n              \n            \n          \n          \n            \n            Container\n          \n        \n        \n          \n            \n              \n                \n                Bins/Libs\n              \n            \n            \n              \n              App\n            \n          \n          \n            \n            Container\n          \n        \n        \n          \n            \n              \n                \n                ...\n              \n            \n            \n              \n                \n                ...\n              \n            \n          \n          \n            \n            Container\n          \n        \n      \n    \n  \n\n\n\n\n\n\n\n\n\n\n\nVirtual Machines\nContainer\n\n\n\n\nGuest OS\nEach VM runs on virtual hardware and the kernel is loaded into its own memory region.\nAll containers share the same kernel.\n\n\nCommunication\nThrough Ethernet Devices.\nStandard IPC mechanisms like Signals, pipes, sockets, etc.\n\n\nPerformance\nSmall overhead as the Machine instructions need to be translated from Guest to Host OS.\nNear native performance as compared to the underlying Host OS.\n\n\nStartup time\nTakes up to a few minutes to boot up.\nContainers can be booted up in a few seconds.\n\n\nIsolation\nSharing libraries, files, etc. between guests and between guests and host not natively possible.\nSubdirectories can be transparently mounted and can be shared.\n\n\nStorage\nVMs usually require more storage as the whole OS kernel and associated programs have to be installed and run.\nContainers consume lower amount of storage since the Host OS is shared."
+    "text": "Virtualization and containerization\n\n\n\n\n\n\n\n\n\n\n\n\nVirtual Machines\nContainer\n\n\n\n\nGuest OS\nEach VM runs on virtual hardware and the kernel is loaded into its own memory region.\nAll containers share the same kernel.\n\n\nCommunication\nThrough Ethernet Devices.\nStandard IPC mechanisms like Signals, pipes, sockets, etc.\n\n\nPerformance\nSmall overhead as the Machine instructions need to be translated from Guest to Host OS.\nNear native performance as compared to the underlying Host OS.\n\n\nStartup time\nTakes up to a few minutes to boot up.\nContainers can be booted up in a few seconds.\n\n\nIsolation\nSharing libraries, files, etc. between guests and between guests and host not natively possible.\nSubdirectories can be transparently mounted and can be shared.\n\n\nStorage\nVMs usually require more storage as the whole OS kernel and associated programs have to be installed and run.\nContainers consume lower amount of storage since the Host OS is shared."
   },
   {
     "objectID": "Trainings/Containers/Introduction_to_containers_presentation.html#how-containers-work",
@@ -191,18 +245,16 @@
     "text": "Containers in the IJC’s HPC\n\n\n\n\n\n- Account for the resources needed by all the dependencies of your script.\n\n- Do not run a container on the master node!\n\n\n\n\nWe are not sudo in the cluster.\nEvery dependency must be installed by the system administrator.\nRun containers with the Slurm scheduler.\n\n\n\n\nExercice 7\n\n\n\nCreate a bash script file with the following content:\n\n#!/bin/bash \ncurl -s \"wttr.in/$1?m1\"\n\nCreate a Slurm script to execute the script from step 1 inside the container you made in the previous exercise. Copy the following sbatch header and add the command to run the script inside the container. The container will run the command that you type after the image name; therefore, you need to use bash script.sh to actually run the script.\n\n#!/bin/bash \n#SBATCH --job-name=run_lolcow\n\nUse sbatch to run the script and check the output. You can use squeue to see the progress. You will find the log file in the current folder when the job finishes.\n\n\n\nSolution\n\n  vim wtt.sh\n  \n  #!/bin/bash \n  curl -s \"wttr.in/$1?m1\"\n  \n  vim wtt.slm\n  \n  #!/bin/bash \n  #SBATCH --job-name=run_wtt\n  singularity exec steam.sif bash wtt.sh\n  \n  sbatch wtt.slm"
   },
   {
-    "objectID": "Trainings/Containers/pipeline_example.html",
-    "href": "Trainings/Containers/pipeline_example.html",
-    "title": "Nexflow pipeline in a container",
+    "objectID": "Trainings/Containers/Intro_to_containers.html",
+    "href": "Trainings/Containers/Intro_to_containers.html",
+    "title": "Introduction to the world of containers",
     "section": "",
-    "text": "Solution\n\n  Module load Nextflow\n  Module load singularity\n  nextflow run rnaseq-nf -with-singularity"
-  },
-  {
-    "objectID": "Trainings/Containers/running_instances.html",
-    "href": "Trainings/Containers/running_instances.html",
-    "title": "Running instances",
-    "section": "",
-    "text": "singularity images list"
+    "text": "This workshop provides a comprehensive introduction to containers for newcomers. It focuses on container technology, usage, and practical applications. Participants will gain insights into container creation, image management, and executing scripts in high-performance computing (HPC) environments.\nTopics covered:\n\nVirtualization and Containerization\nHow Containers Work\nNot Only Docker\nDocker vs Singularity\nPulling Container Images\nInteractive Shell\nRun in a Container\nFiles Access\nBuild a Container\nContainers in the IJC’s High-Performance Computing Cluster (HPC)\n\nMaterials\n\nSeminar presentation (quarto)\nSeminar presentation (pdf)",
+    "crumbs": [
+      "Trainings",
+      "Containers",
+      "Intro to containers"
+    ]
   },
   {
     "objectID": "Trainings/Introduction_to_Linux/Introduction_to_Linux.html",
@@ -222,70 +274,6 @@
     "title": "Introduction to Linux: Exercises",
     "section": "",
     "text": "Exercise 1:\nGo to the ‘root’ directory and list its content. How many other files aside from directories ? How many directories starting with ‘s’?\n\n\n\nExercise 2:\nIn YOUR ‘home’ directory create a new directory called ‘analysis’. Copy the file ‘/home/shared/peaks.bed’ to this directory. Now, create a softlink to the original file and call it ‘softlink_peaks.bed’.\nFinally, list all files that end with ‘.bed’ in a single command.\n\n\n\nExercise 3:\nIs bzip2 or gzip the better compression? Which algorithm compresses the file ‘peaks.bed’ more?\n\n\n\nExercise 4:\nExtract the first and last 10 lines of the file peaks.bed into a new file. How many characters does this file have?\n\n\n\nExercise 5:\nExtract the first 10 lines of the second and fifth column from of peaks.bed. Create a file where the (original) second column is sorted by increasing size and the fifth column by decreasing size. Use the pipe if you can.\nHow many characters does the last line of this file have?\n\n\n\nExercise 6:\nIn the file ‘peaks.bed’, what is the highest and lowest value in column 5 on chrM?\n\n\n\nExercise 7:\nWrite a script, that for any given directory lists all files it contains and counts the number of characters of all regular files it contains."
-  },
-  {
-    "objectID": "Trainings/Introduction_to_Linux/Linux_exercises_with_solutions.June2024.html",
-    "href": "Trainings/Introduction_to_Linux/Linux_exercises_with_solutions.June2024.html",
-    "title": "Introduction to Linux - Exercises",
-    "section": "",
-    "text": "Exercise 1:\nGo to the ‘root’ directory and list its content. How many other files aside from directories ? How many directories starting with ‘s’?\nAnswer\n # Go to the 'root' directory \n cd /\n \n# List the content of the current directory\n ls .      # 1 regular files, 6 softlinks\n \n# List directories starting with 's' \n ls -d s*  # 4 directories, \n\n# =&gt; Note that `ls s*` will list the contents of all directories starting with 's\"' \n\n\n\nExercise 2:\nIn YOUR ‘home’ directory create a new directory called ‘analysis’. Copy the file ‘/home/shared/peaks.bed’ to this directory. Now, create a softlink to the original file and call it ‘softlink_peaks.bed’.\nFinally, list all files that end with ‘.bed’ in a single command.\nAnswer\n# Go to your 'home' directory\n cd ~\n\n# Create a new directory\n mkdir analysis                     \n\n# Enter the 'analysis' directory \n cd analysis\n \n# copy 'peaks.bed' to current directory \n cp /home/shared/peaks.bed .  \n\n# create a softlink \n ln -s /home/shared/peaks.bed -n softlink_peaks.bed  \n\n# list all files ending in '.bed' in the current directory\n ls *.bed\n ls -lrth *.bed\n\n\n\nExercise 3:\nIs bzip2 or gzip the better compression? Which algorithm compresses the file ‘peaks.bed’ more?\nAnswer\n# create two extra copies of 'peaks.bed'\n cp peaks.bed peaks1.bed\n cp peaks.bed peaks2.bed\n\n# compress one file with gzip\n gzip peaks1.bed\n\n# compress the other file wit bzip2\n bzip2 peaks2.bed\n\n# compare file sizes with ls\n ls -lth\n\n# =&gt; the file compressed with bzip2 is slightly smaller (6.1K) than the one compressed with gzip (6.4K)\n\n\n\nExercise 4:\nExtract the first and last 10 lines of the file peaks.bed into a new file. How many characters does this file have?\nAnswer\n# Extract the first 10 lines\n head -10 peaks.bed &gt; head.peaks\n \n# Extract the last 10 lines and append to the previous file\n tail -10 peaks.bed &gt;&gt; head.peaks\n \n# Count the number of characters\n wc -c head.peaks\n\n\n\nExercise 5:\nExtract the first 10 lines of the second and fifth column from of peaks.bed. Create a file where the (original) second column is sorted by increasing size and the fifth column by decreasing size. Use the pipe if you can.\nHow many characters does the last line of this file have?\nAnswer\n# Extract the first 10 lines, slice column 2, sort numerical and store output in a file\n head -10 peaks.bed | cut -f 2 |sort -n &gt; column2\n\n# Do the same but with column 5 and sort in reverse order.\n# Then join output with previous file, extract last line and count number of characters (=12)\n head -10 peaks.bed | cut -f 5 |sort -nr| paste column 2 - | tail -1| wc -c\n\n\n\nExercise 6:\nIn the file ‘peaks.bed’, what is the highest and lowest value in column 5 on chrM?\nAnswer\n# find all lines with pattern 'chrM', slice column 5, sort numerical, \n# extract first and last line\ngrep -w chrM peaks.bed | cut -f 5| sort -n| head -1\ngrep -w chrM peaks.bed | cut -f 5| sort -n| tail -1\n\n\n\nExercise 7:\nWrite a script, that for any given directory lists all files it contains and counts the number of characters of all regular files it contains.\nAnswer\n#! /bin/bash\n\n### Author: Angelika Merkel\n### Date: 30/11/2022\n\n###############################################################################\n### Description:\n### Script script, that for any given directory lists all files it contains and\n### counts the number of characters of all regular files it contains.\n\n###############################################################################\n# assign the script's first argument to a meaningful variable\nDIR=$1\n\n# Loop over all elements listed in the specified directory\nfor i in `ls $DIR`\n do\n \n # Test if the element listed is a regular file (else could be a directory)\n  if [ -f \"$i\" ]                         \n  \n  # if this is true, count all characters within the file and return a message\n    then\n      CHAR=`cat $i| wc -c`\n      echo $i \":\" $CHAR \"characters\"\n  \n  # close conditional structure\n  fi\n  \n# close the 'for loop'\ndone\nFinally, to run the script in the terminal:\n chmod a+x myscript.sh       # make the file executable\n ./myscript.sh               # run"
-  },
-  {
-    "objectID": "Trainings/Containers/sequera_containers.html",
-    "href": "Trainings/Containers/sequera_containers.html",
-    "title": "Seqera containers",
-    "section": "",
-    "text": "https://seqera.io/containers/"
-  },
-  {
-    "objectID": "Trainings/Containers/Intro_to_containers.html",
-    "href": "Trainings/Containers/Intro_to_containers.html",
-    "title": "Introduction to the world of containers",
-    "section": "",
-    "text": "This workshop provides a comprehensive introduction to containers for newcomers. It focuses on container technology, usage, and practical applications. Participants will gain insights into container creation, image management, and executing scripts in high-performance computing (HPC) environments.\nTopics covered:\n\nVirtualization and Containerization\nHow Containers Work\nNot Only Docker\nDocker vs Singularity\nPulling Container Images\nInteractive Shell\nRun in a Container\nFiles Access\nBuild a Container\nContainers in the IJC’s High-Performance Computing Cluster (HPC)\n\nMaterials\n\nSeminar presentation (quarto)\nSeminar presentation (pdf)",
-    "crumbs": [
-      "Trainings",
-      "Containers",
-      "Intro to containers"
-    ]
-  },
-  {
-    "objectID": "Trainings/Containers/container_sandbox.html",
-    "href": "Trainings/Containers/container_sandbox.html",
-    "title": "Container sandbox",
-    "section": "",
-    "text": "Create a sandbox\n\n\n\n\n\n\nAvoid sandboxex\n\n\n\nThe resulting image will become a blackbox"
-  },
-  {
-    "objectID": "Trainings/IJC_computing/IJC_computing_HPC.html",
-    "href": "Trainings/IJC_computing/IJC_computing_HPC.html",
-    "title": "Computation with the HPC cluster ‘Minastirith’",
-    "section": "",
-    "text": "Specifically for bioinformaticians, we (together with the IT team)provide a practical training session on how to use the IJC HPC cluster (aka ‘Minastirith’) for scientific computation. This session is aimed at users with an Intermediate level and requires basic knowledge of Linux and Bash. We strongly recommend to attend our Beginners course ‘Introduction to Linux and the Shell’ beforehand.\nTopics covered:\n\nThe SLURM job scheduler\nSubmitting jobs with sbatch\nMonitoring and controlling jobs\nSerial and array jobs\nRequesting resources\n\nMaterials:\n\nWorkshop presentation",
-    "crumbs": [
-      "Trainings",
-      "IJC computing",
-      "HPC"
-    ]
-  },
-  {
-    "objectID": "Trainings/Git/Introduction_to_git.html",
-    "href": "Trainings/Git/Introduction_to_git.html",
-    "title": "Introduction to git and GitHub",
-    "section": "",
-    "text": "This course gives a brief introduction to version control with git and the gitHub repository. The course is aimed at user with an Intermediate level of programming skills and and a basic knowledge of Linux and the Terminal.\nTopics covered:\n\nWhy use version control?\nBasic Git workflow and commands\nBacktracking\nRemote repositories\nBranches\n\nMaterials\n\nSeminar presentation",
-    "crumbs": [
-      "Trainings",
-      "Git/GitHub",
-      "Git/GitHub"
-    ]
-  },
-  {
-    "objectID": "Trainings/Advancing_with_the_Shell/Advancing_with_the_Shell_Exercises.June2024.html",
-    "href": "Trainings/Advancing_with_the_Shell/Advancing_with_the_Shell_Exercises.June2024.html",
-    "title": "Advancing with the Shell: Exercises",
-    "section": "",
-    "text": "Exercise 1:\nCreate a ‘for loop’ to iterate over a list of .bed files and print out the name for each file.\nAnswer\n#\nfor i in $( ls *bed ); do echo $i; done\n\n\n\nExercise 2:\nUsing a ‘for loop’ calculate the multiplication series for the number 7 for each 5th instance up to 140 (for example: 1 * 7 = 7, 5 * 7 = 35, 10 * 7 = 70 … 20 * 7 = 140).\nAnswer\n#\nfor i in {1..140..4}; do echo $(( $i * 7)); done\n\n\n\nExercise 3:\nRename all ‘.bed’ files to ‘.txt’ files.\nAnswer\n#\nfor i in $( ls *bed ); do mv $i ${i%.bed}.txt; done\n\n\n\nExercise 4:\nFrom the file ‘subsample1.bed’ extract all lines that start with chr20, chr21, chr22 but not chr2.\nAnswer\n#\negrep '^chr2[0-2]' subsample.bed\n\n\n\nExercise 5:\nUsing ‘sed’, remove all quotes from a file.\nAnswer\n#\nsed 's/\\\"//g' myfile\n\n\n\nExercise 6:\nUsing ‘awk’, print the coordinates of all peaks occoring on the plus strand.\nAnswer\n#\nawk '{if($5==\"+\"){print $1, $2, $3}}'  peaks.bed\nUsing ‘awk’, calculate the total of the peak scores for all peaks occuring on the plus strand.\n\nAnswer\n#\nawk '{if($5==\"+\"){SUM+=$1}} END {print \"The total score is\", SUM}' peaks.bed"
   },
   {
     "objectID": "Trainings/Introduction_to_R/Introduction_to_R.html",
@@ -309,6 +297,18 @@
       "Trainings",
       "R",
       "Data visualization in R"
+    ]
+  },
+  {
+    "objectID": "Trainings/IJC_computing/IJC_computing_infrastructure.html",
+    "href": "Trainings/IJC_computing/IJC_computing_infrastructure.html",
+    "title": "Introduction to the IJC Computing Infrastructure",
+    "section": "",
+    "text": "The Bioinformatics Unit (together with the IT team) provides this seminar to introduce newcomers to the IJC to the institute’s computing infrastructure. It also serves to keep established researchers updated with latest changes or additions by IT.\nTopics covered:\n\nComputational infrastructure and resources\nFile sharing (oneDrive/nextCloud/sharedFolder)\nData sharing (ftp/sftp)\nThe IJC network and remote connections\nIJC’s high-performance computing cluster (HPC)\n\nMaterials\n\nSeminar presentation",
+    "crumbs": [
+      "Trainings",
+      "IJC computing",
+      "Infrastructure"
     ]
   }
 ]
