@@ -30,7 +30,7 @@ Day 2
 <br/>
 **Course materials:**
 
-* [Course presentation](data/Introduction_to_R.July2024.pdf)
+* [Course presentation](data/Introduction_to_R.March_2025.pdf)
 * [Exercises Day 1](Introduction_to_R_Exercises1.qmd)
 * [Data analysis session Day 2](Example_data_analysis.qmd)
 

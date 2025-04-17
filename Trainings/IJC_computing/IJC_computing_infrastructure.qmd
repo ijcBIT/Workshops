@@ -17,4 +17,4 @@ The Bioinformatics Unit (together with the IT team) provides this seminar to int
 
 **Materials**
 
-- [Seminar presentation](data/Introduction_to_the_IJC_computing_infrastructure_Overview.June2024.pdf) 
+- [Seminar presentation](data/Introduction_to_the_IJC_computing_infrastructure_Overview.April2025.pdf) 

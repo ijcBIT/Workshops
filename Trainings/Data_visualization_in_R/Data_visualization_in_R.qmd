@@ -19,6 +19,6 @@ This workshop introduces data visualization in R with the ggplot2 package for [B
 
 **Course materials:**
 
--   [Course presentation](data/Data_visualization_in_R.July2024.pdf)
+-   [Course presentation](data/Data_visualization_in_R.April2025.pdf)
 
 For this course we follow several chapters from the book [R for Data Science (2nd edition)](https://r4ds.hadley.nz/) by *Wickham et al*. This includes the practical session and exercises.

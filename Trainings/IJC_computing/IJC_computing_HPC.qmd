@@ -3,19 +3,16 @@ title: "Computation with the HPC cluster 'Minastirith'"
 editor: visual
 ---
 
-
 Specifically for bioinformaticians, we (together with the IT team)provide a practical training session on how to use the IJC HPC cluster (aka 'Minastirith') for scientific computation. This session is aimed at users with an [Intermediate]{.underline} level and requires basic knowledge of Linux and Bash. We strongly recommend to attend our Beginners course 'Introduction to Linux and the Shell' beforehand.
-
 
 **Topics covered:**
 
-* The SLURM job scheduler
-* Submitting jobs with sbatch
-* Monitoring and controlling jobs
-* Serial and array jobs
-* Requesting resources
-
+-   The SLURM job scheduler
+-   Submitting jobs with sbatch
+-   Monitoring and controlling jobs
+-   Serial and array jobs
+-   Requesting resources
 
 **Materials:**
 
-- [Workshop presentation](data/Introduction_to_the_IJC_HPC.June2024.pdf)
+-   [Workshop presentation](data/Introduction_to_the_IJC_HPC.April2025.pdf)
